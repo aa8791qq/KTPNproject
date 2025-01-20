@@ -7,13 +7,15 @@
 </head>
 <body>
     <!-- html -->
+    <!-- 배경이미지 -->
+    <!-- <p id = 'b1'></p> -->
     <!-- 로그인 로고(회사(KTPN)) -->
     <h2 id = 'logo'> KTPN Status </h2>
 
     <!-- 로그인 안내문 -->
     <!-- 공장 인트라넷임을 표시하는 내용 -->
     <div id = 'information'>
-        여기는 KTPN 현황 시스템입니다. 로그인을 위해서는 관리자의 승인이 필요합니다.
+        여기는 KTPN 현황 시스템입니다. 로그인을 하기 위해서는 관리자의 승인이 필요합니다.
     </div>
     
     <!-- 로그인 디자인 -->
@@ -23,19 +25,54 @@
     <!-- button -->
     <!-- labal -->
         <!-- checkbox(기본 체크해제) -->
-    <div class = 'logininfo'>
-        아이디 : <input type = 'text' id = 'Vid'><br>
-        비밀번호 : <input type = 'text' id = 'Vpw'><br>
-        <button type = "button" id = 'login'> 로그인 </button>
+    <div class = 'login-info'>
+        아이디 : <input type = 'text' id = 'Vid'>
         <label>
             <input type = 'checkbox' id = 'id-remember'> 아이디 저장하기
         </label>
-    </div>
+        <br>
+        비밀번호 : <input type = 'text' id = 'Vpw'><br>
+        <button type = "button" id = 'login'> 로그인 </button>
 
+    </div>
 
     <!-- css -->
     <!-- 배경화면 -->
     <!-- 컬러? / 이미지? -->
+    <style>
+        body{
+            /* background-image: url(''); */
+            background-color: white;
+            background-image: url('https://poc-cf-image.cjenm.com/resize/1076/public/pcms/photogroup/B120214100/kr/B120214100_photogroup_1667984594953.jpg?v=1668051784');
+            background-size : cover;
+        }
+
+        #logo{
+            background-color: aqua;
+
+        }
+
+        #login{
+            border-radius: 10px;
+            border : 1px solid white;
+            background-color: green;
+            width : 70%;
+            color : white;
+            margin-top: 10px;
+            height: 50px;
+        }
+
+        #information {
+            margin-bottom: 5px;
+            height : 100px;
+        }
+        
+        .login-info{
+            border : 1px solid black;
+            width: 70%;
+
+        }
+    </style>
 
     <!-- 자바스크립트 -->
     <!-- 클릭이벤트 발생 -->
