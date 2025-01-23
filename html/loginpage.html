@@ -9,51 +9,71 @@
 
 <body>
     <div class='login_area'>
-        <div>
+        <div class = 'middle_login'>
             <p id='pageinfo'>
                 로그인
             </p>
-            <div>
-                <div>
-                    <!-- 아이디 입력창 -->
-                    <input type='text' id='uid' placeholder="아이디 입력">
+            <div class='send'>
+                <!-- 아이디 입력창 -->
+                <div class='idarea'>
+                    <input type='text' id='uid' placeholder="아이디 입력" style = 'height : 30px'>
                     <!-- 아이디 저장체크여부 -->
-                    <label>
-                        <input type='checkbox' id='uidchkre'> 아이디 저장
+                    <label id = 'uidchkre' >
+                        <input type='checkbox' > 아이디 저장
                     </label>
-                    <br>
-                    <!-- 비밀번호 입력창 -->
-                    <input type='password' id='upw' placeholder="비밀번호 입력">
-                    <!-- 로그인 버튼 -->
-                    <button type='button' id='login'> 로그인</button>
                 </div>
                 <br>
-                <!-- 유저여부체크 -->
-                <div id='uchkmessege'> <!-- 자바스크립트로 조건에 따라 추가할 예정-->
-                    임의의 글씨
+                <div class='pwarea'>
+                    <!-- 비밀번호 입력창 -->
+                    <input type='password' id='upw' placeholder="비밀번호 입력" style = 'height : 30px'>
+                    <button type='button' id='login' style = 'height : 30px'> 로그인</button>
                 </div>
-                <!-- 주의사항메시지 -->
-                <div id='lost_messege'>
-                    ** 로그인키를 잊어버린 경우 관리자에게 문의하시기 바랍니다. **
-                </div>
+                <!-- 로그인 버튼 -->
+            </div>
+            <br>
+            <!-- 유저여부체크 -->
+            <div id='uchkmessege'> <!-- 자바스크립트로 조건에 따라 추가할 예정-->
+                임의의 글씨
+            </div>
+            <!-- 주의사항메시지 -->
+            <div id='lost_messege'>
+                ** 로그인키를 잊어버린 경우<br>관리자에게 문의하시기 바랍니다. **
             </div>
         </div>
     </div>
 
     <style>
+        body {
+            display : flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .login_area {
             border: 1px solid black;
             display: flex;
             width: 100%;
-            height: 200px;
+            height: 100%;
             justify-content: center;
             align-items: center;
+        }
+
+        .middle_login{
+            display: flex;
+            flex-direction: column ;
+            align-items: center;
+        }
+        
+        .send {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
         }
 
         #pageinfo {
             margin-top: 20px;
             border: 1px solid red;
-            width: 100%;
+            width: 70%;
             height: 50px;
             display: flex;
             justify-content: center;
@@ -61,12 +81,36 @@
             align-items: center;
         }
 
+        .idarea{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #uidchkre{
+            padding-left: 10px;
+        }
+
+        .pwarea{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #login{
+            width: 110px;
+        }
+
+
         #lost_messege {
             text-align: center;
             color: red;
             font-weight: 700;
-
-
+            margin-bottom: 20px;
         }
     </style>
 </body>
