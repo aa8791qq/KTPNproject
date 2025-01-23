@@ -9,10 +9,10 @@
 
 <body>
     <div id = 'blank'>
-        
+        <!-- 정리를 위한 공간 -->
     </div>
-    <div class='login_area' >
-        <div class = 'middle_login' style = 'height : 300px'>
+    <div class='login_area'>
+        <div class = 'middle_login' style = 'height : 400px'>
             <p id='pageinfo'>
                 <span id = 'text'>로그인</span>
             </p>
@@ -22,7 +22,7 @@
                     <input type='text' id='uid' placeholder="아이디 입력" style = 'height : 30px'>
                     <!-- 아이디 저장체크여부 -->
                     <label id = 'uidchkre' >
-                        <input type='checkbox' > 아이디 저장
+                        <input type='checkbox'> 아이디 저장
                     </label>
                 </div>
                 <br>
@@ -36,12 +36,13 @@
             <br>
             <!-- 유저여부체크 -->
             <div id='uchkmessege'> <!-- 자바스크립트로 조건에 따라 추가할 예정-->
-                임의의 글씨
+                임의의 글씨 <!-- ( 여기는 회원이 맞는지 확인하는 구간입니다! 추후 자동으로 삽입될 예정 ) -->
             </div>
             <!-- 주의사항메시지 -->
             <div id='lost_messege'>
                 ** 회원가입이 필요한 경우 관리자에게 문의하시기 바랍니다. **
             </div>
+            <!-- 회원정보 찾기 메뉴 -->
             <div class = 'buttons'>
                 <button type = 'button' style = 'height : 30px'> 아이디 찾기</button>
                 <button type = 'button' style = 'height : 30px'> 비밀번호 찾기</button>
@@ -55,21 +56,21 @@
             height: 250px;
             display: inline-block;
         }
+
         .login_area {
             display: flex;
             width: 100%;
-            height: 100%;
             justify-content: center;
             align-items: center;
         }
 
         .middle_login{
             width : 500px;
-            /* height: 250px; */
             border: 1px solid black;
             display: flex;
             flex-direction: column ;
             align-items: center;
+            justify-content: center;
         }
         
         .send {
@@ -79,10 +80,8 @@
         }
 
         #pageinfo {
-            margin-top: 20px;
             border: 1px solid black;
             width: 70%;
-            height: 50px;
             display: flex;
             justify-content: center;
             text-align: center;
@@ -119,10 +118,13 @@
         }
 
         #lost_messege {
+            padding: 3px;
+            border : dotted 2px red;
             text-align: center;
             color: red;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
     </style>
 </body>
