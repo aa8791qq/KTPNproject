@@ -1,0 +1,126 @@
+2025-01-23 09:08:14: -- 분석이 On File Change First Full Analyze Upon Folder Connect에 의해 시작되었습니다.
+2025-01-23 09:08:15: 왼쪽: 상태 파일 C:/teamProject/_gsdata_/_file_state_v4._gs 읽는 중
+2025-01-23 09:08:15: 오른쪽: 상태 파일 C:/Users/111/Desktop/teamproject(KTPN)/_gsdata_/_file_state_v4._gs 읽는 중
+2025-01-23 09:08:15: /.git/COMMIT_EDITMSG: 불일치: 새로운 파일이 다릅니다.
+2025-01-23 09:08:15: /.git/config: 불일치: 새로운 파일이 다릅니다.
+2025-01-23 09:08:15: /.git/FETCH_HEAD: 불일치: 새로운 파일이 다릅니다.
+2025-01-23 09:08:15: /.git/index: 불일치: 새로운 파일이 다릅니다.
+2025-01-23 09:08:15: /.git/logs/HEAD: 불일치: 새로운 파일이 다릅니다.
+2025-01-23 09:08:15: /.git/logs/refs/heads/main: 불일치: 새로운 파일이 다릅니다.
+2025-01-23 09:08:15: /.git/logs/refs/remotes/origin/HEAD: 불일치: 새로운 파일이 다릅니다.
+2025-01-23 09:08:15: /.git/logs/refs/remotes/origin/main: 불일치: 새로운 파일이 다릅니다.
+2025-01-23 09:08:15: /.git/sourcetreeconfig.json: 불일치: 새로운 파일이 다릅니다.
+2025-01-23 09:08:15: /README.md: 불일치: 새로운 파일이 다릅니다.
+2025-01-23 09:08:15: 분석이 완료되었습니다. 불일치 항목이 있습니다. 동기화할 방향을 선택하여 불일치 항목을 해결하고 동기화 버튼을 클릭하세요.
+2025-01-23 09:08:15: 변경됨: 77, 불일치: 10, 시간 복사: 0, 상태 복사: 16, 오류: 0, All: 98
+2025-01-23 09:08:15: Left to Right: Copy File: 27 
+2025-01-23 09:08:15: Right to Left: Copy File: 40 
+2025-01-23 09:08:15: == On File Change First Full Analyze Upon Folder Connect에 의해 동기화가 시작되었습니다.
+2025-01-23 09:08:15: ConnectCloned connected to file:///C:/teamProject
+2025-01-23 09:08:15: ConnectCloned connected to file:///C:/teamProject
+2025-01-23 09:08:15: ConnectCloned connected to file:///C:/teamProject
+2025-01-23 09:08:15: ConnectCloned connected to file:///C:/Users/111/Desktop/teamproject(KTPN)
+2025-01-23 09:08:15: ConnectCloned connected to file:///C:/Users/111/Desktop/teamproject(KTPN)
+2025-01-23 09:08:15: ConnectCloned connected to file:///C:/Users/111/Desktop/teamproject(KTPN)
+2025-01-23 09:08:15: /.git/COMMIT_EDITMSG: unresolved conflict results in No Copy
+2025-01-23 09:08:15: /.git/config: unresolved conflict results in No Copy
+2025-01-23 09:08:15: /.git/FETCH_HEAD: unresolved conflict results in No Copy
+2025-01-23 09:08:15: Connecting to Elevated Local GoodSync Server to complete operation
+2025-01-23 09:08:15: Connecting to Elevated Local GoodSync Server to complete operation
+2025-01-23 09:08:15: Connecting to Elevated Local GoodSync Server to complete operation
+2025-01-23 09:08:15: LOCAL C:(127.0.0.1) -> S:127.0.0.1:33333
+2025-01-23 09:08:15: LOCAL C:(127.0.0.1) -> S:127.0.0.1:33333
+2025-01-23 09:08:15: LOCAL C:(127.0.0.1) -> S:127.0.0.1:33333
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/hooks/applypatch-msg.sample' -> 'C:/teamProject/.git/hooks/applypatch-msg.sample' (478)
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/description' -> 'C:/teamProject/.git/description' (73)
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/HEAD' -> 'C:/teamProject/.git/HEAD' (21)
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/hooks/fsmonitor-watchman.sample' -> 'C:/teamProject/.git/hooks/fsmonitor-watchman.sample' (4,726)
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/hooks/post-update.sample' -> 'C:/teamProject/.git/hooks/post-update.sample' (189)
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/hooks/commit-msg.sample' -> 'C:/teamProject/.git/hooks/commit-msg.sample' (896)
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/hooks/pre-applypatch.sample' -> 'C:/teamProject/.git/hooks/pre-applypatch.sample' (424)
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/hooks/pre-merge-commit.sample' -> 'C:/teamProject/.git/hooks/pre-merge-commit.sample' (416)
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/hooks/pre-commit.sample' -> 'C:/teamProject/.git/hooks/pre-commit.sample' (1,649)
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/hooks/pre-push.sample' -> 'C:/teamProject/.git/hooks/pre-push.sample' (1,374)
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/hooks/pre-rebase.sample' -> 'C:/teamProject/.git/hooks/pre-rebase.sample' (4,898)
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/hooks/pre-receive.sample' -> 'C:/teamProject/.git/hooks/pre-receive.sample' (544)
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/hooks/prepare-commit-msg.sample' -> 'C:/teamProject/.git/hooks/prepare-commit-msg.sample' (1,492)
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/hooks/push-to-checkout.sample' -> 'C:/teamProject/.git/hooks/push-to-checkout.sample' (2,783)
+2025-01-23 09:08:15: /.git/index: unresolved conflict results in No Copy
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/hooks/sendemail-validate.sample' -> 'C:/teamProject/.git/hooks/sendemail-validate.sample' (2,308)
+2025-01-23 09:08:15: /.git/logs/HEAD: unresolved conflict results in No Copy
+2025-01-23 09:08:15: /.git/logs/refs/heads/main: unresolved conflict results in No Copy
+2025-01-23 09:08:15: /.git/logs/refs/remotes/origin/HEAD: unresolved conflict results in No Copy
+2025-01-23 09:08:15: /.git/logs/refs/remotes/origin/main: unresolved conflict results in No Copy
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/hooks/update.sample' -> 'C:/teamProject/.git/hooks/update.sample' (3,650)
+2025-01-23 09:08:15: 폴더 만들기 C:/teamProject/.git/objects/15
+2025-01-23 09:08:15: 폴더 만들기 C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/32
+2025-01-23 09:08:15: 폴더 만들기 C:/teamProject/.git/objects/31
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/info/exclude' -> 'C:/teamProject/.git/info/exclude' (240)
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.git/objects/32/4292da63e5bd46e04a0d84a5d34c5bf4bd6a54' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/32/4292da63e5bd46e04a0d84a5d34c5bf4bd6a54' (1,317)
+2025-01-23 09:08:15: 새 사본 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/15/e397e0abb2a1267b03299987c1f28c41660bc3' -> 'C:/teamProject/.git/objects/15/e397e0abb2a1267b03299987c1f28c41660bc3' (108)
+2025-01-23 09:08:15: 새 사본 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/31/97f6b37ede202f3b023aa5bc6e2e4439a6acc6' -> 'C:/teamProject/.git/objects/31/97f6b37ede202f3b023aa5bc6e2e4439a6acc6' (161)
+2025-01-23 09:08:15: 폴더 만들기 C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/8c
+2025-01-23 09:08:15: 폴더 만들기 C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/9f
+2025-01-23 09:08:15: 폴더 만들기 C:/teamProject/.git/objects/78
+2025-01-23 09:08:15: 폴더 만들기 C:/teamProject/.git/objects/a8
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.git/objects/9f/ff7f2247f199b92e39d6e22b5ed3b6a39f9136' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/9f/ff7f2247f199b92e39d6e22b5ed3b6a39f9136' (55)
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.git/objects/8c/6f856897e1c9b44ffbf8479c8bd2120977d51c' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/8c/6f856897e1c9b44ffbf8479c8bd2120977d51c' (215)
+2025-01-23 09:08:15: 폴더 만들기 C:/teamProject/.git/objects/b7
+2025-01-23 09:08:15: 새 사본 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/78/97253046c917b981930c7bb9684279b9bc400b' -> 'C:/teamProject/.git/objects/78/97253046c917b981930c7bb9684279b9bc400b' (91)
+2025-01-23 09:08:15: 폴더 만들기 C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/db
+2025-01-23 09:08:15: 새 사본 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/a8/b572167831db60c6f5004da074704bf5545272' -> 'C:/teamProject/.git/objects/a8/b572167831db60c6f5004da074704bf5545272' (71)
+2025-01-23 09:08:15: 폴더 만들기 C:/teamProject/.git/objects/c6
+2025-01-23 09:08:15: 폴더 만들기 C:/teamProject/.git/objects/e6
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.git/objects/db/bf8d5ba282e083d8822abf0354662e42b579d2' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/db/bf8d5ba282e083d8822abf0354662e42b579d2' (151)
+2025-01-23 09:08:15: 새 사본 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/b7/b7a204aca28869c2861af3abd04ed0a45835f3' -> 'C:/teamProject/.git/objects/b7/b7a204aca28869c2861af3abd04ed0a45835f3' (170)
+2025-01-23 09:08:15: 폴더 만들기 C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/ef
+2025-01-23 09:08:15: 새 사본 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391' -> 'C:/teamProject/.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391' (15)
+2025-01-23 09:08:15: 새 사본 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/c6/1a3a2827ac7d80b26ebad767099c902d273324' -> 'C:/teamProject/.git/objects/c6/1a3a2827ac7d80b26ebad767099c902d273324' (8,091)
+2025-01-23 09:08:15: 폴더 만들기 C:/teamProject/.git/objects/fa
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.git/objects/ef/55c913403c5c8973e54c2e60b43a1c5adc8b51' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/ef/55c913403c5c8973e54c2e60b43a1c5adc8b51' (121)
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.git/objects/pack/pack-a290e340e09d44a19cb78422f8ef5c0f7bdb1ef1.idx' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/pack/pack-a290e340e09d44a19cb78422f8ef5c0f7bdb1ef1.idx' (1,492)
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.git/objects/pack/pack-a290e340e09d44a19cb78422f8ef5c0f7bdb1ef1.pack' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/pack/pack-a290e340e09d44a19cb78422f8ef5c0f7bdb1ef1.pack' (3,557)
+2025-01-23 09:08:15: 새 사본 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/fa/62bfdf15fe9340a07b074d58186bb1c43f8e4d' -> 'C:/teamProject/.git/objects/fa/62bfdf15fe9340a07b074d58186bb1c43f8e4d' (167)
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.git/objects/pack/pack-a290e340e09d44a19cb78422f8ef5c0f7bdb1ef1.rev' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/pack/pack-a290e340e09d44a19cb78422f8ef5c0f7bdb1ef1.rev' (112)
+2025-01-23 09:08:15: 새 사본 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/pack/pack-ab39315f250c17bac0ef8a741ac6279f600b9728.idx' -> 'C:/teamProject/.git/objects/pack/pack-ab39315f250c17bac0ef8a741ac6279f600b9728.idx' (1,156)
+2025-01-23 09:08:15: 새 사본 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/pack/pack-ab39315f250c17bac0ef8a741ac6279f600b9728.pack' -> 'C:/teamProject/.git/objects/pack/pack-ab39315f250c17bac0ef8a741ac6279f600b9728.pack' (873)
+2025-01-23 09:08:15: 새 사본 'C:/Users/111/Desktop/teamproject(KTPN)/.git/objects/pack/pack-ab39315f250c17bac0ef8a741ac6279f600b9728.rev' -> 'C:/teamProject/.git/objects/pack/pack-ab39315f250c17bac0ef8a741ac6279f600b9728.rev' (64)
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/packed-refs' -> 'C:/teamProject/.git/packed-refs' (112)
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/refs/heads/main' -> 'C:/teamProject/.git/refs/heads/main' (41)
+2025-01-23 09:08:15: /.git/sourcetreeconfig.json: unresolved conflict results in No Copy
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/refs/remotes/origin/HEAD' -> 'C:/teamProject/.git/refs/remotes/origin/HEAD' (30)
+2025-01-23 09:08:15: /README.md: unresolved conflict results in No Copy
+2025-01-23 09:08:15: 폴더 만들기 C:/Users/111/Desktop/teamproject(KTPN)/.SynologyWorkingDirectory
+2025-01-23 09:08:15: Connecting to Elevated Local GoodSync Server to complete operation
+2025-01-23 09:08:15: LOCAL C:(127.0.0.1) -> S:127.0.0.1:33333
+2025-01-23 09:08:15: 덮어 복사 'C:/Users/111/Desktop/teamproject(KTPN)/.git/refs/remotes/origin/main' -> 'C:/teamProject/.git/refs/remotes/origin/main' (41)
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.SynologyWorkingDirectory/-OJBQVEB' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.SynologyWorkingDirectory/-OJBQVEB' (18,417)
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.SynologyWorkingDirectory/9gdA1R14' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.SynologyWorkingDirectory/9gdA1R14' (6,944)
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.SynologyWorkingDirectory/fOdhtVAR' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.SynologyWorkingDirectory/fOdhtVAR' (6,944)
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.SynologyWorkingDirectory/JJf7jwtP' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.SynologyWorkingDirectory/JJf7jwtP' (6,944)
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.SynologyWorkingDirectory/kdyzS4Qc' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.SynologyWorkingDirectory/kdyzS4Qc' (6,944)
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.SynologyWorkingDirectory/lcd0xQV3' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.SynologyWorkingDirectory/lcd0xQV3' (6,944)
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.SynologyWorkingDirectory/mytwZKdR' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.SynologyWorkingDirectory/mytwZKdR' (20,987)
+2025-01-23 09:08:15: 폴더 만들기 C:/Users/111/Desktop/teamproject(KTPN)/.SynologyWorkingDirectory/#SynoRecycle
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.SynologyWorkingDirectory/N4kVysAx' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.SynologyWorkingDirectory/N4kVysAx' (6,944)
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.SynologyWorkingDirectory/oUrRZMam' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.SynologyWorkingDirectory/oUrRZMam' (20,987)
+2025-01-23 09:08:15: Close Modified Folder (mod-time, acl): /.git/objects/15
+2025-01-23 09:08:15: Close Modified Folder (mod-time, acl): /.git/objects/32
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.SynologyWorkingDirectory/QJzvEB3a' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.SynologyWorkingDirectory/QJzvEB3a' (6,944)
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.SynologyWorkingDirectory/rglmggtw' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.SynologyWorkingDirectory/rglmggtw' (6,944)
+2025-01-23 09:08:15: Close Modified Folder (mod-time, acl): /.git/objects/31
+2025-01-23 09:08:15: Close Modified Folder (mod-time, acl): /.git/objects/8c
+2025-01-23 09:08:15: Close Modified Folder (mod-time, acl): /.git/objects/9f
+2025-01-23 09:08:15: 새 사본 'C:/teamProject/.SynologyWorkingDirectory/tPEJzBik' -> 'C:/Users/111/Desktop/teamproject(KTPN)/.SynologyWorkingDirectory/tPEJzBik' (6,944)
+2025-01-23 09:08:15: Close Modified Folder (mod-time, acl): /.git/objects/78
+2025-01-23 09:08:15: Close Modified Folder (mod-time, acl): /.git/objects/a8
+2025-01-23 09:08:15: Close Modified Folder (mod-time, acl): /.git/objects/db
+2025-01-23 09:08:15: Close Modified Folder (mod-time, acl): /.git/objects/b7
+2025-01-23 09:08:15: Close Modified Folder (mod-time, acl): /.git/objects/c6
+2025-01-23 09:08:15: Close Modified Folder (mod-time, acl): /.git/objects/e6
+2025-01-23 09:08:15: Close Modified Folder (mod-time, acl): /.git/objects/ef
+2025-01-23 09:08:15: Close Modified Folder (mod-time, acl): /.git/objects/fa
+2025-01-23 09:08:15: Close Modified Folder (mod-time, acl): /.SynologyWorkingDirectory
+2025-01-23 09:08:15: 상태 파일 C:/teamProject/_gsdata_/_file_state_v4._gs 저장
+2025-01-23 09:08:15: 상태 파일 C:/Users/111/Desktop/teamproject(KTPN)/_gsdata_/_file_state_v4._gs 저장
+2025-01-23 09:08:15: == 동기화 완료. 시간: 00:00:01, 속도: 0.00/s, 완료 항목: 83, 오류 항목: 0, Conflicts: 10

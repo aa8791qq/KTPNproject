@@ -1,0 +1,12 @@
+2025-01-23 09:25:46: -- 분석이 On File Change First Full Analyze Upon Folder Connect에 의해 시작되었습니다.
+2025-01-23 09:25:46: 왼쪽: 상태 파일 C:/teamproject2/_gsdata_/_file_state_v4._gs 읽는 중
+2025-01-23 09:25:46: 오른쪽: 상태 파일 C:/Users/111/Desktop/teamproject(KTPN)/_gsdata_/_file_state_v4._gs 읽는 중
+2025-01-23 09:25:46: /README.md: 불일치: 새로운 파일이 다릅니다.
+2025-01-23 09:25:46: 분석이 완료되었습니다. 불일치 항목이 있습니다. 동기화할 방향을 선택하여 불일치 항목을 해결하고 동기화 버튼을 클릭하세요.
+2025-01-23 09:25:46: 변경됨: 1, 불일치: 1, 시간 복사: 0, 상태 복사: 0, 오류: 0, All: 89
+2025-01-23 09:25:46: == On File Change First Full Analyze Upon Folder Connect에 의해 동기화가 시작되었습니다.
+2025-01-23 09:25:46: Start only 1 threads, limited by tasks to run
+2025-01-23 09:25:46: /README.md: unresolved conflict results in No Copy
+2025-01-23 09:25:46: 상태 파일 C:/teamproject2/_gsdata_/_file_state_v4._gs 저장
+2025-01-23 09:25:46: 상태 파일 C:/Users/111/Desktop/teamproject(KTPN)/_gsdata_/_file_state_v4._gs 저장
+2025-01-23 09:25:46: == 동기화 완료. 시간: 00:00:00, 속도: 0.00/s, 완료 항목: 0, 오류 항목: 0, Conflicts: 1
