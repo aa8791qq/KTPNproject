@@ -11,8 +11,6 @@
             display: flex;
             width: 100%;
             border: 5px solid #0C4A60;
-
-
         }
 
         .menu {
@@ -208,16 +206,68 @@
                 }
 
                 .boardarea{
-                    border: 1px solid black;
+                    display: flex;
+                }
+
+                .middle_board{
+                    width: 100%;
                 }
 
                 .searcharea{
                     display: flex;
-                    width: 600px;
                     height: 40px;
                     justify-content: center;
                     align-items: center;
                     background-color: gray;
+                }
+
+                /* .board1{
+                    border: 1px solid black;
+                } */
+
+                .boardview{
+                    display: flex;
+                    border: 1px solid black;
+                    height: 50px;
+                    width: 100%;
+                    align-items: center;
+                }
+
+                .boardview > div {
+                    display: flex;
+                    border: 1px solid black;
+                    height: 50px;
+                    align-items: center;
+                }
+
+                #num{
+                    justify-content: center;
+                    width: 100px;
+                }
+
+                #title{
+                    justify-content: center;
+                    width: 200px;
+                }
+
+                #secret{
+                    justify-content: center;
+                    width: 90px;
+                }
+
+                #writeuser{
+                    justify-content: center;
+                    width: 120px;
+                }
+
+                #writedate{
+                    justify-content: center;
+                    width: 120px;
+                }
+
+                #viewcount{
+                    justify-content: center;
+                    width: 120px;
                 }
             </style>
 
@@ -229,7 +279,7 @@
                         <div class = 'boardarea'>
                             <div class = 'middle_board'>
                                 <div class = 'searcharea'>
-                                    <div id ='seletbox'>
+                                    <div id ='selectbox'>
                                         <form>
                                             <select name = 'viewfilter'>
                                                 <option vaule = 'allview'>모두</option>
@@ -246,7 +296,8 @@
                                         <button type="button">검색</button>
                                     </div>
                                 </div>
-                                <div class = 'boardarea'>
+                        <hr>
+                                <div class = 'board1'>
                                     <div class = 'boardview'>
                                         <div id ='num'>
                                             번호
