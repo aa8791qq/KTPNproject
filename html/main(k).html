@@ -197,9 +197,56 @@
             <div class=manuBut>게시판</div>
             <div class=manuBut>공지사항</div>
             <div class="manuPage" id="manuPage1">대시보드내용 추후에 추가예정</div>
-            <div class="manuPage hide" id="manuPage2">게시판내용 추후에 추가예정
+            <div class="manuPage hide" id="manuPage2">
                 <div>
-                    
+                    <p id ='pageinfo'>
+                        자유게시판
+                        <hr>
+                        <div class = 'boardarea'>
+                            <div class = 'middle_board'>
+                                <div class = 'searcharea'>
+                                    <div id ='seletbox'>
+                                        <form>
+                                            <select name = 'viewfilter'>
+                                                <option vaule = 'allview'>모두</option>
+                                                <option vaule = 'tilteview'>제목</option>
+                                                <option vaule = 'contentview'>내용</option>
+                                                <option vaule = 'writeuserview'>작성자</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                    <div id ='fillvalue'>
+                                        <input type ='text' placeholder="검색어를 입력해주세요">
+                                    </div>
+                                    <div id = 'search'>
+                                        <button type="button">검색</button>
+                                    </div>
+                                </div>
+                                <div class = 'boardarea'>
+                                    <div class = 'boardview'>
+                                        <div id ='num'>
+                                            번호
+                                        </div>
+                                        <div id = 'title'>
+                                            제목
+                                        </div>
+                                        <div id = 'secret'>
+                                            비밀글여부
+                                        </div>
+                                        <div id = 'writeuser'>
+                                            작성자
+                                        </div>
+                                        <div id = 'writedate'>
+                                            작성일
+                                        </div>
+                                        <div id = 'viewcount'>
+                                            조회수
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
                 </div>
             </div>
             <div class="manuPage hide" id="manuPage3">공지사항내용 추후에 추가예정</div>
@@ -601,4 +648,4 @@
 
 </body>
 
-</html
+</html>
