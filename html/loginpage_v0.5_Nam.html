@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="loginpage_css_v0.5_Nam.css">
+    <script src="loginpage_js_v0.5_Nam.js"></script>
 </head>
 
 <body>
@@ -53,133 +55,6 @@
             <!-- 정리를 위한 공간 -->
         </div>
     </div>
-
-    <style>
-        /* 반응형 해결책마련 */
-        #blank {
-            height: 200px;
-            display: inline-block;
-        }
-
-        /* 반응형 해결책마련 */
-
-        .login_area {
-            display: flex;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* 세로 방향 가운데 정렬 해결(flex 옵션으로 해결) */
-        .middle_login {
-            width: 500px;
-            border: 1px solid black;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #pageinfo {
-            border: 1px solid black;
-            width: 70%;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-            margin-top: 0px;
-        }
-
-        .send {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        #text {
-            font-size: 20px;
-            font-weight: 700;
-        }
-
-        .idarea {
-            display: flex;
-            flex-direction: row;
-            text-align: center;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        #uidchkre {
-            padding-left: 10px;
-        }
-
-        .pwarea {
-            display: flex;
-            flex-direction: row;
-            text-align: center;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        #login {
-            width: 110px;
-        }
-
-        #lost_messege {
-            padding: 3px;
-            border: dotted 2px red;
-            text-align: center;
-            color: red;
-            font-weight: 700;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-    </style>
-
-    <script>
-        window.addEventListener('load', function () {
-            let login = document.querySelector('.login_area')
-            console.log('접근중....')
-        })
-
-        document.querySelector('#login').addEventListener('click', login)
-        function login() {
-            let login = document.querySelector('#login')
-            login.addEventListener('click', function () {
-                console.log('로그인 버튼 클릭')
-
-                const id = document.querySelector('#uid')
-                const pw = document.querySelector('#upw')
-                console.log(id, id.value)
-                console.log(pw, pw.value)
-
-                if ((id.value == "admin" && pw.value == 1234) || (id.value == "admin" && pw.value == 5678)) {
-                    // 메인페이지로 점프
-                } else {
-                    console.log('회원정보 없음')
-                    document.querySelector('#uchkmessege').textContent = '회원정보가 일치하지 않습니다.'
-                }
-
-                if (id.value == '') {
-                    console.log('미입력된 항목이 있음')
-                    document.querySelector('#uchkmessege').style.color = '#f00';
-                    document.querySelector('#uchkmessege').textContent = '아이디는 필수입니다';
-                } else if (pw.value == '') {
-                    console.log('미입력된 항목이 있음')
-                    document.querySelector('#uchkmessege').style.color = '#f00';
-                    document.querySelector('#uchkmessege').textContent = '비밀번호는 필수입니다';
-                }
-            }
-            )}
-        
-        // document.addEventListener('click', idfind)
-        // function idfind() {
-        //     let idfind = document.querySelector('#idfind')
-        //     console.log('아이디 찾는중')
-        // }
-
-
-    </script>
 
 </body>
 
