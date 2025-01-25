@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="manuPage" id="manuPage2">
+    <div>
         <div>
             <p id='pageinfo'>
                 자유게시판
@@ -46,6 +46,9 @@
                             <td class='viewcount'> 조회수 </td>
                         </tr>
                     </table>
+                    <table class='boardcontents'>
+                        
+                    </table>
                 </div>
                     <div class='pageline'>
                         <div class='pagemanger'>
@@ -59,7 +62,7 @@
                             <span class='pnum5'> 5 </span>
                         </div>
                         <div>
-                            <button type="button" s class='nextp'> 다음페이지 </button>
+                            <button type="button" class='nextp'> 다음페이지 </button>
                         </div>
                         <div>
                             <button type="button" class='write'> 글쓰기 </button>
@@ -81,7 +84,7 @@
         // }
 
         window.addEventListener("load", function () {
-            console.log('들어옴')
+            console.log('게시판에 들어옴')
         })
         const search = document.querySelector("#search");
         search.addEventListener('click', filter)
@@ -91,6 +94,18 @@
             console.log(optionS.value)
             console.log(optionT.value)
         }
+
+        const write = document.querySelector('.write');
+        write.addEventListener('click', writeprocess)
+        function writeprocess(){
+            const writeprocess = document.querySelector('.boardcontents')
+            writeprocess.innerHTML += `<td class='num'> 번호 </td>
+    <td class='writetitle'> 제목 </td>
+    <td class='writeuser'> 작성자 </td>
+    <td class='writedate'> 작성일 </td>
+    <td class='viewcount'> 조회수 </td>
+    </tr>`
+}
     </script>
 
 </body>
