@@ -74,15 +74,6 @@
     </div>
 
     <script>
-        // document.querySelector('.prevp').addEventListener('click', prev)
-        // function prev() {
-        //     let pageline = document.querySelector('.pnum')
-        //     console.log(.pnum)
-        //     for (prev of pageline) {
-        //         console.log(`pageline`)
-        //     }
-        // }
-
         window.addEventListener("load", function () {
             console.log('게시판에 들어옴')
         })
@@ -99,13 +90,16 @@
         write.addEventListener('click', writeprocess)
         function writeprocess(){
             const writeprocess = document.querySelector('.boardcontents')
-            writeprocess.innerHTML += `<td class='num'> 번호 </td>
+            writeprocess.innerHTML += `<tr class='boardcontents' style="height: 30px; border: 1px solid black;">
+            <td class='num'> 번호 </td>
     <td class='writetitle'> 제목 </td>
     <td class='writeuser'> 작성자 </td>
     <td class='writedate'> 작성일 </td>
     <td class='viewcount'> 조회수 </td>
     </tr>`
 }
+
+
     </script>
 
 </body>
