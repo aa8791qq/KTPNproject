@@ -24,7 +24,7 @@
     justify-content: center;
 }
 
-.idfindInfo{
+.pwfindInfo{
     border: 1px solid red;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@
     height : 90px;
 }
 
-.nameInfo, .telInfo{
+.idInfo, .telInfo{
     display : flex;
     width : 300px;
     justify-content :space-around;
@@ -47,7 +47,7 @@
     width : 100px;
 }
 
-#idfindprocess{
+#pwfindprocess{
     display: flex;
     justify-content: center;
     

@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="pwfindpage_v0.2_Nam.css">
     <!-- 코드생각중 -->
-    <script src="pwfindpage_v0.2_Nam.js"></script>
+    <!-- <script src="pwfindpage_v0.2_Nam.js"></script> -->
 </head>
 <body>
     <div class='findarea'>
@@ -18,18 +18,18 @@
                 <span id=pwfindT>비밀번호 찾기</span>
             </div>
         </div>
-        <div class='idfindInfo'>
-            <div class='nameInfo'>
+        <div class='pwfindInfo'>
+            <div class='idInfo'>
                 <span id='conid'> 아이디 </span>
-                <input type='text' id='name' placeholder="이름">
+                <input type='text' id='id' placeholder="아이디">
             </div>
             <div class='telInfo'>
                 <span id='connum'> 휴대폰번호 </span>
                 <input type='tel' id='tel' placeholder="휴대폰번호">
             </div>
         </div>
-        <div id='idfindprocess'>
-            <button type='button' id='result'> 아이디찾기 </button>
+        <div id='pwfindprocess'>
+            <button type='button' id='result'> 비밀번호찾기 </button>
         </div>
         <div class='findres'>
             <!-- 아이디 찾기 결과 표시하는 곳 -->
@@ -39,7 +39,7 @@
     <script>
         window.addEventListener('load', message)
         function message() {
-            console.log("아이디 찾기 페이지 접근중")
+            console.log("비밀번호 찾기 페이지 접근중")
         }
 
         document.querySelector('#result').addEventListener('click', idfinder)
@@ -47,16 +47,16 @@
             let idfinder = document.querySelector('#result')
             console.log('아이디찾기 버튼 클릭')
 
-            const name = document.querySelector('#name')
-            console.log(name.value)
+            const id = document.querySelector('#id')
+            console.log(id.value)
             const tel = document.querySelector('#tel')
             console.log(tel.value)
             const userfind = document.querySelector('.findres')
 
-            if ((name.value == "admin" && tel.value == '0415611122')) {
+            if ((id.value == "admin" && tel.value == '0415611122')) {
                 console.log('회원정보 찾음')
-                // 회원정보(id)값을 불러와야함.(현재 넣은 아이디는 임의값임)
-                userfind.textContent = '아이디는 adnin 입니다.'
+                // 비밀번호를 임시비밀번호를 줄지 알려줄지 고민됨
+                userfind.textContent = '비밀번호는  입니다.'
                 userfind.style.color = 'black'
             } else {
                 console.log('회원정보 없음')
@@ -64,7 +64,7 @@
                 userfind.style.color = 'red'
             }
 
-            if (name.value == '') {
+            if (id.value == '') {
                 console.log('미입력된 항목이 있음')
                 userfind.style.color = '#f00';
                 userfind.textContent = '이름은 필수입니다!';
