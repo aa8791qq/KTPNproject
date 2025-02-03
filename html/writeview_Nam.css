@@ -1,0 +1,25 @@
+.pagecon {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+}
+
+#pageinfo {
+    display: flex;
+    border: 1px solid black;
+    width: 150px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.viewarea{
+    display: flex;
+    flex-direction: column;
+}
+
+.title, .content{
+    display: flex;
+    align-items: center;
+    height : 30px;
+}
