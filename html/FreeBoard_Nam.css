@@ -1,3 +1,9 @@
+.pagecon {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+}
+
 #pageinfo {
     display: flex;
     border: 1px solid black;
@@ -10,10 +16,13 @@
 .boardarea {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .middle_board {
-    width: 100%;
+    display: flex;
+    width: 800px;
+    flex-direction: column;
 }
 
 .searcharea {
@@ -24,10 +33,12 @@
     background-color: gray;
 }
 
-.boardtable, .boardcontents, .boardcontent {
+.boardtable,
+.boardcontents {
     border: 1px solid black;
     margin-left: auto;
     margin-right: auto;
+    width: 750px;
 }
 
 .boardlist>tr {
@@ -64,4 +75,8 @@
     justify-content: center;
     align-items: center;
     margin: 10px;
+}
+
+.pnum {
+    margin: 0px 10px;
 }
