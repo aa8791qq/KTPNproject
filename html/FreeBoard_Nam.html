@@ -70,11 +70,16 @@
                                     <div class='searchB'>
                                         <button type="button" id='search'>검색</button>
                                     </div>
+                                    <div id='write'>
+                                        <div>
+                                            <button type="button" class='write'> 글쓰기 </button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <hr>
                                 <div>
                                     <table class='boardtable'>
-                                        <tr class='boardlist' style="height: 30px; border: 1px solid black; ">
+                                        <tr class='boardlist1' style="height: 30px; border: 1px solid black; ">
                                             <td class='num'> 번호 </td>
                                             <td class='writetitle'> 제목 </td>
                                             <td class='writeuser'> 작성자 </td>
@@ -94,7 +99,7 @@
                                             <td class='writeuser'> 직원1 </td>
                                             <td class='writedate'> 2025-02-03 </td>
                                             <td class='viewcount'> 10 </td>
-                                        </tr>                
+                                        </tr>
                                         <tr class='boardlist' style="height: 30px; border: 1px solid black;">
                                             <td class='num'> 1 </td>
                                             <td class='writetitle'> 오늘 점심 어떤걸로 주문할까요? </td>
@@ -102,24 +107,21 @@
                                             <td class='writedate'> 2025-02-03 </td>
                                             <td class='viewcount'> 2 </td>
                                         </tr>
-                                </table>
+                                    </table>
                                 </div>
                                 <div class='pageline'>
                                     <div class='pagemanger'>
-                                        <button type="button" class='prevp'> 이전페이지 </button>
+                                        <button type="button" class='prevp' onclick="alert('이전페이지이동!')"> 이전페이지 </button>
                                     </div>
                                     <div class='pnum'>
-                                        <span class='pnum1'> 1 </span>
-                                        <span class='pnum2'> 2 </span>
-                                        <span class='pnum3'> 3 </span>
-                                        <span class='pnum4'> 4 </span>
-                                        <span class='pnum5'> 5 </span>
+                                        <span class='pnum1 normal'> 1 </span>
+                                        <span class='pnum2 normal'> 2 </span>
+                                        <span class='pnum3 normal'> 3 </span>
+                                        <span class='pnum4 normal'> 4 </span>
+                                        <span class='pnum5 normal'> 5 </span>
                                     </div>
                                     <div>
-                                        <button type="button" class='nextp'> 다음페이지 </button>
-                                    </div>
-                                    <div>
-                                        <button type="button" class='write'> 글쓰기 </button>
+                                        <button type="button" class='nextp' onclick="alert('다음페이지이동!')"> 다음페이지 </button>
                                     </div>
                                 </div>
                             </div>
@@ -131,8 +133,4 @@
         </div>
         </div>
         </div>
-    </body>
-
-</body>
-
-</html>
+ 

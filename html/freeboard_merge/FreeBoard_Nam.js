@@ -54,7 +54,7 @@ function init() {
                 window.location.href = "#"
             } else if (e.target.textContent == '게시판') {
                 // 게시판 메인
-                window.location.href = "#"
+                window.location.href = "FreeBoard_Nam.htmls"
             } else if (e.target.textContent == '공지사항') {
                 // 공지사항 메인
                 window.location.href = "#"
@@ -64,6 +64,8 @@ function init() {
             }
         })
     }// 메뉴 버튼 눌렀을때 해당 내용 나오게 하기<끝>
+
+
     console.log('게시판에 들어옴')
 
     const search = document.querySelector("#search");
@@ -82,14 +84,16 @@ function init() {
     function writeprocess() {
         window.location.href = "writeprocess_nam.html"
         console.log("글쓰기 페이지 진입")
-    }
 
+
+    }
     // 페이지표시부분 미구현
     const page1 = document.querySelector('.pnum1')
     page1.addEventListener('click', function () {
         const first = document.querySelector('.pum1')
         console.log('1페이지 진입')
     })
+
 
     const page2 = document.querySelector('.pnum2')
     page2.addEventListener('click', function () {
@@ -115,38 +119,4 @@ function init() {
         console.log('5페이지 진입')
     })
 
-
-    const pagestyle = document.querySelector('.pnum')
-
-    // function pagenumberchange(e) {
-    //     e.target.style.color = 'orange'
-    //     e.target.removeEventListener('click', pagenumberchange)
-    //     e.target.addEventListener('click', pagenumberchange2)
-    // }
-
-    let pnums = document.querySelectorAll('.pnum')
-
-    for(pnum of pnums){
-        pnum.addEventListener('click',function(e){
-            if(e.target.classList.length == 2){
-                e.target.classList.remove('normal')
-                console.log(e.currentTarget.textContent)
-            }
-            if(e.target.classList.length == 1) {
-                e.currentTarget.classList.remove('normal')
-            }
-        })
-    }
-
-    // function pagenumberchange2(e) {
-    //     // e.target.style.fontWeight = 'bold'
-    //     console.log(e.target)
-    //     // e.target.removeEventListener('click', pagenumberchange2);
-    //     // e.target.addEventListener('click', pagenumberchange)
-    // }
-
-    // pagestyle.addEventListener('click', pagenumberchangedefult);
-    // function pagenumberchangedefult(e){
-    //     e.target.style.color = e.target.style.color === 'black'
-    // }
 }
