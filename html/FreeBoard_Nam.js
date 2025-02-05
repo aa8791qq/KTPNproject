@@ -27,19 +27,19 @@ function init() {
             // 클릭했을때 해당 페이지로 넘어가는 Java Script
             if (e.target.textContent == '작업관리') {
                 // 작업관리 메인
-                window.location.href = "#"
+                window.location.href = "workManage_main_kwak.html"
             } else if (e.target.textContent == '생산관리') {
                 // 생산관리 메인 
-                window.location.href = "#"
+                window.location.href = "Production management_tak.html"
             } else if (e.target.textContent == '생산리포팅') {
                 // 생산리포팅 메인 
-                window.location.href = "#"
+                window.location.href = "Production reporting_tak.html"
             } else if (e.target.textContent == '자재관리') {
                 // 자재관리 메인 
-                window.location.href = "#"
+                window.location.href = "./TestMM_park/TestMM_html/TestMM_main_park.html"
             } else if (e.target.textContent == '품질관리') {
                 // 품질관리 메인 
-                window.location.href = "#"
+                window.location.href = "./TestQA_park/TestQA_html/TestQA_main_park.html"
             }
         })
     }// 탑 버튼 내용나오게 하기  <끝>
@@ -51,19 +51,21 @@ function init() {
         button.addEventListener('click', function (e) {
             if (e.target.textContent == '대시보드') {
                 // 대시보드 메인
-                window.location.href = "#"
+                window.location.href = "dashBoard_kwak.html"
             } else if (e.target.textContent == '게시판') {
                 // 게시판 메인
-                window.location.href = "#"
+                window.location.href = "FreeBoard_Nam.html"
             } else if (e.target.textContent == '공지사항') {
                 // 공지사항 메인
-                window.location.href = "#"
+                window.location.href = "noticeBoard_Nam.html"
             } else if (e.target.textContent == '기준관리') {
                 // 기준관리 메인
-                window.location.href = "#"
+                window.location.href = "masterdataManage_main_kwak.html"
             }
         })
-    }// 메뉴 버튼 눌렀을때 해당 내용 나오게 하기<끝>
+    }// 메뉴 버튼 눌렀을때 해당 내용 나오게 하기<끝
+
+
     console.log('게시판에 들어옴')
 
     const search = document.querySelector("#search");
@@ -82,14 +84,16 @@ function init() {
     function writeprocess() {
         window.location.href = "writeprocess_nam.html"
         console.log("글쓰기 페이지 진입")
-    }
 
+
+    }
     // 페이지표시부분 미구현
     const page1 = document.querySelector('.pnum1')
     page1.addEventListener('click', function () {
         const first = document.querySelector('.pum1')
         console.log('1페이지 진입')
     })
+
 
     const page2 = document.querySelector('.pnum2')
     page2.addEventListener('click', function () {
@@ -115,38 +119,23 @@ function init() {
         console.log('5페이지 진입')
     })
 
+    const nums = document.querySelectorAll('.pnum')        
 
-    const pagestyle = document.querySelector('.pnum')
-
-    // function pagenumberchange(e) {
-    //     e.target.style.color = 'orange'
-    //     e.target.removeEventListener('click', pagenumberchange)
-    //     e.target.addEventListener('click', pagenumberchange2)
+    // for(let i =0; i< nums.length; i++){
+    //     nums.forEach(num => { num.addEventListener('click',function(e){
+    //         nums.forEach(nm => nm.classList.remove('bold'));
+    //         e.target.classList.add('bold')
+    //     })
+    // });
     // }
 
-    let pnums = document.querySelectorAll('.pnum')
-
-    for(pnum of pnums){
-        pnum.addEventListener('click',function(e){
-            if(e.target.classList.length == 2){
-                e.target.classList.remove('normal')
-                console.log(e.currentTarget.textContent)
-            }
-            if(e.target.classList.length == 1) {
-                e.currentTarget.classList.remove('normal')
+    for(let i =0; i< nums.length; i++){
+        nums[i].addEventListener('click',function(e){
+            for(let j=0; j<nums.length; j++){
+                nums[j].classList.remove('bold')
+                e.target.classList.add('bold')
             }
         })
     }
 
-    // function pagenumberchange2(e) {
-    //     // e.target.style.fontWeight = 'bold'
-    //     console.log(e.target)
-    //     // e.target.removeEventListener('click', pagenumberchange2);
-    //     // e.target.addEventListener('click', pagenumberchange)
-    // }
-
-    // pagestyle.addEventListener('click', pagenumberchangedefult);
-    // function pagenumberchangedefult(e){
-    //     e.target.style.color = e.target.style.color === 'black'
-    // }
 }
