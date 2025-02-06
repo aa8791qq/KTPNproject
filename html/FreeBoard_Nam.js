@@ -5,15 +5,15 @@ window.addEventListener('load', init)
 function init() {
 
     //메뉴 열었다 닫았다 하기<시작>
-    document.querySelector('#main-menu').addEventListener('click', function () {
+    document.querySelector('#ham').addEventListener('click', function () {
 
 
         if (document.querySelector('.mainmenu').classList.length == 1) {
             document.querySelector('.mainmenu').classList.add('hide')
-            document.querySelector('#main-menu').textContent = 'MENU 열기'
+            // document.querySelector('#main-menu').textContent = 'MENU 열기'
         } else if (document.querySelector('.mainmenu').classList.length == 2) {
             document.querySelector('.mainmenu').classList.remove('hide')
-            document.querySelector('#main-menu').textContent = 'MENU 닫기'
+            // document.querySelector('#main-menu').textContent = 'MENU 닫기'
         }
 
     }) //메뉴 열었다 닫았다 하기<끝>
@@ -36,10 +36,13 @@ function init() {
                 window.location.href = "Production reporting_tak.html"
             } else if (e.target.textContent == '자재관리') {
                 // 자재관리 메인 
-                window.location.href = "./TestMM_park/TestMM_html/TestMM_main_park.html"
+                window.location.href = "TestMM_main_park.html"
             } else if (e.target.textContent == '품질관리') {
                 // 품질관리 메인 
-                window.location.href = "./TestQA_park/TestQA_html/TestQA_main_park.html"
+                window.location.href = "TestQA_main_park.html"
+            }else if (e.target.textContent == '기준관리') {
+                // 기준관리 메인
+                window.location.href = "masterdataManage_main_kwak.html"
             }
         })
     }// 탑 버튼 내용나오게 하기  <끝>
@@ -58,10 +61,7 @@ function init() {
             } else if (e.target.textContent == '공지사항') {
                 // 공지사항 메인
                 window.location.href = "noticeBoard_Nam.html"
-            } else if (e.target.textContent == '기준관리') {
-                // 기준관리 메인
-                window.location.href = "masterdataManage_main_kwak.html"
-            }
+            } 
         })
     }// 메뉴 버튼 눌렀을때 해당 내용 나오게 하기<끝
 
@@ -79,7 +79,7 @@ function init() {
         // 필터링 후 표시(미구현)
     }
 
-    const write = document.querySelector('.write');
+    const write = document.querySelector('.add');
     write.addEventListener('click', writeprocess)
     function writeprocess() {
         window.location.href = "writeprocess_nam.html"
@@ -87,39 +87,39 @@ function init() {
 
 
     }
-    // 페이지표시부분 미구현
-    const page1 = document.querySelector('.pnum1')
-    page1.addEventListener('click', function () {
-        const first = document.querySelector('.pum1')
-        console.log('1페이지 진입')
-    })
+    // // 페이지표시부분 미구현
+    // const page1 = document.querySelector('.pnum1')
+    // page1.addEventListener('click', function () {
+    //     const first = document.querySelector('.pum1')
+    //     console.log('1페이지 진입')
+    // })
 
 
-    const page2 = document.querySelector('.pnum2')
-    page2.addEventListener('click', function () {
-        const second = document.querySelector('.pum2')
-        console.log('2페이지 진입')
-    })
+    // const page2 = document.querySelector('.pnum2')
+    // page2.addEventListener('click', function () {
+    //     const second = document.querySelector('.pum2')
+    //     console.log('2페이지 진입')
+    // })
 
-    const page3 = document.querySelector('.pnum3')
-    page3.addEventListener('click', function () {
-        const thrid = document.querySelector('.pum3')
-        console.log('3페이지 진입')
-    })
+    // const page3 = document.querySelector('.pnum3')
+    // page3.addEventListener('click', function () {
+    //     const thrid = document.querySelector('.pum3')
+    //     console.log('3페이지 진입')
+    // })
 
-    const page4 = document.querySelector('.pnum4')
-    page4.addEventListener('click', function () {
-        const fourth = document.querySelector('.pum4')
-        console.log('4페이지 진입')
-    })
+    // const page4 = document.querySelector('.pnum4')
+    // page4.addEventListener('click', function () {
+    //     const fourth = document.querySelector('.pum4')
+    //     console.log('4페이지 진입')
+    // })
 
-    const page5 = document.querySelector('.pnum5')
-    page5.addEventListener('click', function () {
-        const fifth = document.querySelector('.pum5')
-        console.log('5페이지 진입')
-    })
+    // const page5 = document.querySelector('.pnum5')
+    // page5.addEventListener('click', function () {
+    //     const fifth = document.querySelector('.pum5')
+    //     console.log('5페이지 진입')
+    // })
 
-    const nums = document.querySelectorAll('.pnum')        
+    
 
     // for(let i =0; i< nums.length; i++){
     //     nums.forEach(num => { num.addEventListener('click',function(e){
@@ -128,6 +128,8 @@ function init() {
     //     })
     // });
     // }
+
+    const nums = document.querySelectorAll('.num')
 
     for(let i =0; i< nums.length; i++){
         nums[i].addEventListener('click',function(e){
