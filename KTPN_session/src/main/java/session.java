@@ -90,18 +90,24 @@ public class session extends HttpServlet {
 //        response.getWriter().write(jsonResponse.toString());
         System.out.println("JSON 응답: " + jsonOutput);
         response.getWriter().write(gson.toJson(jsonResponse));
-		
-
-		
-		// 콘솔출력
+        // 콘솔출력
 //		System.out.println("저장된 세션: " + (sestest != null ? sestest.getId() : "없음"));
-		System.out.println("세션 저장된 값" + id);
-		System.out.println("세션 만료여부" + TF);
-		System.out.println("세션 유지 시간: " + sessionTimeout + "초");
-		
-        System.out.println("남은 시간: " + remainingTime + "초");
+        System.out.println("세션 저장된 값 " + id);
+        System.out.println("세션 만료여부 " + TF);
+        System.out.println("세션 유지 시간 : " + sessionTimeout + "초");
+        
+        System.out.println("남은 시간 : " + remainingTime + "초");
 //		System.out.println("세션유효함: " + (sestest != null ? sestest.getId() : "없음"));
 //		System.out.println("세션유효함: " + (sestest != null ? sestest.getAttribute("username") : "없음"));
 	}
+   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+            HttpSession session = request.getSession(false);
+            if (session != null) {
+                session.invalidate(); // 🔥 세션 만료
+            }
 
+            response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
+            response.getWriter().write("{\"message\": \"세션이 만료되었습니다.\"}");
+        }
 }

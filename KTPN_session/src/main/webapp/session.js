@@ -12,7 +12,7 @@ function fetchSessionData() {
         })
         .then(data => {
             document.getElementById('sessionId').innerText = data.sessionId || "없음";
-            document.getElementById('username').innerText = data.username || "없음";
+            document.getElementById('username').innerText = data.username || "admin";
             document.getElementById('sessionTimeout').innerText = data.sessionTimeout || "알 수 없음";
             document.getElementById('sessionExpired').innerText = data.sessionExpired ? "만료됨" : "유효함";
 
@@ -38,11 +38,24 @@ function updateTimer(remainingTime) {
             document.getElementById('timer').innerText = "세션이 만료되었습니다.";
             alert("세션이 만료되었습니다. 다시 로그인해주세요.");
             clearInterval(window.timerInterval);
+
+            markSessionAsExpired();
         }
     }
-
     countdown();
     window.timerInterval = setInterval(countdown, 1000);
+}
+
+
+// 팝업이 닫힐 때 세션 만료 요청 보내기
+function markSessionAsExpired() {
+    fetch('/session-expire', { method: 'POST' }) // 서버에 세션 만료 요청
+        .then(response => response.json())
+        .then(data => {
+            console.log("서버 응답:", data);
+            document.getElementById('sessionExpired').innerText = "만료됨"; // 화면 업데이트
+        })
+        .catch(error => console.error("세션 만료 요청 중 오류 발생:", error));
 }
 
 
