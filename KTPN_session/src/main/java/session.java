@@ -1,6 +1,8 @@
 
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+//import org.json.simple.JSONObject;
+
 @WebServlet("/session")
 public class session extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -16,8 +20,9 @@ public class session extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// 기존 새션 불러오기
-		HttpSession sestest = request.getSession(false);
+//		HttpSession sestest = request.getSession(false);
 //		HttpSession sestest = request.getSession();
+		HttpSession sestest = request.getSession(true);
 		boolean isNewSession = (sestest == null);
 		
 //		// 세션 확인 후 없으면 생성
@@ -64,7 +69,21 @@ public class session extends HttpServlet {
         long currentTime = System.currentTimeMillis();
         long elapsedTime = (currentTime - lastAccessTime) / 1000;
         int remainingTime = (int) (sessionTimeout - elapsedTime);
-        if (remainingTime < 0) remainingTime = 0;
+        if (remainingTime < 0) {
+        	remainingTime = 0;
+        }
+
+        // json 응답상태 확인
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        
+//      JSONObject jsonResponse = new JSONObject();
+        Map<String, Object> jsonResponse = new HashMap<>();
+        jsonResponse.put("remainingTime", remainingTime);
+        jsonResponse.put("sessionTimeout", sessionTimeout);
+        jsonResponse.put("sessionId", sestest.getId());
+
+        response.getWriter().write(jsonResponse.toString());
 		
 		// 응답 출력
 		response.setContentType("text/html;charset=UTF-8");
