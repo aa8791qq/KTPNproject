@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.google.gson.Gson;
+
 //import org.json.simple.JSONObject;
 
 @WebServlet("/session")
@@ -31,7 +33,7 @@ public class session extends HttpServlet {
 //		}
 		
 		// id 저장(임의값)
-//		String id = "admin";
+		String id = "admin";
 		
 		// 세션확인 후 없으면 생성
 		if (isNewSession) {
@@ -74,88 +76,26 @@ public class session extends HttpServlet {
         }
 
         // json 응답상태 확인
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
         
 //      JSONObject jsonResponse = new JSONObject();
         Map<String, Object> jsonResponse = new HashMap<>();
         jsonResponse.put("remainingTime", remainingTime);
         jsonResponse.put("sessionTimeout", sessionTimeout);
         jsonResponse.put("sessionId", sestest.getId());
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
 
-        response.getWriter().write(jsonResponse.toString());
+        Gson gson = new Gson();
+        String jsonOutput = gson.toJson(jsonResponse);
+//        response.getWriter().write(jsonResponse.toString());
+        System.out.println("JSON 응답: " + jsonOutput);
+        response.getWriter().write(gson.toJson(jsonResponse));
 		
-		// 응답 출력
-		response.setContentType("text/html;charset=UTF-8");
-		response.getWriter().println("<html><head>");
-		
-		// 팝업 띄우기
-//		response.getWriter().println("<script>");
-		// 챗gpt..
-//		response.getWriter().println("var remainingTime = " + remainingTime + ";");
-//		response.getWriter().println("function updateTimer() {");
-//		response.getWriter().println("    if (remainingTime > 0) {");
-//		response.getWriter().println("        document.getElementById('timer').innerText = remainingTime + ' 초';");
-//		response.getWriter().println("        remainingTime--; setTimeout(updateTimer, 1000);");
-//		response.getWriter().println("    } else { document.getElementById('timer').innerText = '세션 만료됨'; }");
-//		response.getWriter().println("}");
-//		response.getWriter().println("window.onload = updateTimer;");
 
-		response.getWriter().println("<script>");
-		// 챗gpt..
-		response.getWriter().println("var remainingTime = " + remainingTime + ";");
-		response.getWriter().println("function updateTimer() {");
-		response.getWriter().println("    if (remainingTime > 0) {");
-		response.getWriter().println("        document.getElementById('timer').innerText = remainingTime + ' 초';");
-		response.getWriter().println("        remainingTime--;");
-		response.getWriter().println("    } else {");
-		response.getWriter().println("        document.getElementById('timer').innerText = '세션이 만료되었습니다. 로그인페이지로 돌아갑니다.';");
-		response.getWriter().println("        alert('세션이 만료되었습니다. 다시 로그인해주세요.');"); // 팝업 추가
-//		response.getWriter().println("        window.location.href = 'login.html';"); // 로그인 페이지 이동
-		response.getWriter().println("        clearInterval(timerInterval);"); // 반복 중지
-		response.getWriter().println("    }");
-		response.getWriter().println("}");
-		response.getWriter().println("var timerInterval = setInterval(updateTimer, 1000);"); // 1초마다 실행
-		// 챗gpt..
-
-		if(TF == true) {
-			response.getWriter().println("alert('세션만료됨. 다시로그인해주세요');");
-		}
-		response.getWriter().println("</script>");
-		response.getWriter().println("</head><body>");
-		
-		// 지정값 가져오기
-		String username = "없음";
-        if (sestest != null && sestest.getAttribute("username") != null) {
-            username = (String) sestest.getAttribute("username");
-        }
-        
-        // 세션id출력
-//        if (sestest != null) {
-            response.getWriter().println("<p>세션 ID: " + sestest.getId() + "</p>");
-            System.out.println("저장된 세션: " + sestest.getId());
-//        } else {
-//            response.getWriter().println("<p>세션 ID: 없음</p>");
-//            System.out.println("저장된 세션: 없음");
-//        }
-		
-		// 표시하기
-//		String username = (String) (sestest != null) ? (String) sestest.getAttribute("username") : "없음");
-//		String username = (sestest != null) ? (String) sestest.getAttribute("username") : "없음";
-		
-//		response.getWriter().println("<p> 저장된 세션: " + (id != null ? id : "없음") + "</p>");
-//		response.getWriter().println("<p> 저장된 세션: " + (sestest != null ? sestest.getId() : "없음") + "</p>");
-//		response.getWriter().println("<p> Session 유효"+ sestest.getId() + "</p>");
-		response.getWriter().println("<p> 저장된 username : " + username + "</p>");
-		response.getWriter().println("<p> 세션만료 여부 : "+ TF + "</p>");
-        response.getWriter().println("<p>세션 유지 시간(초) : " + sessionTimeout + "</p>");
-        response.getWriter().println("<p>세션 남은 시간 : <span id='timer'></span></p>");
-//		response.getWriter().println("<p> Session id"+ sestest.getAttribute("username") + "</p>");
-		response.getWriter().println("</body></html>");
 		
 		// 콘솔출력
 //		System.out.println("저장된 세션: " + (sestest != null ? sestest.getId() : "없음"));
-		System.out.println("세션 저장된 값" + username);
+		System.out.println("세션 저장된 값" + id);
 		System.out.println("세션 만료여부" + TF);
 		System.out.println("세션 유지 시간: " + sessionTimeout + "초");
 		

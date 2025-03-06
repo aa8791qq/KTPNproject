@@ -14,5 +14,8 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/aa879/Desktop/apache-tomcat-9.0.100/json-simple-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/aa879/Desktop/apache-tomcat-9.0.100/jstl.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/aa879/Desktop/apache-tomcat-9.0.100/standard.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/aa879/Desktop/apache-tomcat-9.0.100/gson-2.8.9.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
