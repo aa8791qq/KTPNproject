@@ -1,3 +1,4 @@
 _gsdata_/*.log
 .git/
 .SynologyWorkingDirectory/
+/.metadata/
