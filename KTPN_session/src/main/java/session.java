@@ -90,12 +90,13 @@ public class session extends HttpServlet {
 		response.getWriter().println("        document.getElementById('timer').innerText = remainingTime + ' 초';");
 		response.getWriter().println("        remainingTime--;");
 		response.getWriter().println("    } else {");
-		response.getWriter().println("        document.getElementById('timer').innerText = '세션 만료됨';");
+		response.getWriter().println("        document.getElementById('timer').innerText = '세션이 만료되었습니다. 로그인페이지로 돌아갑니다.';");
 		response.getWriter().println("        alert('세션이 만료되었습니다. 다시 로그인해주세요.');"); // 팝업 추가
 //		response.getWriter().println("        window.location.href = 'login.html';"); // 로그인 페이지 이동
 		response.getWriter().println("        clearInterval(timerInterval);"); // 반복 중지
 		response.getWriter().println("    }");
 		response.getWriter().println("}");
+		response.getWriter().println("var timerInterval = setInterval(updateTimer, 1000);"); // 1초마다 실행
 		// 챗gpt..
 
 		if(TF == true) {
@@ -138,6 +139,7 @@ public class session extends HttpServlet {
 		System.out.println("세션 저장된 값" + username);
 		System.out.println("세션 만료여부" + TF);
 		System.out.println("세션 유지 시간: " + sessionTimeout + "초");
+		
         System.out.println("남은 시간: " + remainingTime + "초");
 //		System.out.println("세션유효함: " + (sestest != null ? sestest.getId() : "없음"));
 //		System.out.println("세션유효함: " + (sestest != null ? sestest.getAttribute("username") : "없음"));
