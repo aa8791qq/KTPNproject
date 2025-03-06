@@ -49,7 +49,7 @@ public class session extends HttpServlet {
 		
 		// 키값 유효시간
 //		if (sestest != null) {
-	    sestest.setMaxInactiveInterval(60 * 1);
+	    sestest.setMaxInactiveInterval(60 * 3);
 //	}
 		
 		// 세션 만료 여부 확인작업
