@@ -103,7 +103,7 @@ public class session extends HttpServlet {
    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             HttpSession session = request.getSession(false);
             if (session != null) {
-                session.invalidate(); // 🔥 세션 만료
+                session.invalidate(); // 세션 만료
             }
 
             response.setContentType("application/json");
