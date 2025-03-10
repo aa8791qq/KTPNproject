@@ -9,10 +9,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>세션 정보</title>
-    <link rel="stylesheet" href="loginpage_Nam.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="loginpage_Nam.js"></script>
     <script src="session.js"></script> <!-- JavaScript 파일 연결 -->
+    <link rel="stylesheet" href="/views/loginpage_Nam.css">
+	<script src="/views/loginpage_Nam.js"></script>
+    
 </head>
 <body>
 <div id='blank'>
