@@ -32,7 +32,8 @@ public class MemberDAO {
 				dto.setId(rs.getString("id"));
 				dto.setPw(rs.getString("pw"));
 				dto.setMbr_nm(rs.getString("mbr_nm"));
-				dto.setYtn_yn(rs.getString("ytn_yn"));
+				
+				dto.setYtn_yn(rs.getString("dlt_yn"));
 				dto.setReg_dttm(rs.getDate("reg_dttm"));
 				dto.setMod_dttm(rs.getDate("mod_dttm"));
 				dto.setMbr_senm(rs.getString("mbr_senm"));
@@ -49,34 +50,50 @@ public class MemberDAO {
 	}
 	
 	/// 테이블 명 : TB_MB_1000MT
-	public int updateMember(MemberDTO memberDTO) {
+	public List updateMember(MemberDTO memberDTO) {
 		System.out.println("member updateTodo 실행");
 		System.out.println(memberDTO);
 
-		int result = -1;
+		List result = new ArrayList();
 		
 		try {
 			// [DB 접속] 시작
 			Context ctx = new InitialContext();
 			DataSource ds = (DataSource) ctx.lookup("java:/comp/env/jdbc/oracle");
 			Connection con = ds.getConnection();
+			ResultSet rs = null;
 
 			// [SQL 준비]
 			String 	query =  " update TB_MB_1000MT ";
 					query += " set pw = ?";
-					query += " set mod_dttm = ?";
+					query += " , mod_dttm = sysdate";
 					query += " where id = ?";
+					
 			PreparedStatement ps = con.prepareStatement(query);
 			
 			// 첫번째 물음표에 값을 넣어달라
 			ps.setString(1, memberDTO.getPw());
-			ps.setDate(2, memberDTO.getMod_dttm());
-			ps.setString(3, memberDTO.getId());
+			ps.setString(2, memberDTO.getId());
 
 			// [SQL 실행] 및 [결과 확보]
 			// int executeUpdate() : select 외 모든 것
 			// int에는 영향받은 줄의 수
-			result = ps.executeUpdate();
+			int movInt = ps.executeUpdate();
+			
+			if (movInt > 0) {
+	            String selectQuery = "SELECT id, pw, mod_dttm FROM TB_MB_1000MT WHERE id = ?";
+	            ps = con.prepareStatement(selectQuery);
+	            ps.setString(1, memberDTO.getId());
+	            rs = ps.executeQuery();
+
+	            while (rs.next()) {
+	                MemberDTO updatedMember = new MemberDTO();
+	                updatedMember.setId(rs.getString("id"));
+	                updatedMember.setPw(rs.getString("pw"));
+	                updatedMember.setMod_dttm(rs.getDate("mod_dttm"));
+	                result.add(updatedMember);
+	            }
+	        }
 
 			con.close();
 		} catch (Exception e) {
