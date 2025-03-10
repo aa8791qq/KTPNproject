@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 
 public class MemberDAO {
 
-	public List selectMember(MemberDTO memberDTO) {
+	List selectMember() {
 		System.out.println("member select 실행");
 		
 		List result = new ArrayList();
@@ -45,7 +45,6 @@ public class MemberDAO {
 			e.printStackTrace();
 		}
 		
-		
 		return result;
 	}
 	
@@ -54,7 +53,7 @@ public class MemberDAO {
 		System.out.println("member updateTodo 실행");
 		System.out.println(memberDTO);
 
-		List result = new ArrayList();
+		int result = -1;
 		
 		try {
 			// [DB 접속] 시작
@@ -64,20 +63,15 @@ public class MemberDAO {
 
 			// [SQL 준비]
 			String 	query =  " update TB_MB_1000MT ";
-					query += " set done = ?";
-					query += " where todo_id = ?";
+					query += " set pw = ?";
+					query += " set mod_dttm = ?";
+					query += " where id = ?";
 			PreparedStatement ps = con.prepareStatement(query);
 			
-//			dto.setId(rs.getString("id"));
-//			dto.setPw(rs.getString("pw"));
-//			dto.setMbr_nm(rs.getString("mbr_nm"));
-//			dto.setYtn_yn(rs.getString("ytn_yn"));
-//			dto.setReg_dttm(rs.getDate("reg_dttm"));
-//			dto.setMod_dttm(rs.getDate("mod_dttm"));
-//			dto.setMbr_senm(rs.getString("mbr_senm"));
-			
 			// 첫번째 물음표에 값을 넣어달라
-			ps.
+			ps.setString(1, memberDTO.getPw());
+			ps.setDate(2, memberDTO.getMod_dttm());
+			ps.setString(3, memberDTO.getId());
 
 			// [SQL 실행] 및 [결과 확보]
 			// int executeUpdate() : select 외 모든 것
