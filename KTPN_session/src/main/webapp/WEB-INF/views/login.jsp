@@ -11,8 +11,8 @@
     <title>세션 정보</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="session.js"></script> <!-- JavaScript 파일 연결 -->
-    <link rel="stylesheet" href="/views/loginpage_Nam.css">
-	<script src="/views/loginpage_Nam.js"></script>
+    <link rel="stylesheet" href="loginpage_Nam.css" type="text/css">
+	<script src="loginpage_Nam.js"></script>
     
 </head>
 <body>
