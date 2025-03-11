@@ -3,6 +3,7 @@
 import java.io.IOException;
 import java.net.URLDecoder;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -29,16 +30,24 @@ public class GetCookie extends HttpServlet {
 				String value = c.getValue();
 				System.out.println("name: "+ name +", value: "+ value);
 				
-				if("account1".equals(name)) {
+				if("account1".equals(name)) { // key값 불러오기
 					String str = URLDecoder.decode(value, "utf-8");
 					System.out.println("str : "+ str);
-				} else if("account2".equals(name)) {
+				} else if("account2".equals(name)) { // key값 불러오기
 					String str = URLDecoder.decode(value, "utf-8");
 					System.out.println("str : "+ str);
 				}
 				
-				if("key".equals(name) && "value".equals(value)) {
+				if("oac1".equals(name) && "open".equals(value)) {
 					isShow = false; // 메뉴 접었다폈다 기능.
+//					RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/popup.jsp");
+//					dispatcher.forward(request, response);
+					System.out.println(isShow);
+				} else if("oac2".equals(name) && "close".equals(value)) {
+					isShow = true; // 메뉴 접었다폈다 기능.
+//					RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/popup.jsp");
+//					dispatcher.forward(request, response);
+					System.out.println(isShow);
 				}
 				
 			}
