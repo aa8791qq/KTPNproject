@@ -1,23 +1,36 @@
 function getCookie(name) {
     let cookies = document.cookie.split('; ');
+    console.log("cookies : ", cookies);
+    
     for (let cookie of cookies) {
         let [key, value] = cookie.split('=');
-        if (key === name) return value;
+		console.log("현재 쿠키 : ", key, value);
+		
+		if (key === name) return value;
     }
     return null;
 }
 
-function closePopup() {
-    // 서버에 쿠키 설정 요청
-    fetch('/scookie')
-        .then(() => {
-            document.getElementById("popup").style.display = "none";
-        });
+window.onload = function(){
+	let popupClosed1 = getCookie("oac1");
+	console.log("popupClosed1 : " , popupClosed1);
+	
+    
+	
+	
+	
 }
 
-window.onload = function () {
-    let popupClosed = getCookie("popupClosed");
-    if (!popupClosed) {
-        document.getElementById("popup").style.display = "block";
+function closePopup() {
+    let popupClosed1 = getCookie("oac1");   //팝업안보임
+    
+    console.log("popupClosed1 : " , popupClosed1);
+
+    console.log(document.cookie);
+	// if (!popupClosed1) {
+	
+    if (popupClosed1 === "false") { // 문자를 받은거...
+        document.getElementById("popup").style.display = "none";
     }
-};
+   
+}

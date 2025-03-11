@@ -38,18 +38,17 @@ public class GetCookie extends HttpServlet {
 					System.out.println("str : "+ str);
 				}
 				
-				if("oac1".equals(name) && "open".equals(value)) {
+				if("oac1".equals(name) && "true".equals(value)) {
 					isShow = false; // 메뉴 접었다폈다 기능.
-//					RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/popup.jsp");
-//					dispatcher.forward(request, response);
+					RequestDispatcher dispatcher = request.getRequestDispatcher("popup.jsp");
+					dispatcher.forward(request, response);
 					System.out.println(isShow);
-				} else if("oac2".equals(name) && "close".equals(value)) {
+				} else if("oac2".equals(name) && "false".equals(value)) {
 					isShow = true; // 메뉴 접었다폈다 기능.
-//					RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/popup.jsp");
-//					dispatcher.forward(request, response);
+					RequestDispatcher dispatcher = request.getRequestDispatcher("popup.jsp");
+					dispatcher.forward(request, response);
 					System.out.println(isShow);
 				}
-				
 			}
 		} else {
 			System.out.println("쿠키가 없습니다");

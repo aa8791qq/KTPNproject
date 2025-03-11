@@ -12,7 +12,7 @@
     <script src="oac.js"></script>
     <style>
         #popup {
-            display: none;
+            display: block;
             position: fixed;
             top: 50%;
             left: 50%;

@@ -38,21 +38,23 @@ public class Setcookie extends HttpServlet implements Servlet {
 		
 		// 햄버커 쿠키 생성후 가져오기(만들기)
 //		set -> get
-		Cookie oac1 = new Cookie("oac1", "open");
+		// 쿠키 팝업 o,x
+		Cookie oac1 = new Cookie("oac1", "false");
 		oac1.setMaxAge(-1);
-		oac1.setPath("/");
+		oac1.setPath("/session");
 		response.addCookie(oac1);
 		
-		Cookie oac2 = new Cookie("oac2", "close");
-		oac2.setMaxAge(-1);
-		oac2.setPath("/");
-		response.addCookie(oac2);
+		// 쿠키 팝업 o
+//		Cookie oac2 = new Cookie("oac2", "true");
+//		oac2.setMaxAge(-1);
+//		oac2.setPath("/session");
+//		response.addCookie(oac2);
 		
 		String valueK2 = "한 글";
 		valueK2 = URLEncoder.encode(valueK2, "utf-8");
 		
 		System.out.println("oac1 : "+ oac1.getValue());
-		System.out.println("oac2 : "+ oac2.getValue());
+//		System.out.println("oac2 : "+ oac2.getValue());
 		
 		
 	}
