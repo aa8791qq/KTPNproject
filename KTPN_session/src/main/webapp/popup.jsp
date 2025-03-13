@@ -32,7 +32,7 @@
         <button id = "pop" onclick="closePopup()">닫기</button>
     </div>
     <div id="popdown">
-    	<button id = "pop" onclick="openPopup()">열기</button>
+    	<button id = "pop" onclick="closePopup()">열기</button>
     	<p> 다시 보이고 있습니다.</p>
     </div>
 </body>

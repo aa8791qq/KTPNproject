@@ -20,11 +20,11 @@ window.onload = function(){
         /// 팝업창 유지
         // document.cookie = "oac1=false";
         console.log("팝업을 띄운다.") 
-        // document.querySelector("#popup").style.display = "block"
+        document.querySelector("#popup").style.display = "block"
     } else if(popupClosed1 == "false") {
         // document.cookie = "oac1=true";
         console.log("팝업을 없앤다.") 
-        // document.querySelector("#popup").style.display = "none"
+        document.querySelector("#popup").style.display = "none"
     }
 }
 
@@ -33,22 +33,27 @@ function closePopup() {
     
     if (popupClosed1 === "false") {
         document.cookie = "oac1=true";
-        console.log("팝업을 없앤다.") 
+        console.log("팝업을 나타낸다.") 
         console.log("popupClosed1 : 1" , popupClosed1);
+        document.getElementById("popup").style.display = "block";
+    } else if (popupClosed1 === "true") {
+        document.cookie = "oac1=false";
+        console.log("팝업을 지운다.") 
+        console.log("popupClosed1 : 2" , popupClosed1);
         document.getElementById("popup").style.display = "none";
     }
 }
 
-function openPopup(){
-    let popupClosed1 = getCookie("oac1");
+// function openPopup(){
+//     let popupClosed1 = getCookie("oac1");
     
-    if (popupClosed1 === "true") {
-        document.cookie = "oac1=false";
-        console.log("팝업을 띄운다.") 
-        console.log("popupClosed1 : 2" , popupClosed1);
-        document.getElementById("popup").style.display = "block";
-    }
-}
+//     if (popupClosed1 === "true") {
+//         document.cookie = "oac1=false";
+//         console.log("팝업을 지운다.") 
+//         console.log("popupClosed1 : 2" , popupClosed1);
+//         document.getElementById("popup").style.display = "none";
+//     }
+// }
 
 // 1. 햄버거 메뉴 버튼을 누르면 세션쿠키의 값이 바뀐다
 // document.cookie = "oac1=true";
