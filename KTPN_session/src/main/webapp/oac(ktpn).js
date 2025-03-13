@@ -30,21 +30,21 @@ window.onload = function () {
     })
 }
 
-function closePopup() {
-    let popupClosed1 = getCookie("oac1");
+// function closePopup() {
+//     let popupClosed1 = getCookie("oac1");
 
-    if (popupClosed1 === "2") {
-        document.cookie = "oac1=1";
-        console.log("메뉴을 지운다.")
-        console.log("popupClosed1 : 1", popupClosed1);
-        document.getElementById("work1").style.display = "block";
-    } else if (popupClosed1 === "1") {
-        document.cookie = "oac1=2";
-        console.log("메뉴을 띄운다.")
-        console.log("popupClosed1 : 2", popupClosed1);
-        document.getElementById("work1").style.display = "none";
-    }
-}
+//     if (popupClosed1 === "2") {
+//         document.cookie = "oac1=1";
+//         console.log("메뉴을 지운다.")
+//         console.log("popupClosed1 : 1", popupClosed1);
+//         document.getElementById("work1").style.display = "block";
+//     } else if (popupClosed1 === "1") {
+//         document.cookie = "oac1=2";
+//         console.log("메뉴을 띄운다.")
+//         console.log("popupClosed1 : 2", popupClosed1);
+//         document.getElementById("work1").style.display = "none";
+//     }
+// }
 
 // 1. 햄버거 메뉴 버튼을 누르면 세션쿠키의 값이 바뀐다
 // document.cookie = "oac1=true";
