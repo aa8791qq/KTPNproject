@@ -12,7 +12,6 @@
     <script src="oac.js"></script>
     <style>
         #popup {
-            display: block;
             position: fixed;
             top: 50%;
             left: 50%;
@@ -30,7 +29,11 @@
 <body>
     <div id="popup">
         <p>이 팝업은 하루 동안 다시 보이지 않습니다.</p>
-        <button onclick="closePopup()">닫기</button>
+        <button id = "pop" onclick="closePopup()">닫기</button>
+    </div>
+    <div id="popdown">
+    	<button id = "pop" onclick="closePopup()">열기</button>
+    	<p> 다시 보이고 있습니다.</p>
     </div>
 </body>
 </html>

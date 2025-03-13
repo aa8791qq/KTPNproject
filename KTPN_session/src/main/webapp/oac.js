@@ -13,25 +13,41 @@ function getCookie(name) { // 가져올때
 
 window.onload = function(){
 	let popupClosed1 = getCookie("oac1");
+    console.log("getCookie(oac1) : ", getCookie("oac1"))
 	console.log("popupClosed1 : " , popupClosed1);
+
+    if(popupClosed1 == "true"){
+        /// 팝업창 유지
+        document.cookie = "oac1=false";
+        console.log("팝업을 띄운다.") 
+        // document.querySelector("#popup").style.display = "block"
+    } else if(popupClosed1 == "false") {
+        document.cookie = "oac1=true";
+        console.log("팝업을 없앤다.") 
+        // document.querySelector("#popup").style.display = "none"
+    }  /// 팝업창 닫임
+    // console.log("document.cookie : " , document.cookie);
+    
 }
 
 function closePopup() {
-    let popupClosed1 = getCookie("oac1");   //팝업안보임
+    let popupClosed1 = getCookie("oac1");
     
-    console.log("popupClosed1 : " , popupClosed1);
-
-    console.log(document.cookie);
-	// 바꿔서 작동하는 것을 코딩안함.
-	
-    if (popupClosed1 === "false") { // 문자로 받은거...
+    if (popupClosed1 === "false") {
         document.cookie = "oac1=true";
-        document.getElementById("popup").style.display = "none";
-        // popupClosed1 = true;
+        console.log("팝업을 없앤다.") 
+        console.log("popupClosed1 : 1" , popupClosed1);
+        // document.getElementById("popup").style.display = "none";
     } else if(popupClosed1 === "true") {
         document.cookie = "oac1=false";
-        document.getElementById("popup").style.display = "none";
+        console.log("팝업을 띄운다.") 
+        console.log("popupClosed1 : 2" , popupClosed1);
+        // document.getElementById("popup").style.display = "block";
     }
+
+	// 바꿔서 작동하는 것을 코딩안함.
+	
+    // 문자로 받은거...
 }
 
 
