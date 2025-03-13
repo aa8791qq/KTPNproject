@@ -18,16 +18,14 @@ window.onload = function(){
 
     if(popupClosed1 == "true"){
         /// 팝업창 유지
-        document.cookie = "oac1=false";
+        // document.cookie = "oac1=false";
         console.log("팝업을 띄운다.") 
         // document.querySelector("#popup").style.display = "block"
     } else if(popupClosed1 == "false") {
-        document.cookie = "oac1=true";
+        // document.cookie = "oac1=true";
         console.log("팝업을 없앤다.") 
         // document.querySelector("#popup").style.display = "none"
-    }  /// 팝업창 닫임
-    // console.log("document.cookie : " , document.cookie);
-    
+    }
 }
 
 function closePopup() {
@@ -37,19 +35,20 @@ function closePopup() {
         document.cookie = "oac1=true";
         console.log("팝업을 없앤다.") 
         console.log("popupClosed1 : 1" , popupClosed1);
-        // document.getElementById("popup").style.display = "none";
-    } else if(popupClosed1 === "true") {
+        document.getElementById("popup").style.display = "none";
+    }
+}
+
+function openPopup(){
+    let popupClosed1 = getCookie("oac1");
+    
+    if (popupClosed1 === "true") {
         document.cookie = "oac1=false";
         console.log("팝업을 띄운다.") 
         console.log("popupClosed1 : 2" , popupClosed1);
-        // document.getElementById("popup").style.display = "block";
+        document.getElementById("popup").style.display = "block";
     }
-
-	// 바꿔서 작동하는 것을 코딩안함.
-	
-    // 문자로 받은거...
 }
-
 
 // 1. 햄버거 메뉴 버튼을 누르면 세션쿠키의 값이 바뀐다
 // document.cookie = "oac1=true";
