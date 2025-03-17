@@ -103,9 +103,9 @@ public class BoardDAO {
 			// [SQL 준비]// 틀림
 			String query = " update tb_br_1000mt "
 						+ " set TTL_NM = ?"
-						+ " , set BRD_DESC = ?"
-						+ " , set BLND_YN = ?"
-						+ " , set MOD_DTTM = ?"
+						+ " , BRD_DESC = ?"
+						+ " , BLND_YN = ?"
+						+ " , MOD_DTTM = ?"
 						+ " where BRD_NO = ?";
 			PreparedStatement ps = con.prepareStatement(query);
 			

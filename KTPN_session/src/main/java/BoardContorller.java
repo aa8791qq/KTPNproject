@@ -19,7 +19,7 @@ public class BoardContorller extends HttpServlet {
 		
 		request.setAttribute("resultList", resultList);
 		
-		request.getRequestDispatcher("/FreeBoard_Nam.html").forward(request, response);
+		request.getRequestDispatcher("/FreeBoard_Nam.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
