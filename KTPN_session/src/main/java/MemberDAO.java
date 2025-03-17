@@ -63,7 +63,7 @@ public class MemberDAO {
 			Connection con = ds.getConnection();
 			ResultSet rs = null;
 
-			// [SQL 준비]
+			// [SQL 준비] (여러개 넣을때)
 			String 	query =  " update TB_MB_1000MT ";
 					query += " set pw = ?";
 					query += " , mod_dttm = sysdate";
