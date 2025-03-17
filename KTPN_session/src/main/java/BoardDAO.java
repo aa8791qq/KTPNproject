@@ -100,13 +100,20 @@ public class BoardDAO {
 			Connection con = ds.getConnection();
 
 			// [SQL 준비]
-			String query = " update todo ";
-			query += " set done = ?";
-			query += " where todo_id = ?";
+			String query = " update tb_br_1000mt ";
+			query += " set TTL_NM = ?";
+			query += " , set BRD_DESC = ?";
+			query += " , set BLND_YN = ?";
+			query += " , set MOD_DTTM = ?";
+			query += " , set VW_CNT = ?";
+			query += " where BRD_NO = ?";
 			PreparedStatement ps = con.prepareStatement(query);
+			
 			// 첫번째 물음표에 값을 넣어달라
-			ps.setString(1, todoDTO.getDone());
-			ps.setInt(2, todoDTO.getTodo_id());
+			ps.setString(1, boardDTO.getBRD_DESC());
+			ps.setString(2, boardDTO.getBLND_YN());
+			ps.setDate(3, boardDTO.getMOD_DTTM());
+			ps.setInt(4, boardDTO.getVW_CNT());
 
 			// [SQL 실행] 및 [결과 확보]
 			// int executeUpdate() : select 외 모든 것
