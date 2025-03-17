@@ -48,6 +48,7 @@ public class BoardDAO {
 		return result;
 	}
 
+	
 	List selectBoardList() {
 		System.out.println("selectBoardList 실행");
 		List list = new ArrayList();
@@ -62,11 +63,11 @@ public class BoardDAO {
 			String query = " select * from tb_br_1000mt ";
 			PreparedStatement ps = con.prepareStatement(query);
 
-			// [SQL 실행] 및 [결과 확보]
+			// [SQL 실행] 및 [결과 확보]문제잇음
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				BoardDTO dto = new BoardDTO();
-				dto.setBRO_NO(rs.getInt("BRO_NO"));
+				dto.setBRD_NO(rs.getInt("BRD_NO"));
 				dto.setBRD_SENM(rs.getString("BRD_SENM"));
 				dto.setTTL_NM(rs.getString("TTL_NM"));
 				dto.setBRD_DESC(rs.getString("BRD_DESC"));
@@ -99,21 +100,19 @@ public class BoardDAO {
 			DataSource ds = (DataSource) ctx.lookup("java:/comp/env/jdbc/oracle");
 			Connection con = ds.getConnection();
 
-			// [SQL 준비]
-			String query = " update tb_br_1000mt ";
-			query += " set TTL_NM = ?";
-			query += " , set BRD_DESC = ?";
-			query += " , set BLND_YN = ?";
-			query += " , set MOD_DTTM = ?";
-			query += " , set VW_CNT = ?";
-			query += " where BRD_NO = ?";
+			// [SQL 준비]// 틀림
+			String query = " update tb_br_1000mt "
+						+ " set TTL_NM = ?"
+						+ " , set BRD_DESC = ?"
+						+ " , set BLND_YN = ?"
+						+ " , set MOD_DTTM = ?"
+						+ " where BRD_NO = ?";
 			PreparedStatement ps = con.prepareStatement(query);
 			
 			// 첫번째 물음표에 값을 넣어달라
 			ps.setString(1, boardDTO.getBRD_DESC());
 			ps.setString(2, boardDTO.getBLND_YN());
 			ps.setDate(3, boardDTO.getMOD_DTTM());
-			ps.setInt(4, boardDTO.getVW_CNT());
 
 			// [SQL 실행] 및 [결과 확보]
 			// int executeUpdate() : select 외 모든 것
