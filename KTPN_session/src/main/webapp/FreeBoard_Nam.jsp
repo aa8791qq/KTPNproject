@@ -100,14 +100,14 @@
 								<div>
 
 									<table class='boardtable' border=1>
-										<tr class='boardlist th' id="looler" style="height: 30px;">
+										<tr class='boardlist th' style="height: 30px;">
 											<td class='num'>번호</td>
 											<td class='writetitle'>제목</td>
 											<td class='writeuser'>작성자</td>
 											<td class='writedate'>작성일</td>
 											<td class='viewcount'>조회수</td>
 										</tr>
-										<table class='boardlist' name="fblist" style="height: 30px;">
+										<table class='boardlist' id="looler" name="fblist" style="height: 30px;">
 											<c:forEach var="dto" items="${resultList}">
 												<tr class='boardlist'>
 													<td>${dto.BRD_NO}</td>
