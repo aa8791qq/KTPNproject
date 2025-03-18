@@ -12,7 +12,6 @@ public class BoardDAO {
 
 	public int insertBoard(BoardDTO boardDTO) {
 
-		///////
 		System.out.println("BoardDTO insertBoardDTO 실행");
 		int result = -1;
 
@@ -27,13 +26,14 @@ public class BoardDAO {
 			// 방법 1 : sql string을 그냥 만들기
 //				query += " values ( seq_todo.nextval, '"+ todoDTO.getTodo() +"', sysdate, null, 'N' )";
 			// 방법 2 : ? 활용하기
-			query += " values ( seq_tb_br_1000mt.nextval, ?, ?, ?, Y, ?, N, sysdate, sysdate, 'admin' )";
+			query += " values ( seq_tb_br_1000mt.nextval, ?, ?, ?, Y, ?, N, sysdate, sysdate, ? )";
 			PreparedStatement ps = con.prepareStatement(query);
 			// 첫번째 물음표에 값을 넣어달라
 			ps.setString(1, boardDTO.getBRD_SENM());
 			ps.setString(2, boardDTO.getTTL_NM());
 			ps.setString(3, boardDTO.getBRD_DESC());
 			ps.setInt(4, boardDTO.getVW_CNT());
+			ps.setString(5, boardDTO.getID());
 
 			// [SQL 실행] 및 [결과 확보]
 			// int executeUpdate() : select 외 모든 것
@@ -63,19 +63,19 @@ public class BoardDAO {
 			String query = " select * from tb_br_1000mt ";
 			PreparedStatement ps = con.prepareStatement(query);
 
-			// [SQL 실행] 및 [결과 확보]문제잇음
+			// [SQL 실행] 및 [결과 확보] ////////////문제잇음
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				BoardDTO dto = new BoardDTO();
 				dto.setBRD_NO(rs.getInt("BRD_NO"));
-				dto.setBRD_SENM(rs.getString("BRD_SENM"));
+				dto.setBRD_SENM(rs.getString("BRD_SENM")); //
 				dto.setTTL_NM(rs.getString("TTL_NM"));
 				dto.setBRD_DESC(rs.getString("BRD_DESC"));
-				dto.setBLND_YN(rs.getString("BLND_YN"));
+				dto.setBLND_YN(rs.getString("BLND_YN")); //
 				dto.setVW_CNT(rs.getInt("VW_CNT"));
-				dto.setDLT_YN(rs.getString("DLT_YN"));
+				dto.setDLT_YN(rs.getString("DLT_YN")); //
 				dto.setREG_DTTM(rs.getDate("REG_DTTM"));
-				dto.setMOD_DTTM(rs.getDate("MOD_DTTM"));
+				dto.setMOD_DTTM(rs.getDate("MOD_DTTM")); //
 				dto.setID(rs.getString("ID"));
 
 				list.add(dto);
