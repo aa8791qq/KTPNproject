@@ -95,6 +95,7 @@
                                 </div>
                                 <hr>
                                 <div>
+                                ${resultList}
                                     <table class='boardtable'>
                                         <tr class='boardlist th' style="height: 30px;">
                                             <td class='num'> 번호 </td>
