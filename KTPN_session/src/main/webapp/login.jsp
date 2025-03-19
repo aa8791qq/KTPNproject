@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>세션 정보</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="session.js"></script> <!-- JavaScript 파일 연결 -->
+<!--     <script src="session.js"></script> JavaScript 파일 연결 -->
     <link rel="stylesheet" href="loginpage_Nam.css" type="text/css">
 	<script src="loginpage_Nam.js"></script>
 	<script src="oac(ktpn).js"></script>
@@ -44,9 +44,15 @@
             </div>
             <br>
             <!-- 유저여부체크 -->
-            <div id='uchkmessege'> <!-- 자바스크립트로 조건에 따라 추가할 예정-->
-                <!-- ( 여기는 회원이 맞는지 확인하는 구간입니다! 추후 자동으로 삽입될 예정 ) -->
-            </div>
+<!--             <div id='uchkmessege'> 자바스크립트로 조건에 따라 추가할 예정 -->
+<!--                 ( 여기는 회원이 맞는지 확인하는 구간입니다! 추후 자동으로 삽입될 예정 ) -->
+<!--             </div> -->
+
+			<c:forEach var="dto" items="${resultList}">
+			${dto.id }
+			${dto.pw }
+			</c:forEach>
+			
             <!-- 주의사항메시지 -->
             <div id='lost_messege'>
                 ** 회원가입이 필요한 경우 관리자에게 문의하시기 바랍니다. **

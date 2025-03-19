@@ -26,11 +26,12 @@ public class MemberTest extends HttpServlet {
 			
 		}
 		request.setAttribute("resultList", resultList);
+		System.out.println(resultList);
 
 		// /로 시작하면 webapp을 뜻한다
 		// WEB-INF 폴더는 보안영역이라서 브라우저에서는 접근할 수 없다
 //				String url = "/WEB-INF/list.jsp";
-		String url = "/WEB-INF/views/login.jsp";
+		String url = "/login.jsp";
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
@@ -41,6 +42,12 @@ public class MemberTest extends HttpServlet {
 		
 		String command = request.getParameter("command");
 		System.out.println("command : "+ command);
+		
+		String str_mid = request.getParameter("ID");
+		System.out.println(str_mid);
+		
+		String url = "mtest";
+		response.sendRedirect(url);
 	}
 
 }

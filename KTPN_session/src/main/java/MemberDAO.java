@@ -22,7 +22,7 @@ public class MemberDAO {
 			Connection con = ds.getConnection();
 
 			// [SQL 준비]
-			String 	query =  " select * from TB_MB_1000MT ";
+			String query =  " select * from TB_MB_1000MT ";
 			PreparedStatement ps = con.prepareStatement(query);
 
 			// [SQL 실행] 및 [결과 확보]
@@ -31,11 +31,11 @@ public class MemberDAO {
 				MemberDTO dto = new MemberDTO();
 				dto.setId(rs.getString("id"));
 				dto.setPw(rs.getString("pw"));
-				dto.setMbr_nm(rs.getString("mbr_nm"));
-				dto.setYtn_yn(rs.getString("dlt_yn"));
-				dto.setReg_dttm(rs.getDate("reg_dttm"));
-				dto.setMod_dttm(rs.getDate("mod_dttm"));
-				dto.setMbr_senm(rs.getString("mbr_senm"));
+//				dto.setMbr_nm(rs.getString("mbr_nm"));
+//				dto.setYtn_yn(rs.getString("dlt_yn"));
+//				dto.setReg_dttm(rs.getDate("reg_dttm"));
+//				dto.setMod_dttm(rs.getDate("mod_dttm"));
+//				dto.setMbr_senm(rs.getString("mbr_senm"));
 				
 				result.add(dto);
 			}

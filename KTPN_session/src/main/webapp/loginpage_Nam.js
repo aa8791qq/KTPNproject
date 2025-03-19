@@ -13,15 +13,15 @@ window.addEventListener('load', function () {
         console.log(id, id.value)
         console.log(pw, pw.value)
 
-        if ((id.value == "admin" && pw.value == 1234) || (id.value == "user" && pw.value == 5678)) {
-            console.log('로그인 성공')
-            userchk.textContent = ''
-            location.href = "dashBoard_kwak.html"
-        } else {
-            console.log('회원정보 없음')
-            userchk.textContent = '회원정보가 일치하지 않습니다.'
-            userchk.style.color = 'red'
-        }
+        // if ((id.value == "admin" && pw.value == 1234) || (id.value == "user" && pw.value == 5678)) {
+        //     console.log('로그인 성공')
+        //     userchk.textContent = ''
+        //     location.href = "dashBoard_kwak.html"
+        // } else {
+        //     console.log('회원정보 없음')
+        //     userchk.textContent = '회원정보가 일치하지 않습니다.'
+        //     userchk.style.color = 'red'
+        // }
 
         if (id.value == '') {
             console.log('미입력된 항목이 있음')
