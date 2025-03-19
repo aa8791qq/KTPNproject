@@ -17,12 +17,14 @@ public class MemberTest extends HttpServlet {
 			throws ServletException, IOException {
 		MemberDAO memberDAO = new MemberDAO();
 		List resultList = memberDAO.selectMember();
+//		List resultList3 = memberDAO.selectMemberOne(MemberDTO memberDTO);
 //		List resultList2 = memberDAO.updateMember(MemberDTO memberDTO);
 		
 		for(int i = 0; i<resultList.size(); i++) {
 			MemberDTO dto = new MemberDTO();
 			dto = (MemberDTO) resultList.get(i);
 			System.out.println("dto.id : " + dto.getId());
+			System.out.println("dto.pw : " + dto.getPw());
 			
 		}
 		request.setAttribute("resultList", resultList);
@@ -37,17 +39,58 @@ public class MemberTest extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		System.out.println("dopost 실행");
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=utf-8");
 		
-		String command = request.getParameter("command");
-		System.out.println("command : "+ command);
+		String check = request.getParameter("checking");
+		System.out.println("check : "+ check);
+
+		MemberDTO mDTO = new MemberDTO();
 		
-		String str_mid = request.getParameter("ID");
+		String str_mid = request.getParameter("id");
 		System.out.println(str_mid);
 		
-		String url = "mtest";
-		response.sendRedirect(url);
+		String str_mpw = request.getParameter("pw");
+		System.out.println(str_mpw);
+		
+		
+		// dto id, pw 넣고
+		// dao 메소드 전달, dao에서 출력
+		
+		mDTO.setId(str_mid);
+		mDTO.setPw(str_mpw);
+		
+		
+		
+		
+		
+		
+		/// 나중에
+		
+		MemberDAO mDAO = new MemberDAO();
+		
+		List result = mDAO.selectMember();
+		System.out.println(result);
+		
+		
+		
+		
+//		if(str_mid == mDTO.id && str_mpw == mDTO.pw) {
+//			System.out.println("로그인성공");
+//		} else {
+//			System.out.println("실패");
+//		}
+		
+		
+		
+		
+//		String url = "dashBoard_kwak.html";
+//		response.sendRedirect(url);
+		
+//		mDTO.setId(str_mid);
+//		mDTO.setPw(str_mpw);
 	}
 
 }

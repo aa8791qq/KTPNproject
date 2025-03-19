@@ -110,11 +110,11 @@
 										<table id="looler" name="fblist"">
 											<c:forEach var="dto" items="${resultList}">
 												<tr class='boardlist1'>
-													<td class = "num">${dto.BRD_NO}</td>
-													<td class = "writetitle">${dto.TTL_NM}</td>
-													<td class = "writeuser">${dto.ID}</td>
-													<td class = 'writedate'>${dto.REG_DTTM}</td>
-													<td class = 'viewcount'>${dto.VW_CNT}</td>			
+													<td class="num">${dto.BRD_NO}</td>
+													<td class="writetitle">${dto.TTL_NM}</td>
+													<td class="writeuser">${dto.ID}</td>
+													<td class='writedate'>${dto.REG_DTTM}</td>
+													<td class='viewcount'>${dto.VW_CNT}</td>
 												</tr>
 											</c:forEach>
 										</table>

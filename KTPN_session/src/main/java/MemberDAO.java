@@ -1,3 +1,5 @@
+
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,6 +12,68 @@ import javax.sql.DataSource;
 
 public class MemberDAO {
 
+	List selectMemberOne(MemberDTO memberDTO) {
+		System.out.println("한명만 출력하는 시스템 실행");
+
+		List result = new ArrayList();
+		
+		MemberDTO mDTO = new MemberDTO();
+		
+		System.out.println(mDTO.getId());;
+		System.out.println(mDTO.getPw());;
+		
+		
+		System.out.println(result);
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		??
+		try {
+			// [DB 접속] 시작
+			Context ctx = new InitialContext();
+			DataSource ds = (DataSource) ctx.lookup("java:/comp/env/jdbc/oracle");
+			Connection con = ds.getConnection();
+
+			// [SQL 준비]
+			String query =  " select * from TB_MB_1000MT ";
+			PreparedStatement ps = con.prepareStatement(query);
+
+			// [SQL 실행] 및 [결과 확보]
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				MemberDTO dto = new MemberDTO();
+				dto.setId(rs.getString("id"));
+				dto.setPw(rs.getString("pw"));
+//				dto.setMbr_nm(rs.getString("mbr_nm"));
+//				dto.setYtn_yn(rs.getString("dlt_yn"));
+//				dto.setReg_dttm(rs.getDate("reg_dttm"));
+//				dto.setMod_dttm(rs.getDate("mod_dttm"));
+//				dto.setMbr_senm(rs.getString("mbr_senm"));
+				
+				result.add(dto);
+			}
+
+			con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+//		
+		return result;
+//		
+//		
+	
+	}
+	
+	
+	
 	List selectMember() {
 		System.out.println("member select 실행");
 		
