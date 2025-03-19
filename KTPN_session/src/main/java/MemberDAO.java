@@ -12,30 +12,18 @@ import javax.sql.DataSource;
 
 public class MemberDAO {
 
-	List selectMemberOne(MemberDTO memberDTO) {
+	List selectMemberOne(MemberDTO memberDTO) { // 클래스명 변수명(앞으로 쓸 바구니)
 		System.out.println("한명만 출력하는 시스템 실행");
 
-		List result = new ArrayList();
+		//오류
+		//DTO까지 됬지만 막상 실행하면 selectMemberOne이 실행안됨.
+		//selectMemberOne을 실행할려고 메소드를 만들려하면 전달인자오류로 되지 않음
 		
-		MemberDTO mDTO = new MemberDTO();
-		
-		System.out.println(mDTO.getId());;
-		System.out.println(mDTO.getPw());;
-		
-		
-		System.out.println(result);
+		System.out.println(memberDTO.getId());;
+		System.out.println(memberDTO.getPw());;
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-//		??
+		List result = new ArrayList();
+
 		try {
 			// [DB 접속] 시작
 			Context ctx = new InitialContext();
@@ -43,8 +31,10 @@ public class MemberDAO {
 			Connection con = ds.getConnection();
 
 			// [SQL 준비]
-			String query =  " select * from TB_MB_1000MT ";
+			String query =  " select * from TB_MB_1000MT where id = ? and pw = ? ";
 			PreparedStatement ps = con.prepareStatement(query);
+			ps.setString(1, memberDTO.getId()); //? 세팅은 여기에다가!
+			ps.setString(2, memberDTO.getPw());
 
 			// [SQL 실행] 및 [결과 확보]
 			ResultSet rs = ps.executeQuery();
@@ -52,11 +42,11 @@ public class MemberDAO {
 				MemberDTO dto = new MemberDTO();
 				dto.setId(rs.getString("id"));
 				dto.setPw(rs.getString("pw"));
-//				dto.setMbr_nm(rs.getString("mbr_nm"));
-//				dto.setYtn_yn(rs.getString("dlt_yn"));
-//				dto.setReg_dttm(rs.getDate("reg_dttm"));
-//				dto.setMod_dttm(rs.getDate("mod_dttm"));
-//				dto.setMbr_senm(rs.getString("mbr_senm"));
+				dto.setMbr_nm(rs.getString("mbr_nm"));
+				dto.setYtn_yn(rs.getString("dlt_yn"));
+				dto.setReg_dttm(rs.getDate("reg_dttm"));
+				dto.setMod_dttm(rs.getDate("mod_dttm"));
+				dto.setMbr_senm(rs.getString("mbr_senm"));
 				
 				result.add(dto);
 			}
@@ -68,7 +58,7 @@ public class MemberDAO {
 //		
 		return result;
 //		
-//		
+//		session setAt....를 이용해서 꺼내서 표시하기 해야됨(이것만 하면 진정 끝인가....)
 	
 	}
 	
