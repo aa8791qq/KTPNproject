@@ -13,6 +13,7 @@
     <script src="session.js"></script> <!-- JavaScript 파일 연결 -->
     <link rel="stylesheet" href="loginpage_Nam.css" type="text/css">
 	<script src="loginpage_Nam.js"></script>
+	<script src="oac(ktpn).js"></script>
     
 </head>
 <body>

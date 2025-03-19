@@ -86,6 +86,7 @@
                                 <div id='writemsg'>
                                     <!-- 메시지 -->
                                 </div>
+<!--                                 아이디 자동표시되게 하기(3차) -->
                                 <div class='writebutton'>
                                     <button type='submit' id='button'>글쓰기</button>
                                 </div>

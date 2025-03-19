@@ -32,7 +32,6 @@ public class MemberDAO {
 				dto.setId(rs.getString("id"));
 				dto.setPw(rs.getString("pw"));
 				dto.setMbr_nm(rs.getString("mbr_nm"));
-				
 				dto.setYtn_yn(rs.getString("dlt_yn"));
 				dto.setReg_dttm(rs.getDate("reg_dttm"));
 				dto.setMod_dttm(rs.getDate("mod_dttm"));
@@ -91,6 +90,7 @@ public class MemberDAO {
 	                updatedMember.setId(rs.getString("id"));
 	                updatedMember.setPw(rs.getString("pw"));
 	                updatedMember.setMod_dttm(rs.getDate("mod_dttm"));
+	                
 	                result.add(updatedMember);
 	            }
 	        }
