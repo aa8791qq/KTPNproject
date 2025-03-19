@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/mtest")
 public class MemberTest extends HttpServlet {
@@ -62,18 +63,27 @@ public class MemberTest extends HttpServlet {
 		mDTO.setId(str_mid);
 		mDTO.setPw(str_mpw);
 		
-		
-		
-		
-		
-		
 		/// 나중에
 		
 		MemberDAO mDAO = new MemberDAO();
 		
-		List result = mDAO.selectMember();
+		List result = mDAO.selectMemberOne(mDTO); // 담았던 바구니를 전달인자에 넣는다.
 		System.out.println(result);
 		
+		//세션
+//		session setAt....를 이용해서 꺼내서 표시하기 해야됨(이것만 하면 진정 끝인가....)
+		HttpSession session = request.getSession();
+//		System.out.println("session : " + session);
+		
+		String value1 = (String)session.getAttribute("id");
+		String value2 = (String)session.getAttribute("pw");
+		
+		// 세션에 저장(list에 있는 dto에 있는 데이터를 꺼내서 세션에 넣기
+//		session.setAttribute("", );
+//		session.setAttribute("pw", request.getParameter("pw"));
+		
+		System.out.println("value : "+ value1);
+		System.out.println("value : "+ value2);
 		
 		
 		

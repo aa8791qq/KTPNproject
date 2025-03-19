@@ -58,7 +58,7 @@ public class MemberDAO {
 //		
 		return result;
 //		
-//		session setAt....를 이용해서 꺼내서 표시하기 해야됨(이것만 하면 진정 끝인가....)
+
 	
 	}
 	
