@@ -45,16 +45,19 @@ public class MemberTest extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=utf-8");
 		
-		String check = request.getParameter("checking");
-		System.out.println("check : "+ check);
+//		String check = request.getParameter("checking");
+//		System.out.println("check : "+ check);
 
 		MemberDTO mDTO = new MemberDTO();
 		
 		String str_mid = request.getParameter("id");
-		System.out.println(str_mid);
+		System.out.println("str_mid : " + str_mid);
 		
 		String str_mpw = request.getParameter("pw");
-		System.out.println(str_mpw);
+		System.out.println("str_mpw : " + str_mpw);
+		
+//		String str_mbr_nm = request.getParameter("mbr_nm");
+//		System.out.println(str_mbr_nm);
 		
 		
 		// dto id, pw 넣고
@@ -64,38 +67,38 @@ public class MemberTest extends HttpServlet {
 		mDTO.setPw(str_mpw);
 		
 		/// 나중에
-		
 		MemberDAO mDAO = new MemberDAO();
 		
 		List result = mDAO.selectMemberOne(mDTO); // 담았던 바구니를 전달인자에 넣는다.
-		System.out.println(result);
+		System.out.println("result : " + result);
 		
 		//세션
 //		session setAt....를 이용해서 꺼내서 표시하기 해야됨(이것만 하면 진정 끝인가....)
 		HttpSession session = request.getSession();
 //		System.out.println("session : " + session);
+
+		// 세션에 저장(list에 있는 dto에 있는 데이터를 꺼내서 세션에 넣기
+		session.setAttribute("id", request.getParameter("id"));
+		session.setAttribute("pw", request.getParameter("pw"));
 		
 		String value1 = (String)session.getAttribute("id");
 		String value2 = (String)session.getAttribute("pw");
 		
-		// 세션에 저장(list에 있는 dto에 있는 데이터를 꺼내서 세션에 넣기
-//		session.setAttribute("", );
-//		session.setAttribute("pw", request.getParameter("pw"));
+		System.out.println("id : "+ value1);
+		System.out.println("pw : "+ value2);
 		
-		System.out.println("value : "+ value1);
-		System.out.println("value : "+ value2);
+		// jsp에서 꺼낸다음에 출력(이름까지)
 		
 		
 		
-//		if(str_mid == mDTO.id && str_mpw == mDTO.pw) {
+		
+		// if(str_mid == mDTO.id && str_mpw == mDTO.pw) {
 //			System.out.println("로그인성공");
 //		} else {
 //			System.out.println("실패");
 //		}
 		
-		
-		
-		
+
 //		String url = "dashBoard_kwak.html";
 //		response.sendRedirect(url);
 		
