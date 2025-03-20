@@ -21,6 +21,7 @@ public class MemberDAO {
 		
 		System.out.println(memberDTO.getId());;
 		System.out.println(memberDTO.getPw());;
+		System.out.println(memberDTO.getMbr_nm());
 
 		List result = new ArrayList();
 
@@ -48,6 +49,8 @@ public class MemberDAO {
 				dto.setMod_dttm(rs.getDate("mod_dttm"));
 				dto.setMbr_senm(rs.getString("mbr_senm"));
 				
+				System.out.println(dto.getMbr_nm());
+				
 				result.add(dto);
 			}
 
@@ -61,8 +64,6 @@ public class MemberDAO {
 
 	
 	}
-	
-	
 	
 	List selectMember() {
 		System.out.println("member select 실행");
@@ -85,11 +86,11 @@ public class MemberDAO {
 				MemberDTO dto = new MemberDTO();
 				dto.setId(rs.getString("id"));
 				dto.setPw(rs.getString("pw"));
-//				dto.setMbr_nm(rs.getString("mbr_nm"));
-//				dto.setYtn_yn(rs.getString("dlt_yn"));
-//				dto.setReg_dttm(rs.getDate("reg_dttm"));
-//				dto.setMod_dttm(rs.getDate("mod_dttm"));
-//				dto.setMbr_senm(rs.getString("mbr_senm"));
+				dto.setMbr_nm(rs.getString("mbr_nm"));
+				dto.setYtn_yn(rs.getString("dlt_yn"));
+				dto.setReg_dttm(rs.getDate("reg_dttm"));
+				dto.setMod_dttm(rs.getDate("mod_dttm"));
+				dto.setMbr_senm(rs.getString("mbr_senm"));
 				
 				result.add(dto);
 			}
