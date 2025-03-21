@@ -26,7 +26,7 @@ public class BoardContorller extends HttpServlet {
 		request.setAttribute("resultList", resultList); 
 		
 		// 요청한 결과값을 freeboard_nam.jsp라는 주소로 데이터를 전송하여 연결되게 한다.
-		request.getRequestDispatcher("/FreeBoard_Nam.jsp").forward(request, response);
+		request.getRequestDispatcher("FreeBoard_Nam.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
