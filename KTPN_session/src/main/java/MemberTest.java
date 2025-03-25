@@ -78,7 +78,7 @@ public class MemberTest extends HttpServlet {
 		// 추가코딩
 		ArrayList mid = new ArrayList(result);
 		
-		System.out.println("mid : " + mid.indexOf(mDTO.mbr_nm));
+		System.out.println("mid : " + mid.indexOf(mDTO.mbr_nm)); ///--->
 		
 //		mid.get(0);
 ////		mid.get(1);
@@ -95,12 +95,12 @@ public class MemberTest extends HttpServlet {
 		HttpSession session = request.getSession();
 //		System.out.println("session : " + session);
 
+		// jsp에서 꺼낸다음에 출력(이름까지)
 		// 세션에 저장(list에 있는 dto에 있는 데이터를 꺼내서 세션에 넣기
 		// mid.get(0) = dto값 전체고 세션에 언제든지 꺼내서 쓸수 있다.
 		session.setAttribute("user_dto", mid.get(0));
 		
 		
-		// jsp에서 꺼낸다음에 출력(이름까지)
 		
 		
 		
