@@ -17,5 +17,15 @@
 	<classpathentry exported="true" kind="lib" path="C:/teamproject3/KTPN_session/src/main/webapp/WEB-INF/lib/commons-io-2.6.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/teamproject3/KTPN_session/src/main/webapp/WEB-INF/lib/ojdbc8.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/teamproject3/KTPN_session/src/main/webapp/WEB-INF/lib/tomcat-dbcp.jar"/>
+	<classpathentry kind="lib" path="C:/Users/111/.m2/repository/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" sourcepath="C:/Users/111/.m2/repository/org/projectlombok/lombok/1.18.36/lombok-1.18.36-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+			<attribute name="maven.groupId" value="org.projectlombok"/>
+			<attribute name="maven.artifactId" value="lombok"/>
+			<attribute name="maven.version" value="1.18.36"/>
+			<attribute name="maven.scope" value="provided"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
