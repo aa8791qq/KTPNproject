@@ -7,7 +7,7 @@ import lombok.ToString;
 @ToString
 @Getter
 @Setter
-public class DTO_LOGIN_1000MT {
+public class KW_DTO_LOGIN_1000MT {
 
 	String ID;
 	String PW;
