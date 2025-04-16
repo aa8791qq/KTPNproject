@@ -1,4 +1,5 @@
 package kr.or.ktpn.dto;
+
 import java.sql.Date;
 
 import lombok.Getter;
@@ -8,16 +9,11 @@ import lombok.ToString;
 @ToString
 @Getter
 @Setter
-public class DTO_MB_1000MT {
+public class DTO_Writedb_1000mt {
 
-	String id;
-	String pw;
-	String mbr_nm;
-	String ytn_yn;
-	Date reg_dttm;
-	Date mod_dttm;
-	String mbr_senm;
-	
+	String TTL_NM;
+	String DRD_DESC;
+	Date REG_DTTM;
+	String ID;
+
 }
-
-
