@@ -22,7 +22,16 @@ public class KW_Ctrl_mb_1000mt {
 
 		List<KW_DTO_MB_1000MT> list = serv.getMemberlist();
 		
-		return "login";
+		return "login.tiles";
+	}
+	
+	@RequestMapping(value = "/notice", method = RequestMethod.GET)
+	public String listcontents() {
+		System.out.println("notice 작동테스트");
+
+		//List<KW_DTO_MB_1000MT> list = serv.getMemberlist();
+		
+		return "noticeboard_Nam.tiles";
 	}
 	
 }
