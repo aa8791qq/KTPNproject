@@ -12,8 +12,8 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <!--     <script src="session.js"></script> -->
-<link rel="stylesheet" href="loginpage_Nam.css" type="text/css">
-<script src="loginpage_Nam.js"></script>
+<link rel="stylesheet" href="resources/css/loginpage_Nam.css" type="text/css">
+<script src="resources/js/loginpage_Nam.js"></script>
 <script src="oac(ktpn).js"></script>
 
 </head>
@@ -29,7 +29,7 @@
 			</p>
 			<div class='send'>
 				<!-- 아이디 입력창 -->
-				<form method="post" action="mtest">
+				<form method="post" action="ktpn/">
 					<div class='idarea'>
 						<input type='text' id='uid' name='id' placeholder="아이디 입력"
 							style='height: 30px'>

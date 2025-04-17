@@ -16,22 +16,22 @@ public class KW_Ctrl_mb_1000mt {
 	@Autowired
 	KW_Svc_mb_1000mt serv;
 	
-	@RequestMapping(value = "/member", method = RequestMethod.GET)
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String listMember() {
-		System.out.println("member 불러와본다?");
+		System.out.println("login창 들어간다능");
 
 		List<KW_DTO_MB_1000MT> list = serv.getMemberlist();
 		
-		return "login.tiles";
+		return "/login/login";
 	}
 	
-	@RequestMapping(value = "/notice", method = RequestMethod.GET)
+	@RequestMapping(value = "/notice")
 	public String listcontents() {
 		System.out.println("notice 작동테스트");
 
 		//List<KW_DTO_MB_1000MT> list = serv.getMemberlist();
 		
-		return "noticeboard_Nam.tiles";
+		return "noticeBoard_Nam.tiles";
 	}
 	
 }
