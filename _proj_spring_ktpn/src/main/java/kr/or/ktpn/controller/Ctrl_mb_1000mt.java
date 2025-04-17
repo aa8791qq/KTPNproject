@@ -9,6 +9,8 @@ public class Ctrl_mb_1000mt {
 
 	@RequestMapping(value = "/member", method = RequestMethod.GET)
 	public String listMember() {
+		System.out.println("member 불러와본다?");
+		
 		
 		return "login";
 	}
