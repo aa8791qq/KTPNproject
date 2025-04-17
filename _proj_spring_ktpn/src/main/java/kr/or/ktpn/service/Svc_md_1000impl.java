@@ -19,7 +19,7 @@ public class Svc_md_1000impl implements Svc_md_1000mt {
 	 @Override
 	    public List<DTO_md_1000mt> getMdList(DTO_md_1000mt dto) {
 	        // DAO 메소드에 dto를 전달합니다.
-	        List<DTO_md_1000mt> list = mdDAO.selectMdList(dto);
+	        List list = mdDAO.selectMdList();
 	        return list;
 	    }
 	    

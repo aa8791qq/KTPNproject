@@ -2,14 +2,22 @@ package kr.or.ktpn.service;
 
 import java.util.List;
 
-import kr.or.ktpn.dto.DTO_md_1000mt;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public class KW_Svc_mb_1000mtimpl implements Svc_md_1000mt {
+import kr.or.ktpn.dao.KW_DAO_mb_1000mt;
+import kr.or.ktpn.dto.KW_DTO_MB_1000MT;
 
+@Service
+public class KW_Svc_mb_1000mtimpl implements KW_Svc_mb_1000mt {
+
+	@Autowired
+	KW_DAO_mb_1000mt mb;
+	
 	@Override
-	public List<DTO_md_1000mt> getMdList(DTO_md_1000mt dto) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<KW_DTO_MB_1000MT> getMemberlist() {
+		List list = mb.selectMember();
+		return list;
 	}
 
 }

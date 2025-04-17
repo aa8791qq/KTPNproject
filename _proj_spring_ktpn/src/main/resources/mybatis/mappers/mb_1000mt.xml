@@ -5,7 +5,7 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.TB_MB_1000MT">
 	
-	<select id = "selectMb" resultType="memberDTO">
+	<select id = "selectMb" resultType="kr.or.ktpn.dto.KW_DTO_MB_1000MT">
 		select * from TB_MB_1000MT;
 	</select>
 	
