@@ -9,16 +9,16 @@
 		select * from TB_MB_1000MT
 	</select>
 	
-<!-- 	한명만 -->
-	<select id = "selectMbOne" resultType="memberDTO" >
+<!-- 	한명만.. 값에 따라 출력 -->
+	<select id = "selectMbOne" resultType="memberDTO" parameterType="string">	
 		select * from TB_MB_1000MT
-		where id = 'admin'
+		where id = #{_parameter}
 	</select>
 	
 <!-- 	<insert id = ""> -->
 	
 <!-- 	</insert> -->
-	
+
 <!-- 	<update id = ""> -->
 	
 <!-- 	</update> -->

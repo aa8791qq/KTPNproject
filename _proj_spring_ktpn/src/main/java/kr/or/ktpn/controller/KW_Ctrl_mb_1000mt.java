@@ -28,10 +28,10 @@ public class KW_Ctrl_mb_1000mt {
 	}
 	
 	@RequestMapping(value = "/loginone", method = RequestMethod.GET)
-	public String oneMember() {
+	public String oneMember(String id) {
 		System.out.println("login창 들어간다능");
 		
-		KW_DTO_MB_1000MT result = serv.getMemberone();
+		KW_DTO_MB_1000MT result = serv.getMemberone(id);
 		
 		System.out.println("result : " + result);
 		
