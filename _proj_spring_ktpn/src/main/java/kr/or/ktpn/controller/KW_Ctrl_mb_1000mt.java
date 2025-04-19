@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -17,21 +19,25 @@ public class KW_Ctrl_mb_1000mt {
 	KW_Svc_mb_1000mt serv;
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String listMember() {
+	public String listMember(Model model) {
 		System.out.println("login창 들어간다능");
 
 		List<KW_DTO_MB_1000MT> list = serv.getMemberlist();
 		
 		System.out.println("list.size : " + list.size());
 		
+		model.addAttribute("list : " + list);
+		
 		return "/login/login";
 	}
 	
 	@RequestMapping(value = "/loginone", method = RequestMethod.GET)
-	public String oneMember(String id) {
+	public String oneMember(
+			@ModelAttribute
+			KW_DTO_MB_1000MT dto) {
 		System.out.println("login창 들어간다능");
 		
-		KW_DTO_MB_1000MT result = serv.getMemberone(id);
+		KW_DTO_MB_1000MT result = serv.getMemberone(dto);
 		
 		System.out.println("result : " + result);
 		

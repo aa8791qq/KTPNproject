@@ -21,8 +21,8 @@ public class KW_Svc_mb_1000mtimpl implements KW_Svc_mb_1000mt {
 	}
 	
 	@Override
-	public KW_DTO_MB_1000MT getMemberone(String id) {
-		KW_DTO_MB_1000MT result = mb.selectMbOne(id);
+	public KW_DTO_MB_1000MT getMemberone(KW_DTO_MB_1000MT dto) {
+		KW_DTO_MB_1000MT result = mb.selectMbOne(dto);
 		return result;
 	}
 
