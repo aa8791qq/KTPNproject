@@ -19,5 +19,11 @@ public class KW_Svc_mb_1000mtimpl implements KW_Svc_mb_1000mt {
 		List list = mb.selectMember();
 		return list;
 	}
+	
+	@Override
+	public KW_DTO_MB_1000MT getMemberone() {
+		KW_DTO_MB_1000MT result = mb.selectMbOne();
+		return result;
+	}
 
 }

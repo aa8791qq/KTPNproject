@@ -9,4 +9,21 @@
 		select * from TB_MB_1000MT
 	</select>
 	
+<!-- 	한명만 -->
+	<select id = "selectMbOne" resultType="memberDTO" >
+		select * from TB_MB_1000MT
+		where id = 'admin'
+	</select>
+	
+	<insert id = "">
+	
+	</insert>
+	
+	<update id = "">
+	
+	</update>
+	
+	<delete id = "">
+	
+	</delete>
 </mapper>

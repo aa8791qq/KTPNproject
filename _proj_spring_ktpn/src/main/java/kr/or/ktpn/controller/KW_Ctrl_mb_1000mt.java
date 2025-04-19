@@ -22,6 +22,18 @@ public class KW_Ctrl_mb_1000mt {
 
 		List<KW_DTO_MB_1000MT> list = serv.getMemberlist();
 		
+		System.out.println("list.size : " + list.size());
+		
+		return "/login/login";
+	}
+	@RequestMapping(value = "/loginone", method = RequestMethod.GET)
+	public String oneMember() {
+		System.out.println("login창 들어간다능");
+		
+		KW_DTO_MB_1000MT result = serv.getMemberone();
+		
+		System.out.println("result : " + result);
+		
 		return "/login/login";
 	}
 }
