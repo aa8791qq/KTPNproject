@@ -16,7 +16,6 @@
 			<tr>
 				<th>No.</th>
 				<th>id</th>
-				<th>pw</th>
 				<th>mbr_nm</th>
 				<th>mbr_senm</th>
 			</tr>
@@ -24,10 +23,8 @@
 		<tbody>
 		<c:forEach var="dto" items="${list}" varStatus = "loop">
 			<tr>
-<%-- 				<td> dto: ${dto} </td> --%>
 				<td> ${loop.count} </td>
-				<td> ${dto.id} </td>
-				<td> ${dto.pw} </td>
+				<td> <a href="memberdatail?id=${dto.id}">${dto.id}</a> </td>
 				<td> ${dto.mbr_nm} </td>
 				<td> ${dto.mbr_senm} </td>
 			</tr>

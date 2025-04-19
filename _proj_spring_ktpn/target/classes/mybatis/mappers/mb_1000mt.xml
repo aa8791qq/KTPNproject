@@ -10,9 +10,9 @@
 	</select>
 	
 <!-- 	한명만.. 값에 따라 출력 -->
-	<select id = "selectMbOne" resultType="memberDTO" parameterType="memberDTO">	
+	<select id = "selectMbOne" resultType="memberDTO" parameterType="string">	
 		select * from TB_MB_1000MT
-		where id = #{id} and pw = #{pw}
+		where id = #{id}
 	</select>
 	
 <!-- 	<insert id = ""> -->
