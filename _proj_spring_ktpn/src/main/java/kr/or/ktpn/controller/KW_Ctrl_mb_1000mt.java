@@ -26,9 +26,11 @@ public class KW_Ctrl_mb_1000mt {
 		
 		System.out.println("list.size : " + list.size());
 		
-		model.addAttribute("list : " + list);
+		model.addAttribute("list", list);
 		
-		return "/login/login";
+//		System.out.println();
+		
+		return "/login/memberManger";
 	}
 	
 	@RequestMapping(value = "/loginone", method = RequestMethod.GET)
