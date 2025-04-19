@@ -26,6 +26,7 @@ public class KW_Ctrl_mb_1000mt {
 		
 		return "/login/login";
 	}
+	
 	@RequestMapping(value = "/loginone", method = RequestMethod.GET)
 	public String oneMember() {
 		System.out.println("login창 들어간다능");

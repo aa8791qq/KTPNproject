@@ -15,15 +15,15 @@
 		where id = 'admin'
 	</select>
 	
-	<insert id = "">
+<!-- 	<insert id = ""> -->
 	
-	</insert>
+<!-- 	</insert> -->
 	
-	<update id = "">
+<!-- 	<update id = ""> -->
 	
-	</update>
+<!-- 	</update> -->
 	
-	<delete id = "">
+<!-- 	<delete id = ""> -->
 	
-	</delete>
+<!-- 	</delete> -->
 </mapper>
