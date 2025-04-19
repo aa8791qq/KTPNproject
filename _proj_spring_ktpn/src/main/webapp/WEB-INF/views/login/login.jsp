@@ -21,6 +21,7 @@
 <body>
 	<div id='blank'>
 		<!-- 정리를 위한 공간 -->
+<!-- 		아이디 비번일치 프로세스 만들기 -->
 	</div>
 	<div class='login_area'>
 		<div class='middle_login' style='height: 400px'>

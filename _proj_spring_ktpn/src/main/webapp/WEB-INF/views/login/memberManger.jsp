@@ -9,10 +9,12 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+<!-- 검색기능만들기 -->
 <body>
 	<table border="1">
 		<thead>
 			<tr>
+				<th>No.</th>
 				<th>id</th>
 				<th>pw</th>
 				<th>mbr_nm</th>
@@ -20,9 +22,10 @@
 			</tr>
 		</thead>
 		<tbody>
-		<c:forEach var="dto" items="${list}">
+		<c:forEach var="dto" items="${list}" varStatus = "loop">
 			<tr>
 <%-- 				<td> dto: ${dto} </td> --%>
+				<td> ${loop.count} </td>
 				<td> ${dto.id} </td>
 				<td> ${dto.pw} </td>
 				<td> ${dto.mbr_nm} </td>
