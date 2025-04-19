@@ -15,12 +15,11 @@
 			<tr>
 				<th>id</th>
 				<th>pw</th>
+				<th>mbr_nm</th>
+				<th>mbr_senm</th>
 			</tr>
 		</thead>
 		<tbody>
-		<c:if test="${empty list}">
-			<p> list가 null이거나 비어 있습니다</p>
-		</c:if>
 		<c:forEach var="dto" items="${list}">
 			<tr>
 <%-- 				<td> dto: ${dto} </td> --%>
@@ -30,6 +29,9 @@
 				<td> ${dto.mbr_senm} </td>
 			</tr>
 		</c:forEach>
+		<c:if test="${empty list}">
+			<p> list가 null이거나 비어 있습니다</p>
+		</c:if>
 	</tbody>
 	</table>
 
