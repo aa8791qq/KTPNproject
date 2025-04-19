@@ -11,7 +11,7 @@
 	
 <!-- 	한명만.. 값에 따라 출력 -->
 	<select id = "selectMbOne" resultType="memberDTO" parameterType="memberDTO">	
-		select id, pw, mbr_nm, mbr_senm from TB_MB_1000MT
+		select * from TB_MB_1000MT
 		where id = #{id} and pw = #{pw}
 	</select>
 	

@@ -20,7 +20,7 @@ public class KW_Ctrl_mb_1000mt {
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String listMember(Model model) {
-		System.out.println("login창 들어간다능");
+		System.out.println("맴버관리창 들어간다능");
 
 		List<KW_DTO_MB_1000MT> list = serv.getMemberlist();
 		
@@ -30,10 +30,23 @@ public class KW_Ctrl_mb_1000mt {
 		
 //		System.out.println();
 		
-		return "/login/memberManger";
+		return "/main/memberManger";
 	}
 	
-	@RequestMapping(value = "/loginone", method = RequestMethod.GET)
+//	@RequestMapping(value = "/loginone", method = RequestMethod.GET) // 로그인 인증프로세스 만들거임(미개봉)
+//	public String oneMember(
+//			@ModelAttribute
+//			KW_DTO_MB_1000MT dto) {
+//		System.out.println("login창 들어간다능");
+//		
+//		KW_DTO_MB_1000MT result = serv.getMemberone(dto);
+//		
+//		System.out.println("result : " + result);
+//		
+//		return "/login/login";
+//	}
+	
+	@RequestMapping(value = "/logindetail", method = RequestMethod.GET)
 	public String oneMember(
 			@ModelAttribute
 			KW_DTO_MB_1000MT dto) {
@@ -43,6 +56,6 @@ public class KW_Ctrl_mb_1000mt {
 		
 		System.out.println("result : " + result);
 		
-		return "/login/login";
+		return "/main/memberdetail";
 	}
 }
