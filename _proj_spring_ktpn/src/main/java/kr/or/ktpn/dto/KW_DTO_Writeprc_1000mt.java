@@ -5,13 +5,13 @@ import java.sql.Date;
 import lombok.Data;
 
 @Data
-public class KW_DTO_Writedb_1000mt {
+public class KW_DTO_Writeprc_1000mt {
 
+	String BRD_SENM;
 	String TTL_NM;
 	String BRD_DESC;
-	Date REG_DTTM;
-	Date MOD_DTTM;
-	String ID;
 	String BRIND_YN;
+	Date REG_DTTM;
+	String ID;
 
 }
