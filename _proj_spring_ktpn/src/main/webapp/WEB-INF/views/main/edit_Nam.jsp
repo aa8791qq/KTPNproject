@@ -36,26 +36,25 @@
             <div class="editprocess">
                 <div class='viewdom'>
                     <!-- <form action="writeview_Nam.html" method="get" id="summit"> -->
-                        <div class = 'title-con'>
-                            <span class='text'>제목</span>
-                            <input type="text" id='title' placeholder="제목을 입력하시오" value="${dto.TTL_NM }">
-                        </div>
-                        <div class = 'content-con'>
-                            <span class='text'>내용</span>
-                            <textarea type="text" id="content" placeholder="내용을 입력하세요">
-                            ${dto.BRD_DESC }
-							</textarea>
-                        </div>
+                        <table>
+                        <tr class = 'title-con'>
+                            <td><span class='text'>제목</span></td>
+                            <td><input type="text" id='title' placeholder="제목을 입력하시오" value="${dto.TTL_NM }"></td>
+                        </tr>
+                        <tr class = 'content-con'>
+                            <td><span class='text'>내용</span></td>
+                            <td><textarea id="content" placeholder="내용을 입력하세요">${dto.BRD_DESC }</textarea></td>
+                        </tr>
+                        </table>
                         <div id='time'>
-                    		<!-- 작성일자가 들어오는곳 -->
-                   			<fmt:formatDate value="${dto.MOD_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" />
+                    		<!-- 수정일자가 들어오는곳 -->
+                   			<input type = "hidden" name = "wid" value ="<fmt:formatDate value="${dto.MOD_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" />">
                 		</div>
                 		<div id='user'>
 		                    <!-- 작성자가 들어오는곳 -->
-		                    ${dto.ID }
+		                    <input type = "hidden" name = "wid" value ="${dto.ID }">
 		                </div>
-                    <!-- </form> -->
-            </div>
+            	</div>
             <div id='writemsg'>
                 <!-- 메시지 -->
             </div>
@@ -66,8 +65,8 @@
                 </div>
             </div>
             <div class='buttons'>
-                <button type='submit' class = 'button edit'>수정</button>
-                <button type='submit' class = 'button cancel'>취소</button>
+                <input type='submit' class = 'button edit' value = "수정">
+                <button type='button' class = 'button cancel'>취소</button>
             </div>
         </div>
     </div>
