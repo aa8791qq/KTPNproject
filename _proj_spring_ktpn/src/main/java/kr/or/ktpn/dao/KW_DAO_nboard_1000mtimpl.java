@@ -17,14 +17,14 @@ public class KW_DAO_nboard_1000mtimpl implements KW_DAO_nboard_1000mt {
 	@Override
 	public List<KW_DTO_BR_1000MT> selectnBoard(){
 		List<KW_DTO_BR_1000MT> list = sqls.selectList("mapper.TB_BR_1000MT.selectnbc");
-		System.out.println("fb list : " + list);
+		System.out.println("nb list : " + list);
 		return list;
 	}
 	
 	@Override
-	public KW_DTO_BR_1000MT selectnbnum(String tl) {
-		KW_DTO_BR_1000MT cn = sqls.selectOne("mapper.TB_BR_1000MT.selectselectnbcone", tl);
-		System.out.println("fb cn : "+ cn);
+	public KW_DTO_BR_1000MT selectnbnum(int tl) {
+		KW_DTO_BR_1000MT cn = sqls.selectOne("mapper.TB_BR_1000MT.selectnbdetail", tl);
+		System.out.println("nb cn : "+ cn);
 		return cn;
 	}
 	

@@ -9,9 +9,9 @@
 		select * from TB_BR_1000MT
 	</select>
 	
-	<select id = "selectnbcone" resultType="nboardDTO" parameterType="int">
+	<select id = "selectnbdetail" resultType="nboardDTO" parameterType="int">
 		select * from TB_BR_1000MT
-		where id = #{BRD_NO}
+		where BRD_NO = #{BRD_NO}
 	</select>
 	
 	<insert id="insertnbc">

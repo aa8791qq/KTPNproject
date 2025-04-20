@@ -7,5 +7,5 @@ import kr.or.ktpn.dto.KW_DTO_BR_1000MT;
 public interface KW_Svc_nb_1000mt {
 
 	List<KW_DTO_BR_1000MT> getnboardlist();
-	public KW_DTO_BR_1000MT getnbnum(String tl);
+	public KW_DTO_BR_1000MT getnbnum(int tl);
 }

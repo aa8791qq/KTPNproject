@@ -28,18 +28,17 @@ public class KW_Ctrl_nboard_1000mt {
 		System.out.println("list.size : " + list.size());
 		
 		model.addAttribute("list", list);
-		
 		System.out.println("list : " + list);
 		
 		return "noticeBoard_Nam.tiles";
 	}
 	
 	@RequestMapping(value = "/writeview_Nam", method = RequestMethod.GET)
-	public String detailcontents(@RequestParam String tl, Model model) {
+	public String detailcontents(@RequestParam int tl, Model model) {
 		KW_DTO_BR_1000MT dto = serv.getnbnum(tl);
 		System.out.println("notice 작동테스트");
 		
-		System.out.println("dto = " +dto);
+		System.out.println("tl = " +tl);
 
 //		model.addAttribute("num", num);
 		model.addAttribute("dto", dto);
