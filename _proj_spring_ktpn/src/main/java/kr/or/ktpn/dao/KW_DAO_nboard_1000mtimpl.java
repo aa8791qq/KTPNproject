@@ -22,8 +22,8 @@ public class KW_DAO_nboard_1000mtimpl implements KW_DAO_nboard_1000mt {
 	}
 	
 	@Override
-	public KW_DTO_BR_1000MT selectnbnum(int num) {
-		KW_DTO_BR_1000MT cn = sqls.selectOne("mapper.TB_BR_1000MT.selectselectnbcone", num);
+	public KW_DTO_BR_1000MT selectnbnum(String tl) {
+		KW_DTO_BR_1000MT cn = sqls.selectOne("mapper.TB_BR_1000MT.selectselectnbcone", tl);
 		System.out.println("fb cn : "+ cn);
 		return cn;
 	}

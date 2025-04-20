@@ -21,8 +21,8 @@ public class KW_Svc_nb_1000mtimpl implements KW_Svc_nb_1000mt {
 	}
 	
 	@Override
-	public KW_DTO_BR_1000MT getnbnum(int num) {
-		KW_DTO_BR_1000MT cn = mnb.selectnbnum(num);
+	public KW_DTO_BR_1000MT getnbnum(String tl) {
+		KW_DTO_BR_1000MT cn = mnb.selectnbnum(tl);
 		return cn;
 	}
 }

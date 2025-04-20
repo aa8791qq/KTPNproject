@@ -26,7 +26,6 @@
 </head>
 
 <body>
-
 	<div class="menuPage-con">
 		<!-- html 들어갈 곳 -->
 		<div class='pageAll'>
@@ -65,13 +64,13 @@
 									<th class='viewcount'>조회수</th>
 								</tr>
 								<c:forEach var="dto" items="${list}">
-								<tr class='boardlist' style="height: 30px;">
-									<td class="wnum">${dto.BRD_NO}</td>
-									<td class="writetitle"><a href="writeview_Nam?TTL_NM=${dto.TTL_NM}">${dto.TTL_NM}</a></td>
-									<td class="writeuser">${dto.ID}</td>
-									<td class='writedate'>${dto.REG_DTTM}</td>
-									<td class='viewcount'>${dto.VW_CNT}</td>
-								</tr>
+									<tr class='boardlist' style="height: 30px;">
+										<td class="wnum">${dto.BRD_NO}</td>
+										<td class="writetitle"><a href="writeview_Nam?TTL_NM=${dto.TTL_NM}">${dto.TTL_NM}</a></td>
+										<td class="writeuser">${dto.ID}</td>
+										<td class='writedate'>${dto.REG_DTTM}</td>
+										<td class='viewcount'>${dto.VW_CNT}</td>
+									</tr>
 								</c:forEach>
 								<c:if test="${empty list}">
 									<p> (테스트용)list가 null이거나 비어 있습니다</p>
