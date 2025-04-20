@@ -42,9 +42,11 @@
 			</tr>
 		</c:if>
 		<c:if test="${empty dto}">
-			<p> list가 null이거나 비어 있습니다</p>
+			<p> (테스트용)list가 null이거나 비어 있습니다</p>
+			<p> 조회된 결과가 없습니다.</p>
 		</c:if>
 	</table>
-
+<form>
+</form>
 </body>
 </html>

@@ -58,33 +58,26 @@
 						<div>
 							<table class='boardtable'>
 								<tr class='boardlist th' style="height: 30px;">
-									<td class='num'>번호</td>
-									<td class='writetitle'>제목</td>
-									<td class='writeuser'>작성자</td>
-									<td class='writedate'>작성일</td>
-									<td class='viewcount'>조회수</td>
+									<th class='num'>번호</th>
+									<th class='writetitle'>제목</th>
+									<th class='writeuser'>작성자</th>
+									<th class='writedate'>작성일</th>
+									<th class='viewcount'>조회수</th>
 								</tr>
+								<c:forEach var="dto" items="${list}">
 								<tr class='boardlist' style="height: 30px;">
-									<td class='num'>3</td>
-									<td class='writetitle'>오늘 식단표</td>
-									<td class='writeuser'>직원1</td>
-									<td class='writedate'>2025-02-03</td>
-									<td class='viewcount'>47</td>
+									<td class="wnum">${dto.BRD_NO}</td>
+									<td class="writetitle"><a href="writeview_Nam?TTL_NM=${dto.TTL_NM}">${dto.TTL_NM}</a></td>
+									<td class="writeuser">${dto.ID}</td>
+									<td class='writedate'>${dto.REG_DTTM}</td>
+									<td class='viewcount'>${dto.VW_CNT}</td>
 								</tr>
-								<tr class='boardlist' style="height: 30px;">
-									<td class='num'>2</td>
-									<td class='writetitle'>신규직원 오리엔테이션 안내</td>
-									<td class='writeuser'>직원1</td>
-									<td class='writedate'>2025-02-03</td>
-									<td class='viewcount'>65</td>
-								</tr>
-								<tr class='boardlist' style="height: 30px;">
-									<td class='num'>1</td>
-									<td class='writetitle'>사내규정</td>
-									<td class='writeuser'>직원1</td>
-									<td class='writedate'>2025-02-03</td>
-									<td class='viewcount'>59</td>
-								</tr>
+								</c:forEach>
+								<c:if test="${empty list}">
+									<p> (테스트용)list가 null이거나 비어 있습니다</p>
+									<p> 조회된 결과가 없습니다.</p>
+								</c:if>
+		
 							</table>
 						</div>
 						<div class="page-num-con">

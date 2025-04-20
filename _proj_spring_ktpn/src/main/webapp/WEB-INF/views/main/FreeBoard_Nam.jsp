@@ -59,13 +59,12 @@
 					<div>
 						<table class='boardtable' border=1>
 							<tr class='boardlist th' style="height: 30px;">
-								<th class='num'>번호</td>
-								<th class='writetitle'>제목</td>
-								<th class='writeuser'>작성자</td>
-								<th class='writedate'>작성일</td>
-								<th class='viewcount'>조회수</td>
+								<th class='num'>번호</th>
+								<th class='writetitle'>제목</th>
+								<th class='writeuser'>작성자</th>
+								<th class='writedate'>작성일</th>
+								<th class='viewcount'>조회수</th>
 							</tr>
-							<!-- 										<table id="looler" name="fblist""> -->
 							<c:forEach var="dto" items="${resultList}">
 								<tr class='boardlist'>
 									<td class="wnum">${dto.BRD_NO}</td>
@@ -75,6 +74,10 @@
 									<td class='viewcount'>${dto.VW_CNT}</td>
 								</tr>
 							</c:forEach>
+							<c:if test="${empty dto}">
+								<p> (테스트용)list가 null이거나 비어 있습니다</p>
+								<p> 조회된 결과가 없습니다.</p>
+							</c:if>
 						</table>
 						</div>
 						<div class="page-num-con">

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="mapper.TB_BR_1000MT">
+	
+	<select id = "selectnbc" resultType="nboardDTO" >
+		select * from TB_BR_1000MT
+	</select>
+	
+	<select id = "selectnbcone" resultType="nboardDTO" parameterType="int">
+		select * from TB_BR_1000MT
+		where id = #{BRD_NO}
+	</select>
+	
+	<insert id="insertnbc">
+		
+	</insert>
+	
+	<update id = "updatenbc">
+		
+	</update>
+	
+	<delete id = "deletenbc">
+		
+	</delete>
+</mapper>
