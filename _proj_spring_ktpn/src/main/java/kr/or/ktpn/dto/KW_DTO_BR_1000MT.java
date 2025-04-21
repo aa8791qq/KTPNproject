@@ -11,7 +11,7 @@ public class KW_DTO_BR_1000MT {
 	String TTL_NM;
 	String BRD_DESC;
 	String BLND_YN;
-	int VW_CNT;
+	Integer  VW_CNT;
 	String DLT_YN;
 	Date REG_DTTM;
 	Date MOD_DTTM;

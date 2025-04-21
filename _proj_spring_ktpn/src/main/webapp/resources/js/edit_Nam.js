@@ -76,32 +76,32 @@ function init(){
 
     document.querySelector('.edit').addEventListener('click', edit)
     function edit(e){
-        e.preventDefault();
+        // e.preventDefault();
         let edit = document.querySelector('.edit')
-        let param = {
-            BRD_NO : document.querySelector('input[name="wno"]').value,
-            TTL_NM : document.querySelector('input[name="title"]').value,
-            BRD_DESC : document.querySelector('textarea[name="contents"]').value,
-            BLND_YN : document.querySelector('input[name="screat"]').value,
-            REG_DTTM : document.querySelector('input[name="wt"]').value,
-            MOD_DTTM : document.querySelector('input[name="mt"]').value,
-            ID : document.querySelector('input[name="wid"]').value
-        }
-
-        const xhr = new XMLHttpRequest()
-        console.log(xhr)
-        xhr.open('post', '/edit_Nam')
-        xhr.setRequestHeader('Content-Type', 'application/json')
-        console.log(param)
-        xhr.send( JSON.stringify(param) )
-        xhr.onload = function(){
-            if(xhr.responseText == '1'){
-                alert('수정완료')
-                window.location.href = "writeview_Nam.tiles?BRD_NO=" + param.BRD_NO;
-            } else {
-                alert('수정실패')
-            }
-        }
+        // let param = {
+            const req = document.querySelector('input[name="BRD_NO"]').value;
+        //     TTL_NM : document.querySelector('input[name="title"]').value,
+        //     BRD_DESC : document.querySelector('textarea[name="contents"]').value,
+        //     BLND_YN : document.querySelector('input[name="screat"]').value,
+        //     REG_DTTM : document.querySelector('input[name="wt"]').value,
+        //     MOD_DTTM : document.querySelector('input[name="mt"]').value,
+        //     ID : document.querySelector('input[name="wid"]').value
+        // }
+        console.log(req)
+        // const xhr = new XMLHttpRequest()
+        // console.log(xhr)
+        // xhr.open('post', 'edit_Nam')
+        // xhr.setRequestHeader('Content-Type', 'application/json')
+        // console.log(param)
+        // xhr.send( JSON.stringify(param) )
+        // xhr.onload = function(){
+            // if(req == '1'){
+            //     alert('수정완료')
+                window.location.href = "writeview_Nam.tiles?BRD_NO=" + req;
+            // } else {
+            //     alert('수정실패')
+            // }
+        // }
     }
 
     document.querySelector('.cancel').addEventListener('click', cancel)

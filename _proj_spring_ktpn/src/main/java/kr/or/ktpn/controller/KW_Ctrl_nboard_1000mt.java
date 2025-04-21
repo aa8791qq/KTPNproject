@@ -5,10 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.or.ktpn.dto.KW_DTO_BR_1000MT;
 import kr.or.ktpn.service.KW_Svc_nb_1000mt;
@@ -34,11 +34,11 @@ public class KW_Ctrl_nboard_1000mt {
 	}
 	
 	@RequestMapping(value = "/writeview_Nam", method = RequestMethod.GET)
-	public String detailcontents(@RequestParam int tl, Model model) {
-		KW_DTO_BR_1000MT dto = serv.getnbnum(tl);
+	public String detailcontents(@RequestParam int BRD_NO, Model model) {
+		KW_DTO_BR_1000MT dto = serv.getnbnum(BRD_NO);
 		System.out.println("게시글조회 작동테스트");
 		
-		System.out.println("bn = " +tl);
+		System.out.println("bn = " +BRD_NO);
 
 		model.addAttribute("dto", dto);
 		
@@ -49,9 +49,9 @@ public class KW_Ctrl_nboard_1000mt {
 	public String detailctedit(
 			@RequestParam
 //			KW_DTO_BR_1000MT bde,
-			int tl,
+			int BRD_NO,
 			Model model) {
-		KW_DTO_BR_1000MT dto = serv.getnbnum(tl);
+		KW_DTO_BR_1000MT dto = serv.getnbnum(BRD_NO);
 		System.out.println("게시글수정 작동테스트");
 		
 //		System.out.println("bn = " +tl);
@@ -60,19 +60,17 @@ public class KW_Ctrl_nboard_1000mt {
 //		
 		return "edit_Nam.tiles";
 	}
-	
-	//@PutMapping(value = "/edit_Nam")
-	@RequestMapping(value = "/ktpn/edit_Nam", method = RequestMethod.POST)
-	@ResponseBody
+	///////////////////////////////////////
+	@RequestMapping(value = "/edit_Nam", method = RequestMethod.POST)
 	public String editprocess(Model model,
+			@ModelAttribute
 			KW_DTO_BR_1000MT dto,
 			@RequestParam int BRD_NO
 			) {
 		
-		System.out.println(BRD_NO);
+//		KW_DTO_BR_1000MT dto = serv.getnbnum(BRD_NO);
+		model.addAttribute("dto", dto);
 
-		int result =serv.getnbupdate(dto);
-		System.out.println(result);
-		return "result";
+		return "redirect:writeview_Nam.tiles?BRD_NO=" + dto.getBRD_NO();
 	}
 }
