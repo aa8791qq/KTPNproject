@@ -1,7 +1,5 @@
 window.addEventListener('load',init)
 
-                
-                
 function init(){
 
     //메뉴 열었다 닫았다 하기<시작>
@@ -77,25 +75,48 @@ function init(){
     }
 
     document.querySelector('.edit').addEventListener('click', edit)
-    function edit(){
+    function edit(e){
+        e.preventDefault();
         let edit = document.querySelector('.edit')
-        console.log('수정완료')
-        window.location.href = "writeview_Nam.jsp"
+        let param = {
+            BRD_NO : document.querySelector('input[name="wno"]').value,
+            TTL_NM : document.querySelector('input[name="title"]').value,
+            BRD_DESC : document.querySelector('textarea[name="contents"]').value,
+            BLND_YN : document.querySelector('input[name="screat"]').value,
+            REG_DTTM : document.querySelector('input[name="wt"]').value,
+            MOD_DTTM : document.querySelector('input[name="mt"]').value,
+            ID : document.querySelector('input[name="wid"]').value
+        }
+
+        const xhr = new XMLHttpRequest()
+        console.log(xhr)
+        xhr.open('post', '/edit_Nam')
+        xhr.setRequestHeader('Content-Type', 'application/json')
+        console.log(param)
+        xhr.send( JSON.stringify(param) )
+        xhr.onload = function(){
+            if(xhr.responseText == '1'){
+                alert('수정완료')
+                window.location.href = "writeview_Nam.tiles?BRD_NO=" + param.BRD_NO;
+            } else {
+                alert('수정실패')
+            }
+        }
     }
 
     document.querySelector('.cancel').addEventListener('click', cancel)
     function cancel(){
         let cancel = document.querySelector('.cancel')
         console.log('수정취소')
-        // window.location.href = "writeview_Nam.jsp"
+        window.location.href = "writeview_Nam.jsp"
     }
        // 로그아웃 버튼 
-       document.querySelector('.subBut').addEventListener('click',function(){
+    document.querySelector('.subBut').addEventListener('click',function(){
         window.location.href = "loginpage_Nam.jsp"
-      })
-  
+    })
+
       // 로고버튼
-      document.querySelector('.logo').addEventListener('click',function(){
+    document.querySelector('.logo').addEventListener('click',function(){
         window.location.href = 'dashBoard_kwak.jsp'
-      })
+    })
 }

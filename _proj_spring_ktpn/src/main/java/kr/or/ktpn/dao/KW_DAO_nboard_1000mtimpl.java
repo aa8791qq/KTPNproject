@@ -28,5 +28,12 @@ public class KW_DAO_nboard_1000mtimpl implements KW_DAO_nboard_1000mt {
 		return cn;
 	}
 	
+	@Override
+	public int update(KW_DTO_BR_1000MT dto) {
+		int cn = sqls.update("mapper.TB_BR_1000MT.updatenbc", dto);
+		System.out.println("nb cn : "+ cn);
+		return cn;
+	}
+	
 	
 }

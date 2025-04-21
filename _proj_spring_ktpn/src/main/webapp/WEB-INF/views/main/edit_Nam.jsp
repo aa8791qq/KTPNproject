@@ -24,53 +24,61 @@
 </head>
 
 <body>
-    <div class="menuPage-con">
-        <!-- html 들어갈 곳 -->
-        <div class='pagecon'>
-            <span id='pageinfo'>
-                글수정
-            </span>
-        </div>
-        <hr>
-        <div class="dom">
-            <div class="editprocess">
-                <div class='viewdom'>
-                    <!-- <form action="writeview_Nam.html" method="get" id="summit"> -->
-                        <table>
-                        <tr class = 'title-con'>
-                            <td><span class='text'>제목</span></td>
-                            <td><input type="text" id='title' placeholder="제목을 입력하시오" value="${dto.TTL_NM }"></td>
-                        </tr>
-                        <tr class = 'content-con'>
-                            <td><span class='text'>내용</span></td>
-                            <td><textarea id="content" placeholder="내용을 입력하세요">${dto.BRD_DESC }</textarea></td>
-                        </tr>
-                        </table>
-                        <div id='time'>
-                    		<!-- 수정일자가 들어오는곳 -->
-                   			<input type = "hidden" name = "wid" value ="<fmt:formatDate value="${dto.MOD_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" />">
-                		</div>
-                		<div id='user'>
-		                    <!-- 작성자가 들어오는곳 -->
-		                    <input type = "hidden" name = "wid" value ="${dto.ID }">
-		                </div>
-            	</div>
-            <div id='writemsg'>
-                <!-- 메시지 -->
-            </div>
-            <div class='screat'>
-                <div id='screat'>
-                    <!-- 글이 들어오는곳 -->
-                    비밀글여부 : ${dto.BLND_YN }
-                </div>
-            </div>
-            <div class='buttons'>
-                <input type='submit' class = 'button edit' value = "수정">
-                <button type='button' class = 'button cancel'>취소</button>
-            </div>
-        </div>
-    </div>
-    </div>
+	<div class="menuPage-con">
+		<!-- html 들어갈 곳 -->
+		<div class='pagecon'>
+			<span id='pageinfo'> 글수정 </span>
+		</div>
+		<hr>
+		<form method="post" action="edit_Nam">
+			<div class="dom">
+				<div class="editprocess">
+					<div class='viewdom'>
+							<p>게시판 번호 : ${dto.BRD_NO }<input type="hidden" name="wno" value="${dto.BRD_NO }"></p>
+						<table>
+							<tr class='title-con'>
+								<td><span class='text'>제목</span></td>
+								<td><input type="text" id='title' name = title placeholder="제목을 입력하시오"
+									value="${dto.TTL_NM }"></td>
+							</tr>
+							<tr class='content-con'>
+								<td><span class='text'>내용</span></td>
+								<td><textarea id="content" name = contents placeholder="내용을 입력하세요">${dto.BRD_DESC }</textarea></td>
+							</tr>
+						</table>
+						<div id='time'>
+							<!-- 수정일자가 들어오는곳 -->
+							최초 작성일자 : "${dto.REG_DTTM }" <input type="hidden" name="wt"
+								value="<fmt:formatDate value="${dto.REG_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" />">
+							수정일자 : "${dto.MOD_DTTM }" <input type="hidden" name="mt"
+								value="<fmt:formatDate value="${dto.MOD_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" />">
+						</div>
+						<div id='user'>
+							<!-- 작성자가 들어오는곳 -->
+							작성자 : "${dto.ID }" <input type="hidden" name="wid" value="${dto.ID }">
+						</div>
+					</div>
+					<div id='writemsg'>
+						<!-- 메시지 -->
+					</div>
+					<div class='screat'>
+						<div id='screat'>
+							<!-- 글이 들어오는곳 -->
+							비밀글여부 : ${dto.BLND_YN } <input type= 'text' name = 'screat' value ='${dto.BLND_YN }'>
+						</div>
+					</div>
+					<div class='buttons'>
+						<input type='submit' class='button edit' value="수정form">
+						<button type='button' class='button cancel'>취소</button>
+					</div>
+				</div>
+			</div>
+		</form>
+<!-- 		<div class='buttons'> -->
+<!-- 						<input type='submit' class='button edit' value="수정ajax"> -->
+<!-- 						<button type='button' class='button cancel'>취소</button> -->
+<!-- 					</div> -->
+	</div>
 </body>
 
 </html>

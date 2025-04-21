@@ -5,10 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.or.ktpn.dto.KW_DTO_BR_1000MT;
 import kr.or.ktpn.service.KW_Svc_nb_1000mt;
@@ -59,5 +59,20 @@ public class KW_Ctrl_nboard_1000mt {
 		model.addAttribute("dto", dto);
 //		
 		return "edit_Nam.tiles";
+	}
+	
+	//@PutMapping(value = "/edit_Nam")
+	@RequestMapping(value = "/ktpn/edit_Nam", method = RequestMethod.POST)
+	@ResponseBody
+	public String editprocess(Model model,
+			KW_DTO_BR_1000MT dto,
+			@RequestParam int BRD_NO
+			) {
+		
+		System.out.println(BRD_NO);
+
+		int result =serv.getnbupdate(dto);
+		System.out.println(result);
+		return "result";
 	}
 }

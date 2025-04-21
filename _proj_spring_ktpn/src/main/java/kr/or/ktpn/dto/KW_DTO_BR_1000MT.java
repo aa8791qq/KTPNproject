@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 public class KW_DTO_BR_1000MT {
 
-	int BRD_NO;
+	Integer BRD_NO;
 	String BRD_SENM;
 	String TTL_NM;
 	String BRD_DESC;

@@ -45,7 +45,8 @@
                 </div>
                 <div id='time'>
                     <!-- 작성일자가 들어오는곳 -->
-                    <fmt:formatDate value="${dto.REG_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" />
+                    작성일자 : <fmt:formatDate value="${dto.REG_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" /><br>
+                    수정일자 : <fmt:formatDate value="${dto.MOD_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" />
                 </div>
             </div>
             <div class='contentmenu'>

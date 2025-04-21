@@ -19,7 +19,9 @@
 	</insert>
 	
 	<update id = "updatenbc">
-		
+		update TB_BR_1000MT
+		set ttl_nm = #{ttl_nm}, BRD_DESC = #{BRD_DESC}, mod_dttm = SYSDATE
+		where brd_no = #{BRD_NO}
 	</update>
 	
 	<delete id = "deletenbc">
