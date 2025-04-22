@@ -82,7 +82,7 @@ function init(){
     write.addEventListener('click', writeprocess)
     function writeprocess() {
         console.log("글쓰기 페이지 진입")
-        window.location.href = "writeprocess_nam.tiles"
+        window.location.href = "writeprocess_nam"
     }
     
     // // 페이지표시부분 미구현
@@ -148,7 +148,7 @@ function init(){
 
       for(line of list){
         line.addEventListener('click',function(){
-            window.location.href = 'writeview_Nam.tiles?BRD_NO=' + brdNo
+            window.location.href = 'dashBoard_kwak.jsp'
         })
       }
 }

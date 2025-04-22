@@ -36,4 +36,9 @@ public class KW_Svc_nb_1000mtimpl implements KW_Svc_nb_1000mt {
     public int insert(KW_DTO_BR_1000MT dto) {
         return mnb.insert(dto);
 	}
+	
+	@Override
+	public int delete(int bRD_NO) {
+        return mnb.delete(bRD_NO);
+    }
 }

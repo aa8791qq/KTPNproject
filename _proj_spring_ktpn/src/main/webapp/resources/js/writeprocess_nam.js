@@ -81,15 +81,17 @@ function init() {
         
         if( title.value == '' ){
             console.log('id 안썼음')
+            e.preventDefault();
             document.querySelector('#writemsg').style.color = '#f00';
             document.querySelector('#writemsg').textContent = '제목은 필수입니다';
         } else if( content.value == '' ){
+        	e.preventDefault();
             document.querySelector('#writemsg').style.color = '#f00';
             document.querySelector('#writemsg').textContent = '내용은 필수입니다';
         } else {
             document.querySelector('#writemsg').textContent = '';
             console.log('작성완료')
-            window.location.href = "noticeBoard_Nam"
+            // window.location.href = "noticeBoard_Nam"
         }
     }
        // 로그아웃 버튼 

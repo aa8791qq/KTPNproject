@@ -28,6 +28,7 @@
 	</update>
 	
 	<delete id = "deletenbc">
-		
+		DELETE FROM TB_BR_1000MT
+  		WHERE BRD_NO = #{BRD_NO}
 	</delete>
 </mapper>

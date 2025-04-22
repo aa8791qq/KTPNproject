@@ -37,7 +37,7 @@
                  <div class='viewdom'>
                      <form action="noticeBoard_Nam" method="post" id="summit">
 <!--                      로그인세션 -->
-                     작성자 : "${dto.ID }" <input type="hidden" name="ID" value="${dto.ID }">
+<%--                      작성자 : "${dto.ID }" <input type="hidden" name="ID" value="${dto.ID }"> --%>
                      	<table>
                          <tr class = 'title-con'>
                              <td><span class='text'>제목</span></td>
@@ -49,19 +49,17 @@
                              <td><textarea id="content" name = "BRD_DESC" placeholder="내용을 입력하세요">${dto.BRD_DESC }</textarea></td>
                          </tr>
                          </table>
-                     </form>
                      <div id='writemsg'>
                          
                      </div>
                      <div class='writebutton'>
                          <button type='submit' id='button'>글쓰기</button>
                      </div>
+                     </form>
                  </div>
              </div>
          </div>
      </div>
-    </body>
-
 </body>
 
 </html>

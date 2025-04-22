@@ -87,13 +87,15 @@ public class KW_Ctrl_nboard_1000mt {
 //			String ID
 			) {
 	    model.addAttribute("dto", new KW_DTO_BR_1000MT()); // 빈 DTO 넘기기
-	    return "writeprocess_nam"; // 글쓰기 폼 JSP
+	    return "writeprocess_nam.tiles"; // 글쓰기 폼 JSP
 	}
 	
 	@RequestMapping(value = "writeprocess_nam", method = RequestMethod.POST)
-	public String insert(@ModelAttribute KW_DTO_BR_1000MT dto,
-			@RequestParam("ID")
-			String ID) {
+	public String insert(@ModelAttribute KW_DTO_BR_1000MT dto
+//			@RequestParam("ID")
+//			String ID
+			) 
+			{
 		int result = serv.insert(dto);  // DB에 글 등록
 		System.out.println("📥 받은 DTO: " + dto);
 	    System.out.println("BRD_NO: " + dto.getBRD_NO());
@@ -103,6 +105,13 @@ public class KW_Ctrl_nboard_1000mt {
 	    
 	    System.out.println("🔧 작성 결과: " + result);
 	    
-	    return "redirect:/notice";  // 게시판 목록으로 리다이렉트
+	    return "redirect:/noticeBoard_Nam.tiles";  	// 게시판 목록으로 리다이렉트
+	    											// 업데이트한 글을 받은 상세글페이지로 가야할거 같은데...
+	}
+	
+	@RequestMapping(value = "delete_Nam", method = RequestMethod.GET)
+	public String delete(@RequestParam("BRD_NO") int BRD_NO) {
+		int result = serv.delete(BRD_NO);  // 글 삭제
+	    return "redirect:/notice"; // 목록으로 이동
 	}
 }
