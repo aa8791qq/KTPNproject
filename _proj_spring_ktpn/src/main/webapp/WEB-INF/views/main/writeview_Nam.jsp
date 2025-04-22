@@ -43,11 +43,11 @@
                     <!-- 작성자가 들어오는곳 -->
                     ${dto.ID }
                 </div>
-                <div id='time'>
-                    <!-- 작성일자가 들어오는곳 -->
-                    작성일자 : <fmt:formatDate value="${dto.REG_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" /><br>
-                    수정일자 : <fmt:formatDate value="${dto.MOD_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" />
-                </div>
+<!--                 <div id='time'> -->
+<!--                     작성일자가 들어오는곳 -->
+<%--                     작성일자 : <fmt:formatDate value="${dto.REG_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" /><br> --%>
+<%--                     수정일자 : <fmt:formatDate value="${dto.MOD_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" /> --%>
+<!--                 </div> -->
             </div>
             <div class='contentmenu'>
                 <div id='content'>
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class = 'button'>
-                <a href = "delete_Nam?BRD_NO=${dto.BRD_NO}"> <button type="button" id = 'remove'> 삭제 </button></a>
+                <a href = "notice"> <button type="button" id = 'remove'> 삭제 </button></a>
                 <a href = "edit_Nam?BRD_NO=${dto.BRD_NO}"> <button type="button" id = 'edit'> 수정</button></a>
                 <button type="button" id = 'list'> 목록</button>
             </div>

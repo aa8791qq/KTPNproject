@@ -35,7 +35,7 @@
          <div class="dom">
              <div class="writeprocess">
                  <div class='viewdom'>
-                     <form action="noticeBoard_Nam" method="post" id="summit">
+                     <form action="writeprocess_nam" method="post" id="summit">
 <!--                      로그인세션 -->
 <%--                      작성자 : "${dto.ID }" <input type="hidden" name="ID" value="${dto.ID }"> --%>
                      	<table>

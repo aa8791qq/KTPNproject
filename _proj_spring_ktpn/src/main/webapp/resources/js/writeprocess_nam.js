@@ -70,7 +70,7 @@ function init() {
     const button2 = document.querySelector('#button')
     button2.addEventListener('click', write)
 
-    function write() {
+    function write(e) {
         const title = document.querySelector('#title')
         const content = document.querySelector('#content')
         console.log(title.value)

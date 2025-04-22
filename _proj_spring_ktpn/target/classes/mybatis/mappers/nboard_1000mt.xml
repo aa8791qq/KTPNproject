@@ -15,9 +15,15 @@
 	</select>
 	
 	<insert id="insertnbc">
+	
+	<selectKey keyProperty="BRD_NO" resultType="int" order="BEFORE">
+        SELECT SEQ_TB_BR_1000MT.NEXTVAL FROM DUAL
+    </selectKey>
+    
 		INSERT INTO tb_br_1000mt
-		VALUES(SEQ_TB_BR_1000MT.nextval, #{BRD_SENM}, #{TTL_NM}, #{BRD_DESC},
-		#{BLAD_TN}, #{VW_CNT}, #{REG_DTTM}, #{MOD_DTTM}, #{ID} )
+		VALUES(SEQ_TB_BR_1000MT.nextval, #{TTL_NM}, #{BRD_DESC},
+		#{BLND_YN}, #{VW_CNT}, #{DLT_YN}, #{REG_DTTM}, #{MOD_DTTM}, #{ID} )
+		
 	</insert>
 	
 	<update id = "updatenbc" parameterType = "nboardDTO">
