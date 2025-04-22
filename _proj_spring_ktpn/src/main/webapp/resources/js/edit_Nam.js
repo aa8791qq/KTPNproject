@@ -97,7 +97,7 @@ function init(){
     //     // xhr.onload = function(){
     //         // if(req == '1'){
     //         //     alert('수정완료')
-    //             window.location.href = "writeview_Nam.tiles?BRD_NO=" + req;
+    //             window.location.href = "writeview_Nam?BRD_NO=" + req;
     //         // } else {
     //         //     alert('수정실패')
     //         // }

@@ -9,5 +9,6 @@ public interface KW_DAO_nboard_1000mt {
 	List<KW_DTO_BR_1000MT> selectnBoard();
 	public KW_DTO_BR_1000MT selectnbnum(int tl);
 	public int update(KW_DTO_BR_1000MT dto);
+	int insert(KW_DTO_BR_1000MT dto);
 
 }

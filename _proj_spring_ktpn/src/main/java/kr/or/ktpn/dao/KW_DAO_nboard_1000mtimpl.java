@@ -35,5 +35,8 @@ public class KW_DAO_nboard_1000mtimpl implements KW_DAO_nboard_1000mt {
 		return cn;
 	}
 	
-	
+	@Override
+    public int insert(KW_DTO_BR_1000MT dto) {
+        return sqls.insert("mapper.TB_BR_1000MT.insertnbc", dto);
+    }
 }

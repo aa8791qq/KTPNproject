@@ -77,6 +77,32 @@ public class KW_Ctrl_nboard_1000mt {
 		
 		System.out.println("🔧 업데이트 결과: " + result);
 
-		return "redirect:/writeview_Nam.tiles?BRD_NO=" + dto.getBRD_NO();
+		return "redirect:/writeview_Nam?BRD_NO=" + dto.getBRD_NO();
+	}
+	
+	@RequestMapping(value = "writeprocess_nam", method = RequestMethod.GET)
+	public String showWriteForm(
+			Model model
+//			@RequestParam("ID")
+//			String ID
+			) {
+	    model.addAttribute("dto", new KW_DTO_BR_1000MT()); // 빈 DTO 넘기기
+	    return "writeprocess_nam"; // 글쓰기 폼 JSP
+	}
+	
+	@RequestMapping(value = "writeprocess_nam", method = RequestMethod.POST)
+	public String insert(@ModelAttribute KW_DTO_BR_1000MT dto,
+			@RequestParam("ID")
+			String ID) {
+		int result = serv.insert(dto);  // DB에 글 등록
+		System.out.println("📥 받은 DTO: " + dto);
+	    System.out.println("BRD_NO: " + dto.getBRD_NO());
+	    System.out.println("제목: " + dto.getTTL_NM());
+	    System.out.println("내용: " + dto.getBRD_DESC());
+	    System.out.println("내용: " + dto.getID());
+	    
+	    System.out.println("🔧 작성 결과: " + result);
+	    
+	    return "redirect:/notice";  // 게시판 목록으로 리다이렉트
 	}
 }

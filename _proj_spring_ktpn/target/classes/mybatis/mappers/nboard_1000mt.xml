@@ -15,7 +15,9 @@
 	</select>
 	
 	<insert id="insertnbc">
-		
+		INSERT INTO tb_br_1000mt
+		VALUES(SEQ_TB_BR_1000MT.nextval, #{BRD_SENM}, #{TTL_NM}, #{BRD_DESC},
+		#{BLAD_TN}, #{VW_CNT}, #{REG_DTTM}, #{MOD_DTTM}, #{ID} )
 	</insert>
 	
 	<update id = "updatenbc" parameterType = "nboardDTO">

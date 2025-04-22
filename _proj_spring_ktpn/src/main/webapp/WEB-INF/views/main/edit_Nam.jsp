@@ -47,23 +47,23 @@
 							</tr>
 						</table>
 <!-- 						<div id='time'> -->
-<!-- 							수정일자가 들어오는곳 날짜 형식 문제 -->
-<%-- <%-- 							최초 작성일자 : "${dto.REG_DTTM }" <input type="hidden" name="REG_DTTM" --%> --%>
-<%-- <%-- 								value="<fmt:formatDate value="${dto.REG_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" />"> --%> --%>
-<%-- <%-- 							수정일자 : "${dto.MOD_DTTM }" <input type="hidden" name="MOD_DTTM" --%> --%>
-<%-- <%-- 								value="<fmt:formatDate value="${dto.MOD_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" />"> --%> --%>
+<!-- <!-- 							수정일자가 들어오는곳 날짜 형식 문제 --> -->
+<%-- 							최초 작성일자 : "${dto.REG_DTTM }" <input type="hidden" name="REG_DTTM" --%>
+<%-- 								value="<fmt:formatDate value="${dto.REG_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" />"> --%>
+<%-- 							수정일자 : "${dto.MOD_DTTM }" <input type="hidden" name="MOD_DTTM" --%>
+<%-- 								value="<fmt:formatDate value="${dto.MOD_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" />"> --%>
 <!-- 						</div> -->
-<!-- 						<div id='user'> -->
+						<div id='user'>
 <!-- 							작성자가 들어오는곳 -->
-<%-- <%-- 							작성자 : "${dto.ID }" <input type="hidden" name="ID" value="${dto.ID }"> --%> --%>
-<!-- 						</div> -->
+							작성자 : "${dto.ID }" <input type="hidden" name="ID" value="${dto.ID }">
+						</div>
 					</div>
-<!-- 					<div id='writemsg'> -->
-<!-- 						메시지 -->
-<!-- 					</div> -->
+					<div id='writemsg'>
+						메시지
+					</div>
 <!-- 					<div class='screat'> -->
 <!-- 						<div id='screat'> -->
-<!-- 							글이 들어오는곳 -->
+<!-- <!-- 							글이 들어오는곳 --> -->
 <%-- <%-- 							비밀글여부 : ${dto.BLND_YN } <input type= 'text' name = 'BLND_YN' value ='${dto.BLND_YN }'> --%> --%>
 <!-- 						</div> -->
 <!-- 					</div> -->
@@ -74,10 +74,6 @@
 				</div>
 			</div>
 		</form>
-<!-- 		<div class='buttons'> -->
-<!-- 						<input type='submit' class='button edit' value="수정ajax"> -->
-<!-- 						<button type='button' class='button cancel'>취소</button> -->
-<!-- 					</div> -->
 	</div>
 </body>
 
