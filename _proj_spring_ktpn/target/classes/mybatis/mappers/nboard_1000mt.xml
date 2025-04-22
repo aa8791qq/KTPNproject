@@ -18,9 +18,10 @@
 		
 	</insert>
 	
-	<update id = "updatenbc">
+	<update id = "updatenbc" parameterType = "nboardDTO">
 		update TB_BR_1000MT
-		set ttl_nm = #{ttl_nm}, BRD_DESC = #{BRD_DESC}, mod_dttm = SYSDATE
+		set ttl_nm = #{TTL_NM}, BRD_DESC = #{BRD_DESC}
+<!-- 		mod_dttm = SYSDATE -->
 		where brd_no = #{BRD_NO}
 	</update>
 	

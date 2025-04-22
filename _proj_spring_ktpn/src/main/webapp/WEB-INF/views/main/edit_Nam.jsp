@@ -30,7 +30,7 @@
 			<span id='pageinfo'> 글수정 </span>
 		</div>
 		<hr>
-		<form method="post" action="/edit_Nam">
+		<form method="post" action="edit_Nam">
 			<div class="dom">
 				<div class="editprocess">
 					<div class='viewdom'>
@@ -46,27 +46,27 @@
 								<td><textarea id="content" name = "BRD_DESC" placeholder="내용을 입력하세요">${dto.BRD_DESC }</textarea></td>
 							</tr>
 						</table>
-						<div id='time'>
-							<!-- 수정일자가 들어오는곳 -->
-							최초 작성일자 : "${dto.REG_DTTM }" <input type="hidden" name="REG_DTTM"
-								value="<fmt:formatDate value="${dto.REG_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" />">
-							수정일자 : "${dto.MOD_DTTM }" <input type="hidden" name="MOD_DTTM"
-								value="<fmt:formatDate value="${dto.MOD_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" />">
-						</div>
-						<div id='user'>
-							<!-- 작성자가 들어오는곳 -->
-							작성자 : "${dto.ID }" <input type="hidden" name="ID" value="${dto.ID }">
-						</div>
+<!-- 						<div id='time'> -->
+<!-- 							수정일자가 들어오는곳 날짜 형식 문제 -->
+<%-- <%-- 							최초 작성일자 : "${dto.REG_DTTM }" <input type="hidden" name="REG_DTTM" --%> --%>
+<%-- <%-- 								value="<fmt:formatDate value="${dto.REG_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" />"> --%> --%>
+<%-- <%-- 							수정일자 : "${dto.MOD_DTTM }" <input type="hidden" name="MOD_DTTM" --%> --%>
+<%-- <%-- 								value="<fmt:formatDate value="${dto.MOD_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" />"> --%> --%>
+<!-- 						</div> -->
+<!-- 						<div id='user'> -->
+<!-- 							작성자가 들어오는곳 -->
+<%-- <%-- 							작성자 : "${dto.ID }" <input type="hidden" name="ID" value="${dto.ID }"> --%> --%>
+<!-- 						</div> -->
 					</div>
-					<div id='writemsg'>
-						<!-- 메시지 -->
-					</div>
-					<div class='screat'>
-						<div id='screat'>
-							<!-- 글이 들어오는곳 -->
-							비밀글여부 : ${dto.BLND_YN } <input type= 'text' name = 'BLND_YN' value ='${dto.BLND_YN }'>
-						</div>
-					</div>
+<!-- 					<div id='writemsg'> -->
+<!-- 						메시지 -->
+<!-- 					</div> -->
+<!-- 					<div class='screat'> -->
+<!-- 						<div id='screat'> -->
+<!-- 							글이 들어오는곳 -->
+<%-- <%-- 							비밀글여부 : ${dto.BLND_YN } <input type= 'text' name = 'BLND_YN' value ='${dto.BLND_YN }'> --%> --%>
+<!-- 						</div> -->
+<!-- 					</div> -->
 					<div class='buttons'>
 						<input type='submit' class='button edit' value="수정form">
 						<button type='button' class='button cancel'>취소</button>
