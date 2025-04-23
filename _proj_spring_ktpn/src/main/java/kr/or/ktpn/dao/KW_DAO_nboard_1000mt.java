@@ -10,6 +10,6 @@ public interface KW_DAO_nboard_1000mt {
 	public KW_DTO_BR_1000MT selectnbnum(int tl);
 	public int update(KW_DTO_BR_1000MT dto);
 	int insert(KW_DTO_BR_1000MT dto);
-	public int delete(int bRD_NO);
+	public int delete(int BRD_NO);
 
 }

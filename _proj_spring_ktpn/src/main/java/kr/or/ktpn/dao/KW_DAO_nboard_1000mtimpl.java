@@ -22,8 +22,8 @@ public class KW_DAO_nboard_1000mtimpl implements KW_DAO_nboard_1000mt {
 	}
 	
 	@Override
-	public KW_DTO_BR_1000MT selectnbnum(int tl) {
-		KW_DTO_BR_1000MT cn = sqls.selectOne("mapper.TB_BR_1000MT.selectnbdetail", tl);
+	public KW_DTO_BR_1000MT selectnbnum(int BRD_NO) {
+		KW_DTO_BR_1000MT cn = sqls.selectOne("mapper.TB_BR_1000MT.selectnbdetail", BRD_NO);
 		System.out.println("nb cn : "+ cn);
 		return cn;
 	}
@@ -37,11 +37,13 @@ public class KW_DAO_nboard_1000mtimpl implements KW_DAO_nboard_1000mt {
 	
 	@Override
     public int insert(KW_DTO_BR_1000MT dto) {
+		System.out.println("너가 괴롭히는 "+ dto);
         return sqls.insert("mapper.TB_BR_1000MT.insertnbc", dto);
     }
 	
 	 @Override
-	 public int delete(int bRD_NO) {
-        return sqls.delete("mapper.TB_BR_1000MT.deletenbc", bRD_NO);
+	 public int delete(int BRD_NO) {
+		 System.out.println("너가 괴롭히는 "+ BRD_NO);
+        return sqls.delete("mapper.TB_BR_1000MT.deletenbc", BRD_NO);
     }
 }

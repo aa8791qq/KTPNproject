@@ -38,7 +38,7 @@ public class KW_Svc_nb_1000mtimpl implements KW_Svc_nb_1000mt {
 	}
 	
 	@Override
-	public int delete(int bRD_NO) {
-        return mnb.delete(bRD_NO);
+	public int delete(int BRD_NO) {
+        return mnb.delete(BRD_NO);
     }
 }

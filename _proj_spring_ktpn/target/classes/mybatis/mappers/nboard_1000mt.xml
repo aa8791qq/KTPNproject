@@ -14,15 +14,15 @@
 		where BRD_NO = #{BRD_NO}
 	</select>
 	
-	<insert id="insertnbc">
+	<insert id="insertnbc" parameterType = "nboardDTO">
 	
 	<selectKey keyProperty="BRD_NO" resultType="int" order="BEFORE">
         SELECT SEQ_TB_BR_1000MT.NEXTVAL FROM DUAL
     </selectKey>
     
 		INSERT INTO tb_br_1000mt
-		VALUES(SEQ_TB_BR_1000MT.nextval, #{TTL_NM}, #{BRD_DESC},
-		#{BLND_YN}, #{VW_CNT}, #{DLT_YN}, #{REG_DTTM}, #{MOD_DTTM}, #{ID} )
+		VALUES(#{BRD_NO}, #{TTL_NM}, #{BRD_DESC},
+		#{BLND_YN}, #{VW_CNT}, #{DLT_YN}, sysdate, sysdate, #{ID} )
 		
 	</insert>
 	
@@ -33,7 +33,7 @@
 		where brd_no = #{BRD_NO}
 	</update>
 	
-	<delete id = "deletenbc">
+	<delete id = "deletenbc" parameterType = "int">
 		DELETE FROM TB_BR_1000MT
   		WHERE BRD_NO = #{BRD_NO}
 	</delete>

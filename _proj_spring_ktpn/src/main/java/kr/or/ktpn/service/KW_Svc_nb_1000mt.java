@@ -10,5 +10,5 @@ public interface KW_Svc_nb_1000mt {
 	public KW_DTO_BR_1000MT getnbnum(int tl);
 	public int getnbupdate(KW_DTO_BR_1000MT dto);
 	public int insert(KW_DTO_BR_1000MT dto);
-	public int delete(int bRD_NO);
+	public int delete(int BRD_NO);
 }

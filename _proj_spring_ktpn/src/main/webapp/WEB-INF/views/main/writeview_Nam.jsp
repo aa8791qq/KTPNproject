@@ -34,6 +34,10 @@
      <hr>
     <div id='area'>
         <div class='viewarea'>
+                <div id='brdnums'>
+                    <!-- 게시글번호가 들어오는곳 -->
+                    ${dto.BRD_NO}
+                </div>
             <div class='titlemenu'>
                 <div id='title'>
                     <!-- 제목이 들어오는곳 -->
@@ -45,7 +49,7 @@
                 </div>
 <!--                 <div id='time'> -->
 <!--                     작성일자가 들어오는곳 -->
-<%--                     작성일자 : <fmt:formatDate value="${dto.REG_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" /><br> --%>
+<%--                     작성일자 : <fmt:formatDate value="${dto.REG_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" /> <br> --%>
 <%--                     수정일자 : <fmt:formatDate value="${dto.MOD_DTTM }" pattern="yyyy-MM-dd HH:mm:ss" /> --%>
 <!--                 </div> -->
             </div>
@@ -62,7 +66,7 @@
                 </div>
             </div>
             <div class = 'button'>
-                <a href = "notice"> <button type="button" id = 'remove'> 삭제 </button></a>
+                <a href = "delete_Nam?BRD_NO=${dto.BRD_NO}"> <button type="button" id = 'remove'> 삭제 </button></a>
                 <a href = "edit_Nam?BRD_NO=${dto.BRD_NO}"> <button type="button" id = 'edit'> 수정</button></a>
                 <button type="button" id = 'list'> 목록</button>
             </div>
