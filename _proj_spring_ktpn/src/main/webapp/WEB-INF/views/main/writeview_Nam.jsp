@@ -68,7 +68,7 @@
             <div class = 'button'>
                 <a href = "delete_Nam?BRD_NO=${dto.BRD_NO}"> <button type="button" id = 'remove'> 삭제 </button></a>
                 <a href = "edit_Nam?BRD_NO=${dto.BRD_NO}"> <button type="button" id = 'edit'> 수정</button></a>
-                 <a href = "notice"><button type="button" id = 'list'> 목록</button></a>
+                <a href = "notice"><button type="button" id = 'list'> 목록</button></a>
             </div>
         </div>
     </div>
