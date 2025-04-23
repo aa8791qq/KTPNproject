@@ -684,6 +684,7 @@ body{
 }
 
 #edit, #list, #remove{
+	
     all: unset;
     border: 1px solid #2f373a;
     background-color: #2f373a;

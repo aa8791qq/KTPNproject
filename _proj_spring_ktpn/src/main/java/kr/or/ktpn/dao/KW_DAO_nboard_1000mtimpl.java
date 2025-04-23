@@ -1,6 +1,8 @@
 package kr.or.ktpn.dao;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,4 +48,30 @@ public class KW_DAO_nboard_1000mtimpl implements KW_DAO_nboard_1000mt {
 		 System.out.println("너가 괴롭히는 "+ BRD_NO);
         return sqls.delete("mapper.TB_BR_1000MT.deletenbc", BRD_NO);
     }
+	 
+	 @Override
+	 /**
+	     * 페이징 처리된 게시글 목록 조회
+	     * @param page 현재 페이지 번호
+	     * @return 게시글 리스트 (10개씩)
+	     */
+	    public List<KW_DTO_BR_1000MT> getBoardPagingList(int page) {
+	        int pageSize = 10;
+	        int start = (page - 1) * pageSize + 1;
+	        int end = page * pageSize;
+
+	        Map<String, Integer> param = new HashMap<>();
+	        param.put("start", start);
+	        param.put("end", end);
+
+	        return sqls.selectList("mapper.TB_BR_1000MT.getBoardPagingList", param);
+	    }
+
+	    /**
+	     * 전체 게시글 수 가져오기
+	     * @return 총 게시글 수
+	     */
+	    public int getTotalBoardCount() {
+	        return sqls.selectOne("mapper.TB_BR_1000MT.getTotalBoardCount");
+	    }
 }

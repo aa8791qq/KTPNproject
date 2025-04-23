@@ -12,4 +12,9 @@ public interface KW_DAO_nboard_1000mt {
 	int insert(KW_DTO_BR_1000MT dto);
 	public int delete(int BRD_NO);
 
+    // 전체 게시글 수 조회 (페이지 수 계산용)
+    int getTotalBoardCount();
+	
+	List<KW_DTO_BR_1000MT> getBoardPagingList(int page);
+
 }

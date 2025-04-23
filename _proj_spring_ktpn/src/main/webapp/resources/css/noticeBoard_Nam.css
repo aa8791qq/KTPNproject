@@ -618,8 +618,7 @@ body{
     align-items: center;
     min-width: 300px;
 }
-.page{
-    border: 1px solid darkgrey;
+.page pre-page, next-page{
     height: 60%;
     width: 58%;
     display: flex;

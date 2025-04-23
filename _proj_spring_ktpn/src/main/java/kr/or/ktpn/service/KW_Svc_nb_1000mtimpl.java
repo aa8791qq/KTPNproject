@@ -14,11 +14,11 @@ public class KW_Svc_nb_1000mtimpl implements KW_Svc_nb_1000mt {
 	@Autowired
 	KW_DAO_nboard_1000mt mnb;
 	
-	@Override
-	public List<KW_DTO_BR_1000MT> getnboardlist(){
-		List list = mnb.selectnBoard();
-		return list;
-	}
+//	@Override
+//	public List<KW_DTO_BR_1000MT> getnboardlist(){
+//		List list = mnb.selectnBoard();
+//		return list;
+//	}
 	
 	@Override
 	public KW_DTO_BR_1000MT getnbnum(int tl) {
@@ -31,6 +31,18 @@ public class KW_Svc_nb_1000mtimpl implements KW_Svc_nb_1000mt {
 		int cn = mnb.update(dto);
 		return cn;
 	}
+	
+	// 페이지에 맞는 게시글 10개 조회
+    @Override
+    public List<KW_DTO_BR_1000MT> getBoardPagingList(int page) {
+        return mnb.getBoardPagingList(page);
+    }
+
+    // 전체 게시글 수 조회
+    @Override
+    public int getTotalBoardCount() {
+        return mnb.getTotalBoardCount();
+    }
 	
 	@Override
     public int insert(KW_DTO_BR_1000MT dto) {

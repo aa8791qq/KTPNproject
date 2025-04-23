@@ -19,20 +19,6 @@ public class KW_Ctrl_nboard_1000mt {
 	@Autowired
 	KW_Svc_nb_1000mt serv;
 	
-	@RequestMapping(value = "/notice", method = RequestMethod.GET)
-	public String listcontents(Model model) {
-		System.out.println("notice 작동테스트");
-
-		List<KW_DTO_BR_1000MT> list = serv.getnboardlist();
-		
-		System.out.println("list.size : " + list.size());
-		
-		model.addAttribute("list", list);
-		System.out.println("list : " + list);
-		
-		return "noticeBoard_Nam.tiles";
-	}
-	
 	@RequestMapping(value = "/writeview_Nam", method = RequestMethod.GET)
 	public String detailcontents(@RequestParam("BRD_NO") int BRD_NO, Model model) {
 		KW_DTO_BR_1000MT dto = serv.getnbnum(BRD_NO);
@@ -116,4 +102,27 @@ public class KW_Ctrl_nboard_1000mt {
 		System.out.println("result : " + result);
 	    return "redirect:/notice"; // 목록으로 이동
 	}
+	
+	@RequestMapping("/notice")
+    public String noticeList(@RequestParam(defaultValue = "1") int page, Model model) {
+//		List<KW_DTO_BR_1000MT> list = serv.getnboardlist();
+		
+		List<KW_DTO_BR_1000MT> list = serv.getBoardPagingList(page);
+		System.out.println("list.size : " + list.size());
+		
+        int totalCount = serv.getTotalBoardCount(); // 전체 글 수
+        int pageSize = 10;
+        int totalPages = (int) Math.ceil((double) totalCount / pageSize); // 전체 페이지 수 계산
+       
+
+        model.addAttribute("list", list);
+        model.addAttribute("currentPage", page);
+        model.addAttribute("totalPages", totalPages);
+        
+        System.out.println("list : " + list);
+        System.out.println("currentPage"+ page);
+        System.out.println("totalPages"+ totalPages);
+
+        return "noticeBoard_Nam.tiles"; // JSP 경로
+    }
 }

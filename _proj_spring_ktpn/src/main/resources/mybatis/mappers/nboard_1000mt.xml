@@ -6,7 +6,7 @@
 	<mapper namespace="mapper.TB_BR_1000MT">
 	
 	<select id = "selectnbc" resultType="nboardDTO" >
-		select * from TB_BR_1000MT
+		select * from TB_BR_1000MT ORDER BY BRD_NO DESC
 	</select>
 	
 	<select id = "selectnbdetail" resultType="nboardDTO" parameterType="int">
@@ -29,7 +29,6 @@
 	<update id = "updatenbc" parameterType = "nboardDTO">
 		update TB_BR_1000MT
 		set ttl_nm = #{TTL_NM}, BRD_DESC = #{BRD_DESC}
-<!-- 		mod_dttm = SYSDATE -->
 		where brd_no = #{BRD_NO}
 	</update>
 	
@@ -37,4 +36,25 @@
 		DELETE FROM TB_BR_1000MT
   		WHERE BRD_NO = #{BRD_NO}
 	</delete>
+	
+	<!-- 
+   게시글을 10개 단위로 잘라서 조회하는 SQL (Oracle 전용)
+   필요한 인자: 시작번호(start), 끝번호(end)
+	-->
+
+	<select id="getBoardPagingList" resultType="nboardDTO" parameterType="map">
+	SELECT * FROM (
+		SELECT ROWNUM AS rnum, A.* 
+		FROM (
+			SELECT * FROM TB_BR_1000MT
+			ORDER BY BRD_NO DESC
+		) A
+		WHERE ROWNUM &lt;= #{end}
+	)
+	WHERE rnum &gt;= #{start}
+	</select>
+	
+	<select id="getTotalBoardCount" resultType="int">
+		SELECT COUNT(*) FROM TB_BR_1000MT
+	</select>
 </mapper>
