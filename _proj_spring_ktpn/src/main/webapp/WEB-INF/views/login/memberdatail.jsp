@@ -48,7 +48,7 @@
 	</table>
 	<div class = 'buttons'>
 		<a href = "edit?id=${dto.id}"><button type='button' id ="edit"> 수정form </button></a>
-		<a href = "edit"> <button type="button" id = 'remove'> 삭제</button></a>
+		<a href = "member"> <button type="button" id = 'remove'> 삭제</button></a>
 	</div>
 <!-- <form> -->
 <!-- </form> -->
