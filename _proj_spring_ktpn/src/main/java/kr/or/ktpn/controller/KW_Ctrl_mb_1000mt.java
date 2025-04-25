@@ -112,7 +112,7 @@ public class KW_Ctrl_mb_1000mt {
 	    if (user != null && user.getPw().equals(pw)) {
 	        System.out.println("✅ 로그인 성공");
 	        session.setAttribute("loginUser", user); // 세션 저장
-	        return "redirect:/ktpn/"; // 로그인 후 메인 페이지로 이동
+	        return "redirect:/"; // 로그인 후 메인 페이지로 이동
 	    } else {
 	        System.out.println("❌ 로그인 실패");
 	        model.addAttribute("msg", "아이디 또는 비밀번호가 틀렸습니다.");

@@ -31,7 +31,7 @@
 			</p>
 			<div class='send'>
 				<!-- 아이디 입력창 -->
-				<form method="post" action="/">
+				<form method="post" action="login">
 					<div class='idarea'>
 						<input type='text' id='uid' name='id' placeholder="아이디 입력"
 							style='height: 30px'>
