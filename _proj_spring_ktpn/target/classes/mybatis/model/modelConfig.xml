@@ -15,6 +15,7 @@
 	<typeAliases>
 		<typeAlias type="kr.or.ktpn.dto.KW_DTO_MB_1000MT" alias="memberDTO" />
 		<typeAlias type="kr.or.ktpn.dto.KW_DTO_BR_1000MT" alias="nboardDTO" />
+		<typeAlias type="kr.or.ktpn.dto.KW_DTO_BR_1000MT" alias="fboardDTO" />
 	</typeAliases>
 
 </configuration>
