@@ -36,5 +36,6 @@ public class KW_Svc_mb_1000mtimpl implements KW_Svc_mb_1000mt {
 	public int delete(String id) {
         return mb.delete(id);
     }
+	
 
 }
