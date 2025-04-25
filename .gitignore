@@ -2,3 +2,5 @@ _gsdata_/*.log
 .git/
 .SynologyWorkingDirectory/
 /.metadata/
+_proj_spring_ktpn/target/classes/kr/or/ktpn/dto/KW_DTO_Writedb_1000mt.class
+_proj_spring_ktpn/src/main/java/kr/or/ktpn/dto/KW_DTO_Writedb_1000mt.java
