@@ -36,7 +36,7 @@
         <div class='viewarea'>
         
                 <div id='fn'>
-                    <!-- 게시글번호가 들어오는곳 -->
+                    <!-- 게시판정보가 들어오는곳 -->
                     ${dto.BOARDFN}
                 </div>
                 <div id='brdnums'>
@@ -71,8 +71,8 @@
 <!--                 </div> -->
 <!--             </div> -->
             <div class = 'button'>
-                <a href = "delete_Nam?BRD_NO=${dto.BRD_NO}"> <button type="button" id = 'remove'> 삭제 </button></a>
-                <a href = "edit_Nam?BRD_NO=${dto.BRD_NO}"> <button type="button" id = 'edit'> 수정</button></a>
+                <a href = "ndelete_Nam?BRD_NO=${dto.BRD_NO}"> <button type="button" id = 'remove'> 삭제 </button></a>
+                <a href = "nedit_Nam?BRD_NO=${dto.BRD_NO}"> <button type="button" id = 'edit'> 수정</button></a>
                 <button type="button" id = 'list'> 목록</button>
             </div>
         </div>

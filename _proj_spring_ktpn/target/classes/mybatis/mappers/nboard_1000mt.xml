@@ -6,8 +6,8 @@
 	<mapper namespace="mapper.TB_nBR_1000MT">
 	
 	<select id = "selectnbc" resultType="nboardDTO" >
-		select * from TB_BR_1000M
-		where boardfn = '공지사항'
+		select * from TB_BR_1000MB
+		where boardfn = 'notice'
 		ORDER BY BRD_NO DESC
 	</select>
 	
@@ -22,7 +22,7 @@
         SELECT SEQ_TB_NBR_1000MT.NEXTVAL FROM DUAL
     </selectKey>
     
-		INSERT INTO tb_br_1000mt
+		INSERT INTO tb_br_1000mt (BRD_NO, BOARDFN, TTL_NM, BRD_DESC, VW_CNT, DLT_YN, REG_DTTM, MOD_DTTM, ID)
 		VALUES(#{BRD_NO}, #{BOARDFN}, #{TTL_NM}, #{BRD_DESC},
 		#{VW_CNT}, #{DLT_YN}, sysdate, sysdate, #{ID} )
 		
@@ -49,7 +49,7 @@
 		SELECT ROWNUM AS rnum, A.* 
 		FROM (
 			SELECT * FROM TB_BR_1000MT
-			where boardfn = '공지사항'
+			where boardfn = 'notice'
 			ORDER BY BRD_NO DESC
 		) A
 		WHERE ROWNUM &lt;= #{end}

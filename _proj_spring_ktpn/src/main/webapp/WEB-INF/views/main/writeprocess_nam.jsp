@@ -37,17 +37,16 @@
                  <div class='viewdom'>
                      <form action="nwriteprocess_nam" method="post" id="summit">
 <!--                      로그인세션 -->
-<%--                      작성자 : "${dto.ID }" <input type="hidden" name="ID" value="${dto.ID }"> --%>
+<%--                      게시글 번호: ${dto.BRD_NO }<input type="hidden" name="BRD_NO" value=""${dto.BRD_NO }"> --%>
+                     작성자 : "${ID.mbr_nm}" <input type="hidden" name="ID" value="${ID.id}">
                      	<table>
                          <tr class = 'fncode'>
                              <td><span class='text'>게시판종류</span>
-                             <select name = "fn" id = "select">
+                             <select name = "BOARDFN" id = "select">
                              	<option value = "notice">공지사항</option>
                              	<option value = "free">자유게시판</option>
                              	</select>
                              </td>
-<!--                              <td><input type="text" id='fncode' name = "TTL_NM" placeholder="제목을 입력하시오" -->
-<%-- 									value="${dto.TTL_NM }"></td> --%>
                          </tr>
                          <tr class = 'title-con'>
                              <td><span class='text'>제목</span></td>

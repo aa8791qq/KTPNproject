@@ -91,7 +91,7 @@ function init(){
                 window.location.href="#"
             } else if (e.target.textContent=='공지사항'){
                  // 공지사항 메인
-                window.location.href="#"
+                window.location.href="notice"
             } 
         })
     }// 메뉴 버튼 눌렀을때 해당 내용 나오게 하기<끝>
