@@ -66,7 +66,9 @@ function init(){
     }// 메뉴 버튼 눌렀을때 해당 내용 나오게 하기<끝
 
     console.log('게시판에 들어옴')
-
+    const viewpage = document.querySelector("#pageinfo");
+    console.log(viewpage)
+	console.log("viewpage.innerText", viewpage.innerText)
     const search = document.querySelector("#search");
     search.addEventListener('click', filter)
     function filter() {
@@ -80,9 +82,14 @@ function init(){
 
     const write = document.querySelector('.add');
     write.addEventListener('click', writeprocess)
-    function writeprocess() {
+    function writeprocess(e) {
         console.log("글쓰기 페이지 진입")
-        window.location.href = "writeprocess_nam"
+        console.log("viewpage.innerText", viewpage.innerText)
+        if(viewpage.innerText == '공지사항'){
+        	window.location.href = "nwriteprocess_nam"
+        } else {
+        	window.location.href = "fwriteprocess_nam"
+        }
     }
     
     // // 페이지표시부분 미구현

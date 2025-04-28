@@ -82,7 +82,7 @@ function init(){
     write.addEventListener('click', writeprocess)
     function writeprocess() {
         console.log("글쓰기 페이지 진입")
-        window.location.href = "writeprocess_nam"
+        window.location.href = "fwriteprocess_nam"
     }
     
     // // 페이지표시부분 미구현

@@ -34,6 +34,11 @@
      <hr>
     <div id='area'>
         <div class='viewarea'>
+        
+                <div id='fn'>
+                    <!-- 게시글번호가 들어오는곳 -->
+                    ${dto.BOARDFN}
+                </div>
                 <div id='brdnums'>
                     <!-- 게시글번호가 들어오는곳 -->
                     ${dto.BRD_NO}
@@ -59,12 +64,12 @@
                     ${dto.BRD_DESC }
                 </div>
             </div>
-            <div class='screat'>
-                <div id='screat'>
-                    <!-- 글이 들어오는곳 -->
-                    비밀글여부 : ${dto.BLND_YN }
-                </div>
-            </div>
+<!--             <div class='screat'> -->
+<!--                 <div id='screat'> -->
+<!--                     글이 들어오는곳 -->
+<%--                     비밀글여부 : ${dto.BLND_YN } --%>
+<!--                 </div> -->
+<!--             </div> -->
             <div class = 'button'>
                 <a href = "delete_Nam?BRD_NO=${dto.BRD_NO}"> <button type="button" id = 'remove'> 삭제 </button></a>
                 <a href = "edit_Nam?BRD_NO=${dto.BRD_NO}"> <button type="button" id = 'edit'> 수정</button></a>

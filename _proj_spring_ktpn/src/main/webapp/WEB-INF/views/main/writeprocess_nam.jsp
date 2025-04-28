@@ -35,10 +35,20 @@
          <div class="dom">
              <div class="writeprocess">
                  <div class='viewdom'>
-                     <form action="writeprocess_nam" method="post" id="summit">
+                     <form action="nwriteprocess_nam" method="post" id="summit">
 <!--                      로그인세션 -->
 <%--                      작성자 : "${dto.ID }" <input type="hidden" name="ID" value="${dto.ID }"> --%>
                      	<table>
+                         <tr class = 'fncode'>
+                             <td><span class='text'>게시판종류</span>
+                             <select name = "fn" id = "select">
+                             	<option value = "notice">공지사항</option>
+                             	<option value = "free">자유게시판</option>
+                             	</select>
+                             </td>
+<!--                              <td><input type="text" id='fncode' name = "TTL_NM" placeholder="제목을 입력하시오" -->
+<%-- 									value="${dto.TTL_NM }"></td> --%>
+                         </tr>
                          <tr class = 'title-con'>
                              <td><span class='text'>제목</span></td>
                              <td><input type="text" id='title' name = "TTL_NM" placeholder="제목을 입력하시오"
@@ -49,6 +59,7 @@
                              <td><textarea id="content" name = "BRD_DESC" placeholder="내용을 입력하세요">${dto.BRD_DESC }</textarea></td>
                          </tr>
                          </table>
+                         <input type="hidden" name="VW_CNT" value="0">
                      <div id='writemsg'>
                          
                      </div>

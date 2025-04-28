@@ -11,35 +11,28 @@ import org.springframework.stereotype.Repository;
 import kr.or.ktpn.dto.KW_DTO_BR_1000MT;
 
 @Repository
-public class KW_DAO_nboard_1000mtimpl implements KW_DAO_nboard_1000mt {
+public class KW_DAO_fboard_1000mtimpl implements KW_DAO_fboard_1000mt {
 
 	@Autowired
 	SqlSession sqls;
 	
 	@Override
-	public List<KW_DTO_BR_1000MT> selectnBoard(){
-		List<KW_DTO_BR_1000MT> list = sqls.selectList("mapper.TB_nBR_1000MT.selectnbc");
-		System.out.println("nb list : " + list);
+	public List<KW_DTO_BR_1000MT> selectFBoard(){
+		List<KW_DTO_BR_1000MT> list = sqls.selectList("mapper.TB_fBR_1000MT1.selectfbc");
+		System.out.println("fb list : " + list);
 		return list;
 	}
 	
 	@Override
 	public KW_DTO_BR_1000MT selectnbnum(int BRD_NO) {
-		KW_DTO_BR_1000MT cn = sqls.selectOne("mapper.TB_nBR_1000MT.selectnbdetail", BRD_NO);
-		System.out.println("nb cn : "+ cn);
-		return cn;
-	}
-	
-	@Override
-	public KW_DTO_BR_1000MT selectfn(String BOARDFN) {
-		KW_DTO_BR_1000MT cn = sqls.selectOne("mapper.TB_nBR_1000MT.selectnbdetail", BOARDFN);
+		KW_DTO_BR_1000MT cn = sqls.selectOne("mapper.TB_fBR_1000MT.selectfbdetail", BRD_NO);
 		System.out.println("nb cn : "+ cn);
 		return cn;
 	}
 	
 	@Override
 	public int update(KW_DTO_BR_1000MT dto) {
-		int cn = sqls.update("mapper.TB_nBR_1000MT.updatenbc", dto);
+		int cn = sqls.update("mapper.TB_fBR_1000MT.updatefbc", dto);
 		System.out.println("nb1 cn : "+ cn);
 		return cn;
 	}
@@ -47,16 +40,14 @@ public class KW_DAO_nboard_1000mtimpl implements KW_DAO_nboard_1000mt {
 	@Override
     public int insert(KW_DTO_BR_1000MT dto) {
 		System.out.println("너가 괴롭히는 "+ dto);
-        return sqls.insert("mapper.TB_nBR_1000MT.insertnbc", dto);
+        return sqls.insert("mapper.TB_fBR_1000MT.insertfbc", dto);
     }
 	
 	 @Override
 	 public int delete(int BRD_NO) {
 		 System.out.println("너가 괴롭히는 "+ BRD_NO);
-        return sqls.delete("mapper.TB_nBR_1000MT.deletenbc", BRD_NO);
+        return sqls.delete("mapper.TB_fBR_1000MT.deletefbc", BRD_NO);
     }
-	 
-	 
 	 
 	 @Override
 	 /**
@@ -73,7 +64,7 @@ public class KW_DAO_nboard_1000mtimpl implements KW_DAO_nboard_1000mt {
 	        param.put("start", start);
 	        param.put("end", end);
 
-	        return sqls.selectList("mapper.TB_nBR_1000MT.getBoardPagingList", param);
+	        return sqls.selectList("mapper.TB_fBR_1000MT.getBoardPagingList", param);
 	    }
 
 	    /**
@@ -81,6 +72,8 @@ public class KW_DAO_nboard_1000mtimpl implements KW_DAO_nboard_1000mt {
 	     * @return 총 게시글 수
 	     */
 	    public int getTotalBoardCount() {
-	        return sqls.selectOne("mapper.TB_nBR_1000MT.getTotalBoardCount");
+	        return sqls.selectOne("mapper.TB_fBR_1000MT.getTotalBoardCount");
 	    }
 }
+
+
