@@ -21,6 +21,12 @@ public class KW_Svc_fb_1000mtimpl implements KW_Svc_fb_1000mt {
 	}
 	
 	@Override
+	public KW_DTO_BR_1000MT getfn(String bOARDFN) {
+		KW_DTO_BR_1000MT cn = mfb.selectfn(bOARDFN);
+		return cn;
+	}
+	
+	@Override
 	public int getfbupdate(KW_DTO_BR_1000MT dto) {
 		int cn = mfb.update(dto);
 		return cn;

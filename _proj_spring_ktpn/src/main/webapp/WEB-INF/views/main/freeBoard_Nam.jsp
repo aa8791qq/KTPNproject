@@ -66,7 +66,7 @@
 								<c:forEach var="dto" items="${list}">
 									<tr class='boardlist' style="height: 30px;">
 										<td class="wnum">${dto.BRD_NO}</td>
-										<td class="writetitle"><a href="fwriteview_Nam?BRD_NO=${dto.BRD_NO}">${dto.TTL_NM}</a></td>
+										<td class="writetitle"><a href="writeview_Nam?BRD_NO=${dto.BRD_NO}">${dto.TTL_NM}</a></td>
 										<td class="writeuser">${dto.ID}</td>
 										<td class='writedate'>${dto.REG_DTTM}</td>
 										<td class='viewcount'>${dto.VW_CNT}</td>
