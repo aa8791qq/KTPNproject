@@ -22,7 +22,7 @@ public class KW_Ctrl_fboard_1000mt {
 	@Autowired
 	KW_Svc_fb_1000mt serv;
 	
-	@RequestMapping(value = "/writeview_Nam", method = RequestMethod.GET)
+	@RequestMapping(value = "/fwriteview_Nam", method = RequestMethod.GET)
 	public String detailcontents(@RequestParam("BRD_NO") int BRD_NO, Model model) {
 		KW_DTO_BR_1000MT dto = serv.getfbnum(BRD_NO);
 		System.out.println("게시글조회 작동테스트");
@@ -31,7 +31,7 @@ public class KW_Ctrl_fboard_1000mt {
 
 		model.addAttribute("dto", dto);
 		
-		return "writeview_Nam.tiles";
+		return "fwriteview_Nam.tiles";
 	}
 	
 	@RequestMapping(value = "/fedit_Nam", method = RequestMethod.GET)
@@ -117,7 +117,7 @@ public class KW_Ctrl_fboard_1000mt {
 	    
 	    System.out.println("🔧 작성 결과: " + result);
 	    
-	    return "redirect:/writeview_Nam?BRD_NO=" + dto.getBRD_NO();  	// 게시판 목록으로 리다이렉트
+	    return "redirect:/fwriteview_Nam?BRD_NO=" + dto.getBRD_NO();  	// 게시판 목록으로 리다이렉트
 	    																	// 업데이트한 글을 받은 상세글페이지로 가야할거 같은데...
 	}
 	

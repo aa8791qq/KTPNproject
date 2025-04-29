@@ -57,9 +57,9 @@ function init(){
             if(e.target.textContent=='대시보드'){
                 window.location.href="dashBoard_kwak.jsp"
             } else if (e.target.textContent=='게시판'){
-                window.location.href = "FreeBoard_Nam.jsp"
+                window.location.href = "free"
             } else if (e.target.textContent=='공지사항'){
-                window.location.href = "noticeBoard_Nam.jsp"
+                window.location.href = "notice"
             }  
         })
     }// 메뉴 버튼 눌렀을때 해당 내용 나오게 하기<끝>

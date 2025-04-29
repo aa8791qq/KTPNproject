@@ -57,10 +57,10 @@ function init(){
                 window.location.href = "dashBoard_kwak.jsp"
             } else if (e.target.textContent == '게시판') {
                 // 게시판 메인
-                window.location.href = "notice"
+                window.location.href = "free"
             } else if (e.target.textContent == '공지사항') {
                 // 공지사항 메인
-                window.location.href = "free"
+                window.location.href = "notice"
             } 
         })
     }// 메뉴 버튼 눌렀을때 해당 내용 나오게 하기<끝>
