@@ -71,7 +71,7 @@
 <!--                 </div> -->
 <!--             </div> -->
             <div class = 'button'>
-                <a href = "nwriteview_Nam?BRD_NO=${dto.BRD_NO}"> <button type="button" id = 'remove'> 삭제 </button></a>
+                <button type="button" id="remove">삭제</button>
                 <a href = "nedit_Nam?BRD_NO=${dto.BRD_NO}"> <button type="button" id = 'edit'> 수정</button></a>
                 <a href = ""><button type="button" id = 'list'> 목록</button></a>
             </div>

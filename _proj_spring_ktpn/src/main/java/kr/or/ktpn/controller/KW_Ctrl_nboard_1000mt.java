@@ -126,6 +126,7 @@ public class KW_Ctrl_nboard_1000mt {
 	@RequestMapping(value = "ndelete_Nam", method = RequestMethod.GET)
 	public String delete(@RequestParam("BRD_NO") int BRD_NO) {
 		int result = serv.delete(BRD_NO);  // 글 삭제
+		System.out.println("넘어온 BRD_NO: " + BRD_NO);
 		System.out.println("result : " + result);
 	    return "redirect:/notice"; // 목록으로 이동
 	}

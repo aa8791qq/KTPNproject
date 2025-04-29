@@ -121,7 +121,7 @@ public class KW_Ctrl_fboard_1000mt {
 	    																	// 업데이트한 글을 받은 상세글페이지로 가야할거 같은데...
 	}
 	
-	@RequestMapping(value = "fdelete_Nam", method = RequestMethod.GET)
+	@RequestMapping(value = "/fdelete_Nam", method = RequestMethod.GET)
 	public String delete(@RequestParam("BRD_NO") int BRD_NO) {
 		int result = serv.delete(BRD_NO);  // 글 삭제
 		System.out.println("result : " + result);

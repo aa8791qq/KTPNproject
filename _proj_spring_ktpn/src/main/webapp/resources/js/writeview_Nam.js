@@ -83,15 +83,18 @@ function init(){
         // 목록화면으로 넘어가게 하기(공지사항, 자유게시판)
     }
 
-    let remove = document.querySelector('#remove')
+	const brdno = '${dto.BRD_NO}';
+    const remove = document.querySelector('#remove')
 
     remove.addEventListener('click', removeprocess)
     
     function removeprocess(){
         console.log('삭제되었습니다.')
         alert('삭제되었습니다.')
+        location.href = "ndelete_Nam?BRD_NO=" + brdno;
         // 목록화면으로 넘어가게 하기(공지사항, 자유게시판)
     }
+    
        // 로그아웃 버튼 
        document.querySelector('.subBut').addEventListener('click',function(){
         window.location.href = "loginpage_Nam.jsp"
