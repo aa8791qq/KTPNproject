@@ -83,9 +83,10 @@ function init(){
         // 목록화면으로 넘어가게 하기(공지사항, 자유게시판)
     }
 
-	const brdno = '${dto.BRD_NO}';
+	const brdno = "${dto.BRD_NO}";
+        console.log(brdno)
+    
     const remove = document.querySelector('#remove')
-
     remove.addEventListener('click', removeprocess)
     
     function removeprocess(){
